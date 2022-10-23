@@ -3,7 +3,7 @@ import "./login.css";
 function Login(){
     return(
         <div className="login">
-         <img className="loginimage" src="./images/welcome back.svg" />
+         <img className="loginimage" src="./images/welcome back.svg" alt="login img"/>
          <p className="welcomeback">Welcome Back</p> 
          <p className="details">Enter your details</p>
          <input type="text" id="emaiid" placeholder="Email id" className="email" />
