@@ -1,9 +1,16 @@
 import React from "react";
 import ReactDOM  from "react-dom";
-import Nav from "../src/components/nav";
-ReactDOM.render(<div>
-    <Nav />
-    </div>,document.getElementById("root")
+import { BrowserRouter } from "react-router-dom";
+import Nav from "./components/Nav.js";
 
+import App from "./App";
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+     <Nav />
+     <BrowserRouter>
+     <App />
+     </BrowserRouter>
+  </React.StrictMode>
 );
 
