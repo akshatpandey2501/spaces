@@ -1,9 +1,13 @@
-.loginimage{
+.loginimg{
     position: absolute;
-left: 3.89%;
-right: 49.31%;
-top: 17.96%;
-bottom: 8.63%;
+    left: 3.89%;
+    right: 49.31%;
+    top: 17.96%;
+    bottom: 8.63%;
+    
+     width:674px;
+     height :519px;
+
 
 
 }
@@ -117,6 +121,23 @@ letter-spacing: -0.02em;
 color: rgba(61, 124, 152, 0.6);
 
 
+}
+.details1{    position: absolute;
+    width: 143px;
+    height: 20px;
+    left: 1012px;
+    top:258px ; 
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+    
+    
+    color: #3D7C98;
+   
 }
 .logintext{
     font-family: 'Montserrat';

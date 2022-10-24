@@ -42,7 +42,7 @@
      font-size: 16px;
      line-height: 20px;
      /* identical to box height */
-    
+     text-decoration: none;
     
      color: #3D7C98;
     
@@ -61,7 +61,7 @@
         font-size: 16px;
         line-height: 20px;
         /* identical to box height */
-        
+        text-decoration: none;
         
         color: #3D7C98;
     }
@@ -78,6 +78,10 @@
         line-height: 20px;
         color: #3D7C98;
         list-style-type: none;
+        text-decoration: none;
             
+        }
+        .navbar ul li {
+            text-decoration: none;   
         }
             

@@ -11,9 +11,9 @@ function App(){
          <div className="navbar">
             <p className="appname">SPACES</p>
             <ul>
-            <li><Link to="/" >Home</Link> </li>
-            <li><Link to="/Signup" >Sign up</Link> </li>
-            <li><Link to="/Login" >Login</Link> </li>
+            <li><Link to="/" style={{ textDecoration: 'none' }}>Home</Link> </li>
+            <li><Link to="/Signup" style={{ textDecoration: 'none' }}>Sign up</Link> </li>
+            <li><Link to="/Login" style={{ textDecoration: 'none' }} >Login</Link> </li>
             </ul>
             {/* <Routes>
             <Route path="/" element={<Home/>} />

@@ -1,9 +1,10 @@
 import React from "react";
 import "./home.css";
+import Homesvg from "../images/home.svg"
 function Home (){
     return(
         <div className="home">
-            <img src="./images/Home.svg" className="imagehome"  alt="home"/>         
+            <img src={Homesvg} className="imagehome"  alt="home"/>         
             <div> <p className="welcome">Welcome To Spaces</p></div>
            <div><p className="grow">A place where ideas grow</p></div>
            <div className="explore-box"><p className="explore">Let's Explore</p></div>
