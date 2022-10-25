@@ -395,6 +395,15 @@ line-height: 20px;
 color: #3D7C98;
 
 }
+.login-box{
+    display: none;
+}
+.login1{
+    display: none;
+}
+.already{
+    display: none;
+}
 .formula-box{
     box-sizing: border-box;
     display: inline-block;
@@ -426,6 +435,191 @@ line-height: 20px;
 
 color: #3D7C98;
 }
-@media screen and (max-width: 480px){
+@media screen and (max-width: 400px){
+.imagehome{
+    position: absolute;
+width: 300px;
+height: 192px;
+left: 30px;
+top: 128px;
+}  
+.welcome{
+    position: absolute;
+width: 300px;
+height: 88px;
+left: 30px;
+top: 416px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 44px;
+text-align: center;
+
+color: #3D7C98;
+} 
+.grow{
+    position: absolute;
+width: 213px;
+height: 20px;
+left: 74px;
+top: 528px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+
+color: #3D7C98;
+
+}
+.explore-box{
+    position: absolute;
+width: 300px;
+height: 40px;
+left: 30px;
+top: 624px;
+
+background: #3D7C98;
+border-radius: 20px;
+}
+.explore{
+    margin-left: 25px;
+    margin-top: 10px; 
+}
+.login-box{
+    display: inline-block;
+    box-sizing: border-box;
+
+position: absolute;
+width: 300px;
+height: 40px;
+left: 30px;
+top: 680px;
+
+border: 1px solid #3D7C98;
+border-radius: 20px;
+
+}
+.login1{
+    display: inline-block;
+    position: absolute;
+width: 52px;
+height: 20px;
+left: 154px;
+top: 690px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+
+color: #3D7C98;
+
+}
+.already{
+    display: inline-block;
+    position: absolute;
+width: 197px;
+height: 15px;
+left: 83px;
+top: 749px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+
+
+color: #3D7C98;
+
+}
+.communities{
+    display:none;
+} 
+.ask-box{
+    display:none;
+}     
+.ask{
+    display:none;
+}
+.football-box{
+    display:none;
+}
+.football{
+    display:none;
+}  
+.leagueoflegens-box{
+    display:none;
+} 
+.leagueoflegens{
+    display:none;
+}
+.marvel-box{
+    display:none;
+}
+.marvel{
+    display:none;
+
+}  
+.minecraft-bax{
+    display:none;
+}   
+.minecraft{
+    display:none;
+}
+.travel-box{
+    display:none;
+}
+.travel{
+    display:none;
+
+
+}
+.esport-box{
+    display:none;
+
+}
+
+.esport{
+    display:none;
+
+}
+.robotics-box{
+    display:none;
+}
+.robotics{
+    display:none;
+   
+
+}
+.running-box{
     
+  display: none;
+
+}
+.running{
+  display: none;
+}
+
+.formula-box{
+    box-sizing: border-box;
+    display: none;
+
+}
+.formula{
+    display: none;
+   
+}
+
+
 }
