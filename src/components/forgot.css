@@ -1,0 +1,83 @@
+.loginimg{
+    position: absolute;
+    left: 3.89%;
+    right: 49.31%;
+    top: 17.96%;
+    bottom: 8.63%;
+    
+     width:674px;
+     height :519px;
+
+}
+.forgot1{
+    position: absolute;
+    width: 460px;
+    height: 59px;
+    left: 850px;
+    top: 221px;
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    /* identical to box height */
+    
+    
+    color: #212427;
+    
+}
+.send{
+    position: absolute;
+width: 343px;
+height: 20px;
+left: 1012px;
+top: 284px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+
+color: #212427;
+}
+::placeholder{
+    
+    color: #212427;
+}
+.giveemail{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 425px;
+    height: 40px;
+    left: 867px;
+    top: 332px;
+    padding-left: 3vw;
+    border: 1px solid #212427;
+    border-radius: 5px;
+}
+.forgottext{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+    
+    
+    color: #FFFFFF;
+}
+.forgotbutton{
+    position: absolute;
+    width: 425px;
+   height: 40px;
+   left: 867px;
+   top: 403px;
+ 
+   background: #3D7C98;
+   border-radius: 5px;
+}

@@ -1,143 +1,158 @@
-.loginimage{
+.signimg{
     position: absolute;
-  left: 6.25%;
+    left: 3.89%;
     right: 49.31%;
-     top: 9.05%;
-    bottom: 0.42%;
-    width:640px;
-   height:640px
+    top: 17.96%;
+    bottom: 8.63%;
+    width: 50vw;
+    height: 78vh;
 
 }
 .create{
     position: absolute;
-width: 460px;
-height: 59px;
-left: 850px;
-top: 127px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 700;
-font-size: 48px;
-line-height: 59px;
-/* identical to box height */
-
-
-color: #3D7C98;
-
+    width: 37vw;
+    height: 9vh;
+    left: 62vw;
+    top: 20vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 59px;
+    color: #212427;
 }
 .details{
     position: absolute;
-width: 143px;
-height: 20px;
-left: 1012px;
-top: 196px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 20px;
-/* identical to box height */
-
-
-color: #3D7C98;
+    width: 13vw;
+    height: 20px;
+    left: 74vw;
+    top: 30vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 20px;
+    color: #212427;
 }
 .input{
     box-sizing: border-box;
-
-position: absolute;
-width: 425px;
-height: 40px;
-left: 867px;
-top: 237px;
-
-border: 1px solid #3D7C98;
-border-radius: 5px;
+    position: absolute;
+    width: 31vw;
+    height: 6.5vh;
+    left: 63vw;
+    top: 36vh;
+    border: 1px solid #212427;
+    border-radius: .5rem;
+    padding-left: 3vw;
+}
+.usericon{
+    position: absolute;
+    height: 3.5vh;
+    left: 64vw;
+    top: 37.5vh;
+    z-index: 1;
+}
+.usererror{
+    position: absolute;
+    top: 20vh;
+    left: 30vw;
+    width: 30vw;
+    height: 20vh;
+    font-size: 2rem;
 }
 .input1{
     box-sizing: border-box;
-
-position: absolute;
-width: 425px;
-height: 40px;
-left: 867px;
-top: 301px;
-
-border: 1px solid #3D7C98;
-border-radius: 5px;
+    position: absolute;
+    width: 31vw;
+    height: 6.5vh;
+    left: 63vw;
+    top: 46vh;
+    border: 1px solid #212427;
+    border-radius: .5rem;
+    padding-left: 3vw;
+}
+.mailicon{
+    position: absolute;
+    height: 3.5vh;
+    left: 64vw;
+    top: 47.5vh;
+    z-index: 1; 
 }
 
 .input2{
     box-sizing: border-box;
-
-position: absolute;
-width: 425px;
-height: 40px;
-left: 867px;
-top: 365px;
-
-border: 1px solid #3D7C98;
-border-radius: 5px;
+    position: absolute;
+    width: 31vw;
+    height: 6.5vh;
+    left: 63vw;
+    top: 56vh;
+    border: 1px solid #212427;
+    border-radius: .5rem;
+    padding-left: 3vw;
+}
+.passwordicon{
+    position: absolute;
+    
+    height: 3.5vh;
+    left: 64vw;
+    top: 57.5vh; 
+    z-index: 1;
 }
 .input3{
     box-sizing: border-box;
-
-position: absolute;
-width: 425px;
-height: 40px;
-left: 867px;
-top: 429px;
-
-border: 1px solid #3D7C98;
-border-radius: 5px;
+    position: absolute;
+    width: 31vw;
+    height: 6.5vh;
+    left: 63vw;
+    top: 66vh;
+    border: 1px solid #3D7C98;
+    border-radius: .5rem;
+    padding-left: 3vw;
+}
+.passwordicon1{
+    position: absolute;
+    
+    height: 3.5vh;
+    left: 64vw;
+    top: 67.5vh;
+    z-index: 1;  
 }
 .continuebutton{
     position: absolute;
-   width: 425px;
-  height: 40px;
-  left: 867px;
-  top: 493px;
-
-  background: #3D7C98;
-  border-radius: 5px;
-
+    width: 425px;
+    height: 40px;
+    left: 63vw;
+    top: 76vh;
+    background: #212427;
+    border-radius: .5rem;
 }
 .clicking{
     position: absolute;
-  width: 424px;
-  height: 15px;
-  left: 868px;
-  top: 557px;
-
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 15px;
-/* identical to box height */
-
-   letter-spacing: -0.02em;
-
-  color: #3D7C98;
+    width: 30vw;
+    height: 7vh;
+    left: 64vw;
+    top: 84vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 15px;
+    letter-spacing: -0.02em;
+    color: #212427;
 }
 .registered{
     position: absolute;
-width: 347px;
-height: 20px;
-left: 1010px;
-top: 596px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 20px;
-/* identical to box height */
-
-letter-spacing: -0.02em;
-
-color: rgba(61, 124, 152, 0.6);
+    width: 20vw;
+    height: 6vh;
+    left: 1010px;
+    top: 88vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    color: rgba(61, 124, 152, 0.6);
 
 
 }
@@ -156,43 +171,169 @@ color: #FFFFFF;
 .error{
     display: inline-block;
     position: absolute;
- width: 659px;
-height: 34px;
-left: 873px;
-top: 407px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 17px;
+    width: 26vw;
+    height: 4vh;
+    left: 64vw;
+    top: 62vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 17px;
+    color: rgba(255, 0, 0, 0.66);
 }
 .emailerror{
     display: inline-block;
     position: absolute;
- width: 359px;
-height: 34px;
-left: 873px;
-top: 335px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 17px;
+    width: 26vw;
+    height: 4vh;
+    left: 64vw;
+    top: 52vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 17px;
+    color: rgba(255, 0, 0, 0.66);
 }
 .errorconfirm{
     display: inline-block;
     position: absolute;
- width: 359px;
-height: 34px;
-left: 873px;
-top: 474px;
+    width: 26vw;
+    height: 4vh;
+    left: 64vw;
+    top: 72vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 17px;
+    color: rgba(255, 0, 0, 0.66);
 
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 17px;
+}
+::placeholder{
+    /* text-indent: 3vw; */
+    color: #212427;
+}
 
+@media screen and (max-width: 425px){
+ .signimg{
+    position: absolute;
+    left: 19.89%;
+    right: 49.31%;
+    top: 1.96%;
+    bottom: 8.63%;
+    width: 63vw;
+    height: 29vh;
+ }   
+ .create{
+    top: 32vh;
+    left: 13vw;
+    width: 82vw;
+    height: 12vh;
+    font-size: 2rem;
+ }
+ .details{
+    top: 39vh;
+    left: 27vw;
+    width: 43vw;
+    height: 4vh;
+ }
+ .input{
+    top: 45vh;
+    left: 10vw;
+    width: 84vw;
+    height: 6vh;
+ }
+ .input1{
+    top: 55vh;
+    left: 10vw;
+    width: 84vw;
+    height: 6vh;
+ }
+ .input2{
+    top: 64vh;
+    left: 10vw;
+    width: 84vw;
+    height: 6vh;
+ }
+ .input3{
+    top: 75vh;
+    left: 10vw;
+    width: 84vw;
+    height: 6vh;
+ }
+ .continuebutton{
+    top: 83vh;
+    left: 10vw;
+    width: 81vw;
+    height: 7vh;
+ }
+ .clicking{
+    top: 91vh;
+    left: 12vw;
+    width: 80vw;
+    height: 6vh;
+    font-size: 1.1rem;
+ }
+ .continuetext{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 20px;
+    color: #FFFFFF;
+ }
+.registered{
+    top: 96vh;
+    left: 22vw;
+    width: 49vw;
+    height: 10vh;
+    font-size: 1.1rem;
+}
+.error{
+    display: inline-block;
+    position: absolute;
+    width: 83vw;
+    height: 5vh;
+    left: 10vw;
+    top: 70vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 17px;
+    color: rgba(255, 0, 0, 0.66);
+}
+.emailerror{
+    display: inline-block;
+    position: absolute;
+    width: 42vw;
+    height: 2vh;
+    left: 11vw;
+    top: 61.5vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.85rem;
+    line-height: 17px;
+    color: rgba(255, 0, 0, 0.66);
+
+}
+.errorconfirm{
+    display: inline-block;
+    position: absolute;
+    width: 80vw;
+    height: 3vh;
+    left: 10vw;
+    top: 80.5vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 17px;
+    color: rgba(255, 0, 0, 0.66);
+
+}
+ 
 }

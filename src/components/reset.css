@@ -1,0 +1,76 @@
+.resetimg{
+    position: absolute;
+    left: 3.89%;
+    right: 49.31%;
+    top: 17.96%;
+    bottom: 8.63%;
+    
+     width:674px;
+     height :519px;
+}
+.resetpass{
+    position: absolute;
+    width: 29vw;
+    height: 8vh;
+    left: 65.5vw;
+    top: 27.5vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 59px;
+    color: #212427E5;
+}
+.createnew{
+    position: absolute;
+    width: 28vw;
+    height: 6vh;
+    left: 65vw;
+    top: 39vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 20px;
+    color: #212427;
+}
+.newpass{
+    box-sizing: border-box;
+    position: absolute;
+    width: 31vw;
+    height: 6.5vh;
+    left: 63vw;
+    top: 46vh;
+    border: 1px solid #212427;
+    border-radius: .5rem;
+}
+.cnfnewpass{
+    box-sizing: border-box;
+    position: absolute;
+    width: 31vw;
+    height: 6.5vh;
+    left: 63vw;
+    top: 56vh;
+    border: 1px solid #212427;
+    border-radius: .5rem;
+}
+.verifybutton{
+    position: absolute;
+    width: 30vw;
+    height: 40px;
+    left: 63.5vw;
+    top: 65vh;
+    background: #212427;
+    border-radius: .5rem;
+}
+.verifytext{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 20px;
+    /* identical to box height */
+    
+    
+    color: #FFFFFF;
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import "./home.css";
 import Homesvg from "../images/home.svg"
+import { Link } from "react-router-dom";
 function Home (){
     return(
         <div className="home">
@@ -21,6 +22,8 @@ function Home (){
            <div className="robotics-box"><p className="robotics">Robotics</p></div>
            <div className="running-box"><p className="running">Running</p></div>
            <div className="formula-box"><p className="formula">Formula1</p></div>
+           <div className="login-box"><p className="login1"><Link to="/Login"  style={{ textDecoration: 'none',color:'black'}} >Login</Link></p></div>
+           <p className="already">Don’t have an account? <Link to="/Signup" style={{ textDecoration: 'none',color:'black'}}>SIGN UP</Link></p>
            
         </div>
     );
