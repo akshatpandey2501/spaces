@@ -3,8 +3,10 @@ import Loginsvg from "../images/welcome back.svg"
 import "./reset.css"
 import Passwordsvg from "../images/password.svg"
 import axios from "axios";
+import Login from "./Login";
 
 function Reset(){
+    const[changepassworddone,setChangePass]=useState(false)
     const[newpass,setNewPass]=useState("")
     const[newconfirmpass,setNewConfirmPass]=useState("")
     const handleChange1=e=>{
@@ -26,6 +28,7 @@ function Reset(){
           localStorage.clear();
           if (res.status === 200) {
            localStorage.removeItem("forgote")
+           setChangePass(true)
           } 
         })
         .catch((err) => {
@@ -34,7 +37,8 @@ function Reset(){
         })
 
     }
-return(
+return(<>
+    {changepassworddone?(<Login/>):(
     <div className="reset">
     <img className="resetimg" src={Loginsvg} alt="login img"/>
     <p className="resetpass">Reset Password</p> 
@@ -46,7 +50,8 @@ return(
    
     <button className="verifybutton1" onClick={Clickhandle1} ><p className="verifytext1">Continue</p></button>
     </div>
-
+    )}
+    </>
 )
 }
 export default Reset;
