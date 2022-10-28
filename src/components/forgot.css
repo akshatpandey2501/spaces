@@ -81,3 +81,70 @@ color: #212427;
    background: #3D7C98;
    border-radius: 5px;
 }
+.giveemailicon{
+    position: absolute;
+    height: 3.5vh;
+    left: 64vw;
+    top: 51.7vh;
+    z-index: 1;    
+}
+@media screen and (max-width: 425px){
+    .loginimg{
+       position: absolute;
+       left: 19.89%;
+       right: 49.31%;
+       top: 2.96%;
+       bottom: 8.63%;
+       width: 63vw;
+       height: 29vh;
+    }   
+    .forgot1{
+        top: 37vh;
+        left: 13vw;
+        width: 82vw;
+        height: 12vh;
+        font-size: 2rem;
+    }
+    .send{
+        top: 49vh;
+        left: 15vw;
+        width: 75vw;
+        height: 7vh;
+    }
+
+   
+    .giveemail{
+        top: 61vh;
+        
+        left: 15vw;
+        width: 75vw;
+        height: 7vh;
+    }
+  
+    .forgotbutton{
+        position: absolute;
+        width: 50vw;
+        height: 6vh;
+        top: 73vh;
+        left: 24vw;
+        background: #3D7C98;
+        border-radius: .5rem;
+    }
+
+    .forgottext{
+       font-family: 'Montserrat';
+       font-style: normal;
+       font-weight: 700;
+       font-size: 1.5rem;
+       line-height: 20px;
+       color: #FFFFFF;
+    }
+    .giveemailicon{
+        position: absolute;
+        height: 2.5vh;
+        left: 16vw;
+        top: 63.3vh;
+        z-index: 1;
+    }
+    
+   }

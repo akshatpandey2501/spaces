@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import "./forgot.css";
 import axios from "axios";
 import Loginsvg from "../images/welcome back.svg"
-
+import Mailsvg from "../images/fluent_mail-20-filled.svg"
 import Otp1 from "./Otp1";
 function Forgot(){
     const[forgoterror,setForgotError]=useState(false)
@@ -35,6 +35,7 @@ function Forgot(){
         <img className="loginimg" src={Loginsvg} alt="login img"/>  
         <p className="forgot1">Forgot Password?</p> 
         <p className="send">We'll send you a OTP on this email</p>
+        <img src={Mailsvg} alt="mail" className="giveemailicon" />
         <input type="text" id="emaiid" placeholder="Email id" className="giveemail" onChange={forgotChange} value={forgotemail} />
         <button className="forgotbutton" onClick={handleClicking} ><p className="forgottext">Continue</p></button>
         </div>

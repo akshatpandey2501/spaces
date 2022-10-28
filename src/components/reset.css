@@ -43,6 +43,7 @@
     top: 46vh;
     border: 1px solid #212427;
     border-radius: .5rem;
+    padding-left: 3vw;
 }
 .cnfnewpass{
     box-sizing: border-box;
@@ -53,8 +54,9 @@
     top: 56vh;
     border: 1px solid #212427;
     border-radius: .5rem;
+    padding-left: 3vw;
 }
-.verifybutton{
+.verifybutton1{
     position: absolute;
     width: 30vw;
     height: 40px;
@@ -63,7 +65,7 @@
     background: #212427;
     border-radius: .5rem;
 }
-.verifytext{
+.verifytext1{
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
@@ -74,3 +76,103 @@
     
     color: #FFFFFF;
 }
+.respasswordicon{
+    
+        position: absolute;
+        height: 3.5vh;
+        left: 64vw;
+        top: 47.3vh;
+        z-index: 1;    
+    
+}
+
+.respasswordiconcnf{
+    
+    position: absolute;
+    height: 3.5vh;
+    left: 64vw;
+    top: 57.7vh;
+    z-index: 1;    
+
+}
+@media screen and (max-width: 425px){
+    .resetimg{
+       position: absolute;
+       left: 19.89%;
+       right: 49.31%;
+       top: 1.96%;
+       bottom: 8.63%;
+       width: 63vw;
+       height: 29vh;
+    }   
+    .resetpass{
+        top: 34vh;
+        left: 17vw;
+        width: 82vw;
+        height: 12vh;
+        font-size: 2rem;
+    }
+    .createnew{
+        top: 46vh;
+        left: 22vw;
+        width: 65vw;
+        height: 4vh;
+    }
+  
+    .newpass{
+       top: 55vh;
+       left: 10vw;
+       width: 84vw;
+       height: 6vh;
+       padding-left: 5vw;
+    }
+    .cnfnewpass{
+       top: 64vh;
+       left: 10vw;
+       width: 84vw;
+       height: 6vh;
+       padding-left: 5vw;
+    }
+ 
+    .verifybutton1{
+       top: 83vh;
+       left: 10vw;
+       width: 81vw;
+       height: 7vh;
+       background: #212427;
+    }
+    .clicking1{
+       top: 91vh;
+       left: 12vw;
+       width: 80vw;
+       height: 6vh;
+       font-size: 1.1rem;
+    }
+    .verifytext1{
+        height: 5vh;
+        margin-top: 1.5vh;
+       font-family: 'Montserrat';
+       font-style: normal;
+       font-weight: 700;
+       font-size: 1.5rem;
+       line-height: 20px;
+       color: #FFFFFF;
+    }
+ .respasswordicon{
+    position: absolute;
+    height: 2.5vh;
+    left: 12vw;
+    top: 56.5vh;
+    z-index: 1;
+ }
+ .respasswordiconcnf{
+    position: absolute;
+    height: 2.5vh;
+    left: 12vw;
+    top: 65.5vh;
+    z-index: 1;
+ }
+
+   
+    
+   }

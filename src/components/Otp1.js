@@ -24,6 +24,7 @@ function Otp1(){
           if (res.status === 200) {
             console.log(intell)
          setResetOtp(true)
+
           }
         })
         .catch((err) => {
@@ -37,6 +38,9 @@ function Otp1(){
         
         axios.post('https://spacesback-production.up.railway.app/resendotp',intell1).then((res) => {
           console.log(res);
+          if(res.status===200){
+            localStorage.removeItem("forgote")
+          }
           })
         .catch((err) => {
           console.log(err);

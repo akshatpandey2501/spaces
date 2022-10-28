@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Loginsvg from "../images/welcome back.svg"
 import "./reset.css"
+import Passwordsvg from "../images/password.svg"
 import axios from "axios";
 
 function Reset(){
@@ -38,10 +39,12 @@ return(
     <img className="resetimg" src={Loginsvg} alt="login img"/>
     <p className="resetpass">Reset Password</p> 
     <p className="createnew">Create a new password</p>
-    <input type="text" id="otpinput" placeholder="New Password" className="newpass" value={newpass} onChange={handleChange1} />
-    <input type="text" id="otpinput" placeholder="Confirm Password" className="cnfnewpass" value={newconfirmpass} onChange={handleChange2} />
+    <img src={Passwordsvg} alt="password" className="respasswordicon" />
+    <input type="password" id="otpinput" placeholder="New Password" className="newpass" value={newpass} onChange={handleChange1} />
+    <img src={Passwordsvg} alt="password" className="respasswordiconcnf" />
+    <input type="password" id="otpinput" placeholder="Confirm Password" className="cnfnewpass" value={newconfirmpass} onChange={handleChange2} />
    
-    <button className="verifybutton" onClick={Clickhandle1} ><p className="verifytext">Verify</p></button>
+    <button className="verifybutton1" onClick={Clickhandle1} ><p className="verifytext1">Continue</p></button>
     </div>
 
 )

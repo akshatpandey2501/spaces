@@ -102,7 +102,7 @@ function Signup(){
         })
         .catch((err) => {
           console.log(err);
-          // setUserError(response.data.msg)
+          setUserError(err.data.msg)
           // userotp=false;
         })
       

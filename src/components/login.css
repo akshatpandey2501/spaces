@@ -124,6 +124,21 @@ line-height: 20px;
 color: #FFFFFF;
 
 }
+.emailicon{
+    position: absolute;
+    height: 3.5vh;
+    left: 64vw;
+    top: 46vh;
+    z-index: 1; 
+}
+.passwordinputicon{
+    position: absolute;
+    
+    height: 3.5vh;
+    left: 64vw;
+    top: 56vh;
+    z-index: 1;  
+}
 @media screen and (max-width: 425px){
     .loginimg1{
         position: absolute;

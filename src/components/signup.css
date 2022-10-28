@@ -171,10 +171,10 @@ color: #FFFFFF;
 .error{
     display: inline-block;
     position: absolute;
-    width: 26vw;
+    width: 40vw;
     height: 4vh;
-    left: 64vw;
-    top: 62vh;
+    left: 60vw;
+    top: 63vh;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -188,7 +188,7 @@ color: #FFFFFF;
     width: 26vw;
     height: 4vh;
     left: 64vw;
-    top: 52vh;
+    top: 53vh;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -202,7 +202,7 @@ color: #FFFFFF;
     width: 26vw;
     height: 4vh;
     left: 64vw;
-    top: 72vh;
+    top: 72.5vh;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -244,24 +244,29 @@ color: #FFFFFF;
     left: 10vw;
     width: 84vw;
     height: 6vh;
+    padding-left: 7vw;
  }
  .input1{
     top: 55vh;
     left: 10vw;
     width: 84vw;
     height: 6vh;
+    padding-left: 7vw;
  }
  .input2{
     top: 64vh;
     left: 10vw;
     width: 84vw;
     height: 6vh;
+    padding-left: 5vw;
+    padding-left: 7vw;
  }
  .input3{
     top: 75vh;
     left: 10vw;
     width: 84vw;
     height: 6vh;
+    padding-left: 7vw;
  }
  .continuebutton{
     top: 83vh;
@@ -273,8 +278,8 @@ color: #FFFFFF;
     top: 91vh;
     left: 12vw;
     width: 80vw;
-    height: 6vh;
-    font-size: 1.1rem;
+    height: 7vh;
+    font-size: 0.85rem;
  }
  .continuetext{
     font-family: 'Montserrat';
@@ -289,7 +294,7 @@ color: #FFFFFF;
     left: 22vw;
     width: 49vw;
     height: 10vh;
-    font-size: 1.1rem;
+    font-size: 1rem
 }
 .error{
     display: inline-block;
@@ -334,6 +339,26 @@ color: #FFFFFF;
     line-height: 17px;
     color: rgba(255, 0, 0, 0.66);
 
+}
+.passwordicon1{
+    top: 76vh;
+    left: 11vw;
+    height:3.5vh;
+}
+.passwordicon{
+    top: 66vh;
+    left: 11vw;
+    height:3.5vh;
+}
+.usericon{
+    top: 46vh;
+    left: 11vw;
+    height:3.5vh;
+}
+.mailicon{
+    top: 56vh;
+    left: 11vw;
+    height: 3.5vh;
 }
  
 }

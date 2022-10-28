@@ -2,9 +2,11 @@ import React, { useState,useEffect } from "react";
 import Loginsvg from "../images/welcome back.svg"
 import "./otp.css"
 import axios from "axios";
+import Login from "./Login";
 
 function Otp(){
     const[otp1,setOtp]=useState("")
+    const[loginuser,setLoginUser]=useState(false)
     const handleChange=e=>{
         setOtp(e.target.value);
     }
@@ -18,11 +20,13 @@ function Otp(){
         axios.post('https://spacesback-production.up.railway.app/signup/verify',information).then((res) => {
           console.log(res);
           console.log(information)
-          localStorage.removeItem("email");
-        //   if (res.status == 201) {
-        //    setUserOtp(true);
-        //    setUserError("res.data.msg")
-        //   } 
+          
+          if (res.status == 200) {
+           setLoginUser(true)
+           localStorage.removeItem("email");
+
+
+          } 
         })
         .catch((err) => {
           console.log(err);
@@ -50,7 +54,9 @@ function Otp(){
         })
 
     } 
-return(
+return(<>
+    {loginuser?(<Login/> ):
+    (
     <div className="otp">
     <img className="otpimg" src={Loginsvg} alt="login img"/>
     <p className="verify">Verification</p> 
@@ -59,7 +65,8 @@ return(
     <button className="resendotp" onClick={Resendotp} disabled={(counter!==0) ? true : false} >Resend Otp?</button><p className="resendtimer">: {counter}</p>
     <button className="verifybutton" onClick={Clickhandle} ><p className="verifytext">Verify</p></button>
     </div>
-
+    )}
+    </>
 )
 }
 export default Otp;
