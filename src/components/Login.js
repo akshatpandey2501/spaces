@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import Success from "./Success";
 function Login(){
    const[isloggedin,setisLoggedin] = useState(false);
+   const [loginerror,setLoginError]=useState("")
     const[email,setLogin] = useState("");
     const[password,setPassword]=useState("")
     const handleChange = event =>{
@@ -30,6 +31,8 @@ function Login(){
           })
           .catch((err) => {
             console.log(err);
+            setLoginError(err.data.msg)
+
           })
        }
     return(<>
@@ -38,7 +41,7 @@ function Login(){
         <div className="login">
          <img className="loginimg1" src={Loginsvg} alt="login img"/>
 
-         <p className="welcomeback">Welcome Back</p> 
+         <p className="welcomeback">Welcome Back{loginerror}</p> 
          <p className="details1">Enter your details</p>
          <img src={Mailsvg} alt="mail" className="emailicon" />
          <input type="text" id="emaiid" placeholder="Email id" className="email" value={email} onChange={handleChange}/>
