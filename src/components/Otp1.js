@@ -2,18 +2,21 @@ import React, { useEffect, useState } from "react";
 import Loginsvg from "../images/welcome back.svg"
 import "./otp.css"
 import axios from "axios";
-import Reset from "./Reset";
+import Errorsvg from "../images/errorsign.svg"
+import { useNavigate } from "react-router-dom";
+
 
 function Otp1(){
-    const[resetotp,setResetOtp]=useState(false)
+ 
     const[otp2,setOtp2]=useState("")
     const handleChange=e=>{
+       setIsShow(false)
         setOtp2(e.target.value);
     }
     
     var intell={email:localStorage.getItem("forgote"),otp:otp2}
-
-    
+    const[isShown,setIsShow]=useState(false)
+    const[otperror,setOtpError]=useState("")    
     const Clickhandle=event=>{
         event.preventDefault();
         setOtp2("")
@@ -23,28 +26,35 @@ function Otp1(){
           
           if (res.status === 200) {
             console.log(intell)
-         setResetOtp(true)
+            navigate("/Reset")
 
           }
         })
         .catch((err) => {
           console.log(err);
-        
+          setIsShow(true)
+          setOtpError(err.response.data.msg)
+          
         })
     }
     var intell1={email:localStorage.getItem("forgote")}
+    
+    const navigate=useNavigate()
     const Resendotp=e=>{
         e.preventDefault();
         
         axios.post('https://spacesback-production.up.railway.app/resendotp',intell1).then((res) => {
           console.log(res);
           if(res.status===200){
+            navigate("/Reset")
             localStorage.removeItem("forgote")
           }
           })
         .catch((err) => {
           console.log(err);
-        
+          setOtpError(err.response.data.msg)
+          setIsShow(true)
+
         })
 
     } 
@@ -56,9 +66,10 @@ function Otp1(){
             return()=>clearInterval(timer);
         },[counter]);
   
-return(<>
-       {resetotp?(<Reset/>):(
+return(
+       
     <div className="otp">
+      <div className="usererrorboxotp" style={{display: isShown ? 'block' : 'none'}}><img src={Errorsvg} className="errorimgotp" alt="otp error" ></img><p className="usererror1otp">{otperror}</p></div>
     <img className="otpimg" src={Loginsvg} alt="login img"/>
     <p className="verify">Verification</p> 
     <p className="enterotp">Enter 6 digit OTP send to your EmailID</p>
@@ -66,8 +77,7 @@ return(<>
     <button className="resendotp" onClick={Resendotp} disabled={(counter!==0) ? true : false} >Resend Otp?</button><p className="resendtimer">: {counter}</p>
     <button className="verifybutton" onClick={Clickhandle}  ><p className="verifytext">Verify</p></button>
     </div>
-       )}
-       </>
+      
 )
 }
 export default Otp1;

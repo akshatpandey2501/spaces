@@ -7,9 +7,10 @@ import Signupsvg from "../images/signup.svg"
 import Mailsvg from "../images/fluent_mail-20-filled.svg"
 import Usersvg from "../images/username.svg"
 import Passwordsvg from "../images/password.svg"
-import { Link } from "react-router-dom";
+import Errorsvg from "../images/errorsign.svg"
+import { Link, useNavigate } from "react-router-dom";
 
-import Otp from "./Otp";
+
 function Signup(){
     
     //  var correctpassword=false
@@ -33,14 +34,16 @@ function Signup(){
     const password = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
     const emailreg = 
     new RegExp(/^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/, "gm");
-   
+    const[correctpassword,setCorrectPass]=useState(false)
+    const[correctemail,setCorrectEmail]=useState(false)
+    const[correctcnfpassword,setCorrectCnfPass]=useState(false)
         useEffect(() => {
           if (password.test(message1)) {
           setError1("")  
-              // correctpassword= true;     
+             setCorrectPass(true)     
             }
           else if(message1){
-            setError1("invalid password must have-number,uppercase,lowercase,symbol")
+            setError1("invalid password must have:number,uppercase,lowercase,symbol")
             
            
             } 
@@ -50,7 +53,7 @@ function Signup(){
         useEffect(() => {
           if (emailreg.test(message)) {
           setError("")  
-            // correctemail=true;         
+            setCorrectEmail(true)         
             }
           else if(message){
             setError("invalid email")
@@ -69,16 +72,20 @@ function Signup(){
                 setError2("password not matched")
               }else{
                 setError2("");
-                // confirmemail=true;
+                setCorrectCnfPass(true)
               }
      }
-     
-    const[userotp,setUserOtp]=useState(false)
-     const[usererror,setUserError]=useState("")
+     const[isShown,setIsShow]=useState(false)
+     const navigate=useNavigate()
+     const [signerror,setSignError]=useState(" ")
      var value={user_name:message3,email:message,password:message1}
      const Buttonaction=e=>{
        e.preventDefault();
+       if(localStorage.length !==0){
+        localStorage.removeItem("email")
+       }
        localStorage.setItem("email",message)
+       
        setError2("")
        setError("")
        setMessage2("")
@@ -88,33 +95,34 @@ function Signup(){
        setMessage3("")
        if(message.length===0){
         setError("Required!")
+        setCorrectEmail(false)
        }
        if(message1.length===0){
         setError1("Required!")
+        setCorrectCnfPass(false)
        }
        
-        axios.post('https://spacesback-production.up.railway.app/signup',value).then((response) => {
-          console.log(response);
-          if (response.status == 201) {
-           setUserOtp(true);
-           setUserError(response.data.msg)
+       if(correctemail && correctcnfpassword && correctpassword){
+        axios.post('https://spacesback-production.up.railway.app/signup',value).then((res) => {
+          console.log(res);
+          if (res.status == 201) {
+           navigate("/Otp")
+           
           } 
         })
         .catch((err) => {
-          console.log(err);
-          setUserError(err.data.msg)
-          // userotp=false;
-        })
-      
+          console.log(err)
+          setSignError(err.response.data.msg)
+          setIsShow(true)
+          })
+       }
        
      }
       
 
     return(
-      <>
-       {userotp?(<Otp/>
-       ):(
-        <div className="signup"><p className="usererror">{usererror}</p>
+      
+        <div className="signup"><div className="usererrorbox" style={{display: isShown ? 'block' : 'none'}}><img src={Errorsvg} className="errorimg" alt="signup error"></img><p className="usererror1">{signerror}</p></div>
           <img src={Signupsvg} alt="signup" className="signimg" />
          <p className="create">Create an account</p> 
          <p className="details">Enter your details</p>
@@ -133,8 +141,7 @@ function Signup(){
          <p className="clicking">By clicking on Login, I accept the<b>Terms & Conditions</b> & <b>Privacy Policy</b></p>
          <p className="registered"><Link to="/Login" style={{ textDecoration: 'none',color:'black'}}>Already Registered?</Link></p>
         </div>
-       )}
-       </>
+       
     );
 }
 export default Signup;

@@ -3,10 +3,12 @@ import Loginsvg from "../images/welcome back.svg"
 import "./reset.css"
 import Passwordsvg from "../images/password.svg"
 import axios from "axios";
-import Login from "./Login";
+import { useNavigate } from "react-router-dom";
+import Errorsvg from "../images/errorsign.svg"
+
 
 function Reset(){
-    const[changepassworddone,setChangePass]=useState(false)
+   
     const[newpass,setNewPass]=useState("")
     const[newconfirmpass,setNewConfirmPass]=useState("")
     const handleChange1=e=>{
@@ -16,8 +18,9 @@ function Reset(){
         setNewConfirmPass(e.target.value);
     }    
     var info1={email:localStorage.getItem("forgote"),newpassword:newpass}
-
-  
+    const[isShown,setIsShow]=useState(false)
+    const [signerror,setSignError]=useState(" ")
+    const navigate=useNavigate()
     const Clickhandle1=event=>{
         event.preventDefault();
         setNewPass("")
@@ -28,18 +31,20 @@ function Reset(){
           localStorage.clear();
           if (res.status === 200) {
            localStorage.removeItem("forgote")
-           setChangePass(true)
+           navigate("/Login")
           } 
         })
         .catch((err) => {
           console.log(err);
         localStorage.clear()
+        setSignError(err.response.data.msg)
+          setIsShow(true)
         })
 
     }
-return(<>
-    {changepassworddone?(<Login/>):(
-    <div className="reset">
+return(
+
+    <div className="reset"><div className="usererrorboxreset" style={{display: isShown ? 'block' : 'none'}}><img src={Errorsvg} className="errorimgreset" alt="signup error"></img><p className="usererror1reset">{signerror}</p></div>
     <img className="resetimg" src={Loginsvg} alt="login img"/>
     <p className="resetpass">Reset Password</p> 
     <p className="createnew">Create a new password</p>
@@ -50,8 +55,7 @@ return(<>
    
     <button className="verifybutton1" onClick={Clickhandle1} ><p className="verifytext1">Continue</p></button>
     </div>
-    )}
-    </>
+    
 )
 }
 export default Reset;

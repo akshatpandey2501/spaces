@@ -95,6 +95,48 @@
     z-index: 1;    
 
 }
+@keyframes showerror {
+    0%{
+        transform: translateX(100%);
+    }
+    40%{
+        transform: translateX(-10%);
+    }
+    80%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+    
+}
+
+
+.usererrorboxreset{
+    display: none;
+    background: #ffdb9b;
+    width: 26.5rem;
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    border: 0.25rem;
+    border-left: 0.5rem solid #ffa502;
+    animation: showerror 1s ease forwards;
+   
+    
+}
+.usererrorboxreset .errorimgreset{
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+}
+.usererrorboxreset .usererror1reset{
+    padding: 0 1.25rem;
+    font-size: 1.125rem;
+    color: #ce8500;
+}
 @media screen and (max-width: 425px){
     .resetimg{
        position: absolute;

@@ -13,7 +13,7 @@
     width: 37vw;
     height: 9vh;
     left: 62vw;
-    top: 20vh;
+    top: 15vh;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
@@ -26,7 +26,7 @@
     width: 13vw;
     height: 20px;
     left: 74vw;
-    top: 30vh;
+    top: 25vh;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
@@ -40,7 +40,7 @@
     width: 31vw;
     height: 6.5vh;
     left: 63vw;
-    top: 36vh;
+    top: 31vh;
     border: 1px solid #212427;
     border-radius: .5rem;
     padding-left: 3vw;
@@ -49,7 +49,7 @@
     position: absolute;
     height: 3.5vh;
     left: 64vw;
-    top: 37.5vh;
+    top: 32.5vh;
     z-index: 1;
 }
 .usererror{
@@ -66,7 +66,7 @@
     width: 31vw;
     height: 6.5vh;
     left: 63vw;
-    top: 46vh;
+    top: 42vh;
     border: 1px solid #212427;
     border-radius: .5rem;
     padding-left: 3vw;
@@ -75,8 +75,8 @@
     position: absolute;
     height: 3.5vh;
     left: 64vw;
-    top: 47.5vh;
-    z-index: 1; 
+    top: 43.5vh;
+    z-index: 1;
 }
 
 .input2{
@@ -85,17 +85,16 @@
     width: 31vw;
     height: 6.5vh;
     left: 63vw;
-    top: 56vh;
+    top: 54vh;
     border: 1px solid #212427;
     border-radius: .5rem;
     padding-left: 3vw;
 }
 .passwordicon{
     position: absolute;
-    
     height: 3.5vh;
     left: 64vw;
-    top: 57.5vh; 
+    top: 55.5vh;
     z-index: 1;
 }
 .input3{
@@ -105,24 +104,23 @@
     height: 6.5vh;
     left: 63vw;
     top: 66vh;
-    border: 1px solid #3D7C98;
+    border: 1px solid #212427;
     border-radius: .5rem;
     padding-left: 3vw;
 }
 .passwordicon1{
     position: absolute;
-    
     height: 3.5vh;
     left: 64vw;
     top: 67.5vh;
-    z-index: 1;  
+    z-index: 1;
 }
 .continuebutton{
     position: absolute;
     width: 425px;
     height: 40px;
     left: 63vw;
-    top: 76vh;
+    top: 78vh;
     background: #212427;
     border-radius: .5rem;
 }
@@ -131,7 +129,7 @@
     width: 30vw;
     height: 7vh;
     left: 64vw;
-    top: 84vh;
+    top: 85vh;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -144,8 +142,8 @@
     position: absolute;
     width: 20vw;
     height: 6vh;
-    left: 1010px;
-    top: 88vh;
+    left: 70vw;
+    top: 89vh;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -171,49 +169,103 @@ color: #FFFFFF;
 .error{
     display: inline-block;
     position: absolute;
-    width: 40vw;
-    height: 4vh;
-    left: 60vw;
-    top: 63vh;
+    width: 31vw;
+    height: 5vh;
+    left: 63vw;
+    top: 60.655vh;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: 1rem;
-    line-height: 17px;
-    color: rgba(255, 0, 0, 0.66);
+    font-size: 0.85rem;
+    /* line-height: 17px; */
+    color: #af4242;
+    background-color: #fde8ec;
+    text-align: center;
+    border: 1px solid #af4242;
+    border-radius: 0.5rem;
 }
 .emailerror{
     display: inline-block;
     position: absolute;
-    width: 26vw;
+    width: 31vw;
     height: 4vh;
-    left: 64vw;
-    top: 53vh;
+    left: 63vw;
+    top: 49vh;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 1rem;
     line-height: 17px;
-    color: rgba(255, 0, 0, 0.66);
+    color: #af4242;
+    background-color: #fde8ec;
+    text-align: center;
+    border: 1px solid #af4242;
+    border-radius: 0.5rem;
 }
 .errorconfirm{
     display: inline-block;
     position: absolute;
-    width: 26vw;
+    width: 31vw;
     height: 4vh;
-    left: 64vw;
-    top: 72.5vh;
+    left: 63vw;
+    top: 73vh;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 1rem;
     line-height: 17px;
-    color: rgba(255, 0, 0, 0.66);
+    color: #af4242;
+    background-color: #fde8ec;
+    text-align: center;
+    border: 1px solid #af4242;
+    border-radius: 0.5rem;
 
 }
 ::placeholder{
     /* text-indent: 3vw; */
     color: #212427;
+}
+@keyframes showerror {
+    0%{
+        transform: translateX(100%);
+    }
+    40%{
+        transform: translateX(-10%);
+    }
+    80%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+    
+}
+
+
+.usererrorbox{
+    display: none;
+    background: #ffdb9b;
+    width: 26.5rem;
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    border: 0.25rem;
+    border-left: 0.5rem solid #ffa502;
+    animation: showerror 1s ease forwards;
+   
+    
+}
+.usererrorbox .errorimg{
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+}
+.usererrorbox .usererror1{
+    padding: 0 1.25rem;
+    font-size: 1.125rem;
+    color: #ce8500;
 }
 
 @media screen and (max-width: 425px){
@@ -310,6 +362,7 @@ color: #FFFFFF;
     line-height: 17px;
     color: rgba(255, 0, 0, 0.66);
 }
+
 .emailerror{
     display: inline-block;
     position: absolute;
