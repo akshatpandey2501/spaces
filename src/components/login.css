@@ -11,9 +11,22 @@
 
 
 }
+.errormessage{
+    position: absolute;
+    width: 60vw;
+    height: 8vh;
+    left: 42.5vw;
+    top: 15.5vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 59px;
+    color: #212427E5;
+}
 .welcomeback{
     position: absolute;
-    width: 29vw;
+    width: 55vw;
     height: 8vh;
     left: 65.5vw;
     top: 27.5vh;
@@ -138,6 +151,43 @@ color: #FFFFFF;
     left: 64vw;
     top: 56vh;
     z-index: 1;  
+}
+@keyframes showerror {
+    0%{
+        transform: translateX(100%);
+    }
+    40%{
+        transform: translateX(-10%);
+    }
+    80%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+.usererrorboxlog{
+    display: none;
+    background: #ffdb9b;
+    width: 26.5rem;
+    position: absolute;
+    right: 0;
+    top: 5rem;
+    border: 0.25rem;
+    border-left: 0.5rem solid #ffa502;
+    animation: showerror 1s ease forwards;
+}
+.usererrorboxlog .errorimglog{
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+}
+.usererrorboxlog .usererror1log{
+    padding: 0 1.25rem;
+    font-size: 1.125rem;
+    color: #ce8500;
 }
 @media screen and (max-width: 425px){
     .loginimg1{

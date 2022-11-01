@@ -2,18 +2,22 @@ import React, { useState,useEffect } from "react";
 import Loginsvg from "../images/welcome back.svg"
 import "./otp.css"
 import axios from "axios";
-import Login from "./Login";
+import Errorsvg from "../images/errorsign.svg"
+import { useNavigate } from "react-router-dom";
 
 function Otp(){
+  
     const[otp1,setOtp]=useState("")
-    const[loginuser,setLoginUser]=useState(false)
+
     const handleChange=e=>{
         setOtp(e.target.value);
+        setIsShow1(false)
     }
     
     var information={email:localStorage.getItem("email"),otp:otp1}
-
-    
+    const[isShown1,setIsShow1]=useState(false)
+    const[otperror1,setOtpError1]=useState("")
+    const navigate=useNavigate()
     const Clickhandle=event=>{
         event.preventDefault();
         setOtp("")
@@ -21,8 +25,8 @@ function Otp(){
           console.log(res);
           console.log(information)
           
-          if (res.status == 200) {
-           setLoginUser(true)
+          if (res.status === 200) {
+           navigate("/Login")
            localStorage.removeItem("email");
 
 
@@ -30,7 +34,8 @@ function Otp(){
         })
         .catch((err) => {
           console.log(err);
-        //   setUserError("res.data.msg")
+          setOtpError1(err.response.data.msg)
+          setIsShow1(true)
           // userotp=false;
         })
 
@@ -50,14 +55,15 @@ function Otp(){
           })
         .catch((err) => {
           console.log(err);
-        
+          setOtpError1(err.response.data.msg)
+          setIsShow1(true)
+          
         })
 
     } 
-return(<>
-    {loginuser?(<Login/> ):
-    (
-    <div className="otp">
+return(
+    <div className="otp"><div className="usererrorboxotp" style={{display: isShown1 ? 'block' : 'none'}}><img src={Errorsvg} className="errorimgotp" alt="otp error" ></img><p className="usererror1otp">{otperror1}</p></div>
+      
     <img className="otpimg" src={Loginsvg} alt="login img"/>
     <p className="verify">Verification</p> 
     <p className="enterotp">Enter 6 digit OTP send to your EmailID</p>
@@ -65,8 +71,7 @@ return(<>
     <button className="resendotp" onClick={Resendotp} disabled={(counter!==0) ? true : false} >Resend Otp?</button><p className="resendtimer">: {counter}</p>
     <button className="verifybutton" onClick={Clickhandle} ><p className="verifytext">Verify</p></button>
     </div>
-    )}
-    </>
+    
 )
 }
 export default Otp;
