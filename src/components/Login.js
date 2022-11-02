@@ -7,7 +7,7 @@ import Mailsvg from "../images/fluent_mail-20-filled.svg"
 import Passwordsvg from "../images/password.svg"
 import Errorsvg from"../images/errorsign.svg"
 import { Link, useNavigate } from "react-router-dom";
-
+import Sidebar from "./Sidebar";
 function Login(){
    
    const [loginerror,setLoginError]=useState("abcd")
@@ -43,6 +43,7 @@ function Login(){
     return(
 
         <div className="login">
+         <Sidebar/>
          <div className="usererrorboxlog" style={{display: isShown ? 'block' : 'none'}} ><img src={Errorsvg} className="errorimglog" alt="login error" ></img><p className="usererror1log">{loginerror}</p></div>
          <img className="loginimg1" src={Loginsvg} alt="login img"/>
          

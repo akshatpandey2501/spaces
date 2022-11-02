@@ -9,6 +9,7 @@ import Otp from "./components/Otp";
 import Otp1 from "./components/Otp1";
 import Reset from "./components/Reset";
 import Success from "./components/Success";
+import Explore from "./components/Explore"
 
 function App(){
     return(
@@ -31,6 +32,7 @@ function App(){
             <Route path="/Otp1" element={<Otp1/>} />
             <Route path="/Reset" element={<Reset/>} />
             <Route path="/Success" element={<Success/>} />
+            <Route path="/Explore" element={<Explore/>} />
         </Routes>
         
         </div>

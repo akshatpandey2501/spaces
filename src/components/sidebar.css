@@ -1,0 +1,193 @@
+html{
+    font-size: 62.5%;
+}
+.sidebar{
+    float: left;
+    height: 70.7rem;
+    width: 27.3rem;
+    position: fixed;
+}
+.spaces{
+    position: absolute;
+width: 13.2rem;
+height: 3.9rem;
+left: 5.6rem;
+top: 1.6rem;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 3.2rem;
+line-height: 39px;
+/* identical to box height */
+
+
+color: #212427;
+}
+.searchicon{
+    position: absolute;
+    width: 2.4rem;
+    height: 2.4rem;
+    left: 3.2rem;
+    top: 9.5rem;
+}
+.search{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 24.1rem;
+    height: 4rem;
+    left: 1.6rem;
+    top: 8.7rem;
+    
+    opacity: 0.48;
+    border: 0.1rem solid rgba(0, 0, 0, 0.3);
+    border-radius: 0.3rem;
+}
+.search::placeholder{
+   
+width: 5.5rem;
+height: 2rem;
+left: 7.2rem;
+top: 9.7rem;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 1.6rem;
+line-height: 2rem;
+/* identical to box height */
+
+
+color: rgba(33, 36, 39, 0.5);
+}
+.homeicon{
+    position: absolute;
+width: 2.4rem;
+height: 2.4rem;
+left: 3.2rem;
+top: 15.1rem;
+}
+.home1{
+    position: absolute;
+width: 5rem;
+height: 2rem;
+left: 7.2rem;
+top: 15.3rem;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 1.6rem;
+line-height: 2rem;
+/* identical to box height */
+
+
+color: rgba(33, 36, 39, 0.9);
+}
+.info{
+    position: absolute;
+width: 5.1rem;
+height: 2rem;
+left: 7.2rem;
+top: 23.3rem;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 1.6rem;
+line-height: 20px;
+/* identical to box height */
+
+
+color: rgba(33, 36, 39, 0.9);
+}
+.infoicon{
+    position: absolute;
+    width: 2.4rem;
+    height: 2.4rem;
+    left: 3.2rem;
+    top: 23.1rem;
+       
+}
+.helpicon{
+    position: absolute;
+    width: 2.4rem;
+    height: 2.4rem;
+    left: 3.2rem;
+    top: 19.1rem;
+}
+.help{
+    position: absolute;
+    width: 14.5rem;
+    height: 2rem;
+    left: 7.2rem;
+    top: 19.3rem;
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    /* identical to box height */
+    
+    
+    color: rgba(33, 36, 39, 0.9);
+        
+}
+.arrowicon{
+    position: absolute;
+width: 1.6rem;
+height: 1.6rem;
+left: 23.6rem;
+top: 27.5rem;
+
+}
+.popularicon{
+    position: absolute;
+width: 2.4rem;
+height: 2.4rem;
+left: 3.2rem;
+top: 27.1rem;
+}
+.popular{
+    position: absolute;
+width: 15.6rem;
+height: 2rem;
+left: 7.2rem;
+top: 27.3rem;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 1.6rem;
+line-height: 2rem;
+/* identical to box height */
+
+
+color: rgba(33, 36, 39, 0.9);
+
+
+}
+.loginbuttonside{
+    position: absolute;
+width: 24.1rem;
+height: 4rem;
+left: 1.6rem;
+top: 57.1rem;
+
+background: #212427;
+border-radius: 0.5rem;
+}
+.signupbuttonside{
+    box-sizing: border-box;
+
+position: absolute;
+width: 24.1rem;
+height: 4rem;
+left: 1.6rem;
+top: 63.5rem;
+background: #ffffff;
+border: 0.1rem solid rgba(33, 36, 39, 0.3);
+border-radius: 0.5rem;
+}
