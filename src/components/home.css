@@ -1,0 +1,511 @@
+html{
+    font-size: 100%;
+}
+.imagehome{
+    position: absolute;
+    width: 46vw;
+    height: 59vh;
+    left: 4vw;
+    top: 30vh;
+
+}
+.welcome{
+    display: inline-block;
+    position: absolute;
+    width: 36vw;
+    height: 9vh;
+    left: 61vw;
+    top: 27vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 59px;
+    color: #212427;
+
+}
+.grow{
+    display: inline-block;
+    position: absolute;
+    width: 24vw;
+    height: 5vh;
+    left: 68vw;
+    top: 39vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 29px;
+    color: #212427;
+}
+.explore-box{
+    display: inline-block;
+    position: absolute;
+    width: 11vw;
+    height: 6vh;
+    left: 73vw;
+    top: 48vh;
+    background: #212427;
+    border-radius: 1rem;
+}
+.explore{
+    display: inline-block;
+    margin-left: 1.6vw;
+    margin-top: 1.5vh;
+    width: 11vw;
+    height: 3vh;
+    /* left: 1031px; */
+    /* top: 325px; */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+.communities{
+    display: inline-block;
+    position: absolute;
+    width: 16vw;
+    height: 3vh;
+    left: 74vw;
+    top: 58vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 20px;
+    color: #212427;
+} 
+.ask-box{
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 10vw;
+    height: 6vh;
+    left: 61vw;
+    top: 65.5vh;
+    border: 1px solid #212427;
+    border-radius: 1rem;
+}     
+.ask{
+    margin-left: 1.6vw;
+    margin-top: 1.5vh;
+    width: 14vh;
+    height: 3vh;
+    /* left: 860px; */
+    /* top: 439px; */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 20px;
+    color: #212427;
+}
+.football-box{
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 10vw;
+    height: 6vh;
+    left: 72vw;
+    top: 65.5vh;
+    border: 1px solid #212427;
+    border-radius: 1rem;
+}
+.football{
+    margin-left: 2vw;
+    margin-top: 1.5vh;
+    width: 14vh;
+    height: 3vh;
+    /* left: 860px; */
+    /* top: 439px; */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 20px;
+    color: #212427;
+}  
+.leagueoflegens-box{
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 14vw;
+    height: 6vh;
+    left: 83vw;
+    top: 65.5vh;
+    border: 1px solid #212427;
+    border-radius: 1rem;
+} 
+.leagueoflegens{
+    margin-left: 1.6vw;
+    margin-top: 1.5vh;
+    width: 22vh;
+    height: 3vh;
+    /* left: 860px; */
+    /* top: 439px; */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 20px;
+    color: #212427;
+}
+.marvel-box{
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 11vw;
+    height: 6vh;
+    left: 60vw;
+    top: 74vh;
+    border: 1px solid #212427;
+    border-radius: 1rem;
+}
+.marvel{
+    margin-left: 1.3vw;
+    margin-top: 1.5vh;
+    width: 18vh;
+    height: 3vh;
+    /* left: 860px; */
+    /* top: 439px; */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 20px;
+    color: #212427;
+}  
+.minecraft-bax{
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 10vw;
+    height: 6vh;
+    left: 72vw;
+    top: 74vh;
+    border: 1px solid #212427;
+    border-radius: 1rem;
+}   
+.minecraft{
+    margin-left: 1.9vw;
+    margin-top: 1.5vh;
+    width: 14vh;
+    height: 3vh;
+    /* left: 860px; */
+    /* top: 439px; */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 20px;
+    color: #212427;
+}
+.travel-box{
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 12vw;
+    height: 6vh;
+    left: 84vw;
+    top: 74vh;
+    border: 1px solid #212427;
+    border-radius: 1rem;
+}
+.travel{
+    margin-left: 1.6vw;
+    margin-top: 1.5vh;
+    width: 17vh;
+    height: 3vh;
+    /* left: 860px; */
+    /* top: 439px; */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 20px;
+    color: #212427;
+}
+.esport-box{
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 10vw;
+    height: 6vh;
+    left: 57vw;
+    top: 82.5vh;
+    border: 1px solid #212427;
+    border-radius: 1rem;
+}
+
+.esport{
+    margin-left: 2.5vw;
+    margin-top: 1.5vh;
+    width: 14vh;
+    height: 3vh;
+    /* left: 860px; */
+    /* top: 439px; */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 20px;
+    color: #212427;
+}
+.robotics-box{
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 10vw;
+    height: 6vh;
+    left: 68vw;
+    top: 82.5vh;
+    border: 1px solid #212427;
+    border-radius: 1rem;
+}
+.robotics{
+    margin-left: 2.2vw;
+    margin-top: 1.5vh;
+    width: 14vh;
+    height: 3vh;
+    /* left: 860px; */
+    /* top: 439px; */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 20px;
+    color: #212427;
+}
+.running-box{
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 9vw;
+    height: 6vh;
+    left: 79vw;
+    top: 82.5vh;
+    border: 1px solid #212427;
+    border-radius: 1rem;
+}
+.running{
+    margin-left: 1.7vw;
+    margin-top: 1.5vh;
+    width: 14vh;
+    height: 3vh;
+    /* left: 860px; */
+    /* top: 439px; */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 20px;
+    color: #212427;
+}
+.login-box{
+    display: none;
+}
+.login1{
+    display: none;
+}
+.already{
+    display: none;
+}
+.formula-box{
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 8vw;
+    height: 6vh;
+    left: 89vw;
+    top: 82.5vh;
+    border: 1px solid #212427;
+    border-radius: 1rem;
+}
+.formula{
+    margin-left: 1.1vw;
+    margin-top: 1.5vh;
+    width: 14vh;
+    height: 3vh;
+    /* left: 860px; */
+    /* top: 439px; */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 20px;
+    color: #212427;
+}
+@media screen and (max-width: 425px){
+.imagehome{
+    position: absolute;
+    width: 85vw;
+    height: 50vh;
+    left: 8vw;
+    top: 4vh;
+}  
+.welcome{
+    position: absolute;
+    width: 71vw;
+    height: 88px;
+    left: 16vw;
+    top: 50vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 44px;
+    text-align: center;
+    color: #212427;
+} 
+.grow{
+    position: absolute;
+    width: 61vw;
+    height: 4vh;
+    left: 23vw;
+    top: 66vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 20px;
+    color: #212427;
+
+}
+.explore-box{
+    position: absolute;
+    width: 75vw;
+    height: 6vh;
+    left: 16vw;
+    top: 73vh;
+    background: #212427;
+    border-radius: 2rem;
+}
+.explore{
+    margin-left: 18px;
+    margin-top: 10px;
+    width: 30vw;
+}
+.login-box{
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 64vw;
+    height: 5vh;
+    left: 20vw;
+    top: 80vh;
+    border: 1px solid #212427;
+    border-radius: 2rem;
+}
+.login1{
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    padding-left: 26vw;
+    padding-top: 1vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 20px;
+    color: #212427;
+}
+.already{
+    display: inline-block;
+    position: absolute;
+    width: 61vw;
+    height: 5vh;
+    left: 26vw;
+    top: 90vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 15px;
+    color: #212427;
+
+}
+.communities{
+    display:none;
+} 
+.ask-box{
+    display:none;
+}     
+.ask{
+    display:none;
+}
+.football-box{
+    display:none;
+}
+.football{
+    display:none;
+}  
+.leagueoflegens-box{
+    display:none;
+} 
+.leagueoflegens{
+    display:none;
+}
+.marvel-box{
+    display:none;
+}
+.marvel{
+    display:none;
+
+}  
+.minecraft-bax{
+    display:none;
+}   
+.minecraft{
+    display:none;
+}
+.travel-box{
+    display:none;
+}
+.travel{
+    display:none;
+
+
+}
+.esport-box{
+    display:none;
+
+}
+.explore{
+    padding-left: 20vw;
+}
+
+.esport{
+    display:none;
+
+}
+.robotics-box{
+    display:none;
+}
+.robotics{
+    display:none;
+   
+
+}
+.running-box{
+    
+  display: none;
+
+}
+.running{
+  display: none;
+}
+
+.formula-box{
+    box-sizing: border-box;
+    display: none;
+
+}
+.formula{
+    display: none;
+   
+}
+
+
+}

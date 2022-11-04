@@ -1,0 +1,417 @@
+.signimg{
+    position: absolute;
+    left: 3.89%;
+    right: 49.31%;
+    top: 17.96%;
+    bottom: 8.63%;
+    width: 50vw;
+    height: 78vh;
+
+}
+.create{
+    position: absolute;
+    width: 37vw;
+    height: 9vh;
+    left: 62vw;
+    top: 15vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 59px;
+    color: #212427;
+}
+.details{
+    position: absolute;
+    width: 13vw;
+    height: 20px;
+    left: 74vw;
+    top: 25vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 20px;
+    color: #212427;
+}
+.input{
+    box-sizing: border-box;
+    position: absolute;
+    width: 31vw;
+    height: 6.5vh;
+    left: 63vw;
+    top: 31vh;
+    border: 1px solid #212427;
+    border-radius: .5rem;
+    padding-left: 3vw;
+}
+.usericon{
+    position: absolute;
+    height: 3.5vh;
+    left: 64vw;
+    top: 32.5vh;
+    z-index: 1;
+}
+.usererror{
+    position: absolute;
+    top: 20vh;
+    left: 30vw;
+    width: 30vw;
+    height: 20vh;
+    font-size: 2rem;
+}
+.input1{
+    box-sizing: border-box;
+    position: absolute;
+    width: 31vw;
+    height: 6.5vh;
+    left: 63vw;
+    top: 42vh;
+    border: 1px solid #212427;
+    border-radius: .5rem;
+    padding-left: 3vw;
+}
+.mailicon{
+    position: absolute;
+    height: 3.5vh;
+    left: 64vw;
+    top: 43.5vh;
+    z-index: 1;
+}
+
+.input2{
+    box-sizing: border-box;
+    position: absolute;
+    width: 31vw;
+    height: 6.5vh;
+    left: 63vw;
+    top: 54vh;
+    border: 1px solid #212427;
+    border-radius: .5rem;
+    padding-left: 3vw;
+}
+.passwordicon{
+    position: absolute;
+    height: 3.5vh;
+    left: 64vw;
+    top: 55.5vh;
+    z-index: 1;
+}
+.input3{
+    box-sizing: border-box;
+    position: absolute;
+    width: 31vw;
+    height: 6.5vh;
+    left: 63vw;
+    top: 66vh;
+    border: 1px solid #212427;
+    border-radius: .5rem;
+    padding-left: 3vw;
+}
+.passwordicon1{
+    position: absolute;
+    height: 3.5vh;
+    left: 64vw;
+    top: 67.5vh;
+    z-index: 1;
+}
+.continuebutton{
+    position: absolute;
+    width: 425px;
+    height: 40px;
+    left: 63vw;
+    top: 78vh;
+    background: #212427;
+    border-radius: .5rem;
+}
+.clicking{
+    position: absolute;
+    width: 30vw;
+    height: 7vh;
+    left: 64vw;
+    top: 85vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 15px;
+    letter-spacing: -0.02em;
+    color: #212427;
+}
+.registered{
+    position: absolute;
+    width: 20vw;
+    height: 6vh;
+    left: 70vw;
+    top: 89vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    color: rgba(61, 124, 152, 0.6);
+
+
+}
+.continuetext{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+
+}
+.error{
+    display: inline-block;
+    position: absolute;
+    width: 31vw;
+    height: 5vh;
+    left: 63vw;
+    top: 60.655vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.85rem;
+    /* line-height: 17px; */
+    color: #af4242;
+    background-color: #fde8ec;
+    text-align: center;
+    border: 1px solid #af4242;
+    border-radius: 0.5rem;
+}
+.emailerror{
+    display: inline-block;
+    position: absolute;
+    width: 31vw;
+    height: 4vh;
+    left: 63vw;
+    top: 49vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 17px;
+    color: #af4242;
+    background-color: #fde8ec;
+    text-align: center;
+    border: 1px solid #af4242;
+    border-radius: 0.5rem;
+}
+.errorconfirm{
+    display: inline-block;
+    position: absolute;
+    width: 31vw;
+    height: 4vh;
+    left: 63vw;
+    top: 73vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 17px;
+    color: #af4242;
+    background-color: #fde8ec;
+    text-align: center;
+    border: 1px solid #af4242;
+    border-radius: 0.5rem;
+
+}
+::placeholder{
+    /* text-indent: 3vw; */
+    color: #212427;
+}
+@keyframes showerror {
+    0%{
+        transform: translateX(100%);
+    }
+    40%{
+        transform: translateX(-10%);
+    }
+    80%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+    
+}
+
+
+.usererrorbox{
+    display: none;
+    background: #ffdb9b;
+    width: 26.5rem;
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    border: 0.25rem;
+    border-left: 0.5rem solid #ffa502;
+    animation: showerror 1s ease forwards;
+   
+    
+}
+.usererrorbox .errorimg{
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+}
+.usererrorbox .usererror1{
+    padding: 0 1.25rem;
+    font-size: 1.125rem;
+    color: #ce8500;
+}
+
+@media screen and (max-width: 425px){
+ .signimg{
+    position: absolute;
+    left: 19.89%;
+    right: 49.31%;
+    top: 1.96%;
+    bottom: 8.63%;
+    width: 63vw;
+    height: 29vh;
+ }   
+ .create{
+    top: 32vh;
+    left: 13vw;
+    width: 82vw;
+    height: 12vh;
+    font-size: 2rem;
+ }
+ .details{
+    top: 39vh;
+    left: 27vw;
+    width: 43vw;
+    height: 4vh;
+ }
+ .input{
+    top: 45vh;
+    left: 10vw;
+    width: 84vw;
+    height: 6vh;
+    padding-left: 7vw;
+ }
+ .input1{
+    top: 55vh;
+    left: 10vw;
+    width: 84vw;
+    height: 6vh;
+    padding-left: 7vw;
+ }
+ .input2{
+    top: 64vh;
+    left: 10vw;
+    width: 84vw;
+    height: 6vh;
+    padding-left: 5vw;
+    padding-left: 7vw;
+ }
+ .input3{
+    top: 75vh;
+    left: 10vw;
+    width: 84vw;
+    height: 6vh;
+    padding-left: 7vw;
+ }
+ .continuebutton{
+    top: 83vh;
+    left: 10vw;
+    width: 81vw;
+    height: 7vh;
+ }
+ .clicking{
+    top: 91vh;
+    left: 12vw;
+    width: 80vw;
+    height: 7vh;
+    font-size: 0.85rem;
+ }
+ .continuetext{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 20px;
+    color: #FFFFFF;
+ }
+.registered{
+    top: 96vh;
+    left: 22vw;
+    width: 49vw;
+    height: 10vh;
+    font-size: 1rem
+}
+.error{
+    display: inline-block;
+    position: absolute;
+    width: 83vw;
+    height: 5vh;
+    left: 10vw;
+    top: 70vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 17px;
+    color: rgba(255, 0, 0, 0.66);
+}
+
+.emailerror{
+    display: inline-block;
+    position: absolute;
+    width: 42vw;
+    height: 2vh;
+    left: 11vw;
+    top: 61.5vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.85rem;
+    line-height: 17px;
+    color: rgba(255, 0, 0, 0.66);
+
+}
+.errorconfirm{
+    display: inline-block;
+    position: absolute;
+    width: 80vw;
+    height: 3vh;
+    left: 10vw;
+    top: 80.5vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 17px;
+    color: rgba(255, 0, 0, 0.66);
+
+}
+.passwordicon1{
+    top: 76vh;
+    left: 11vw;
+    height:3.5vh;
+}
+.passwordicon{
+    top: 66vh;
+    left: 11vw;
+    height:3.5vh;
+}
+.usericon{
+    top: 46vh;
+    left: 11vw;
+    height:3.5vh;
+}
+.mailicon{
+    top: 56vh;
+    left: 11vw;
+    height: 3.5vh;
+}
+ 
+}

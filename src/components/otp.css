@@ -1,0 +1,198 @@
+.otpimg{
+    position: absolute;
+    left: 3.89%;
+    right: 49.31%;
+    top: 17.96%;
+    bottom: 8.63%;
+    
+     width:674px;
+     height :519px;
+}
+.verify{
+    position: absolute;
+    width: 29vw;
+    height: 8vh;
+    left: 65.5vw;
+    top: 27.5vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 59px;
+    color: #212427E5;
+}
+.otpfield{
+    box-sizing: border-box;
+    position: absolute;
+    width: 31vw;
+    height: 6.5vh;
+    left: 63vw;
+    top: 46vh;
+    border: 1px solid #212427;
+    border-radius: .5rem;
+}
+.enterotp{
+    position: absolute;
+    width: 28vw;
+    height: 6vh;
+    left: 65vw;
+    top: 39vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 20px;
+    color: #212427;
+}
+.verifybutton{
+    position: absolute;
+    width: 30vw;
+    height: 40px;
+    left: 63.5vw;
+    top: 55vh;
+    background: #212427;
+    border-radius: .5rem;
+}
+.otperror{
+    position: absolute;
+    width: 50vw;
+    height: 6vh;
+    left: 20vw;
+    top: 20vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 20px;
+    color: #212427;
+}
+.verifytext{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 20px;
+    /* identical to box height */
+    
+    
+    color: #FFFFFF;
+}
+.resendotp{
+    position: absolute;
+    width: 15vw;
+    height: 5vh;
+    left: 74.5vw;
+    top: 66vh;
+    background: white;
+    border-radius: .5rem;
+}
+.resendtimer{
+    position: absolute;
+    width: 28vw;
+    height: 6vh;
+    left: 90vw;
+    top: 66.5vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 20px;
+    color: #212427; 
+}
+@keyframes showerror {
+    0%{
+        transform: translateX(100%);
+    }
+    40%{
+        transform: translateX(-10%);
+    }
+    80%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+.usererrorboxotp{
+    display: none;
+    background: #ffdb9b;
+    width: 26.5rem;
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    border: 0.25rem;
+    border-left: 0.5rem solid #ffa502;
+    animation: showerror 1s ease forwards;
+}
+.usererrorboxotp .errorimgotp{
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+}
+.usererrorboxotp .usererror1otp{
+    padding: 0 1.25rem;
+    font-size: 1.125rem;
+    color: #ce8500;
+}
+@media screen and (max-width: 425px){
+    .otpimg{
+       position: absolute;
+       left: 19.89%;
+       right: 49.31%;
+       top: 1.96%;
+       bottom: 8.63%;
+       width: 63vw;
+       height: 29vh;
+    }   
+    .verify{
+       top: 32vh;
+       left: 15vw;
+       width: 82vw;
+       height: 12vh;
+       font-size: 2rem;
+    }
+    .enterotp{
+       top: 47vh;
+       left: 3vw;
+       width: 95vw;
+       height: 4vh;
+    }
+   
+    .otpfield{
+       top: 55vh;
+       left: 10vw;
+       width: 84vw;
+       height: 6vh;
+    }
+    .verifybutton{
+        top: 67vh;
+        left: 20vw;
+        width: 60vw;
+        height: 7vh;
+        background: #212427;
+    }
+    .resendotp{
+        top: 80vh;
+        left: 28vw;
+        width: 43vw;
+        height: 6vh;
+        font-size: 1.1rem;
+    }
+   
+    .resendtimer{
+        position: absolute;
+        width: 20vw;
+        height: 4vh;
+        left: 73vw;
+        top: 81vh;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.1rem;
+        line-height: 20px;
+        color: #212427;
+    }
+    
+   }

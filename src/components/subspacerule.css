@@ -1,0 +1,114 @@
+.rulessubspace{
+    float: right;
+    width: 27.3rem;
+    height: 70.7rem;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    /* position: fixed; */
+    position: sticky;
+}
+.description{
+    position: absolute;
+    width: 14.6rem;
+    height: 2rem;
+    left: 9.4rem;
+    top: 1.6rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #212427;
+}
+.descriptiontext{
+    position: absolute;
+    width: 25.9rem;
+    height: 6rem;
+    top: 5.7rem;
+    left: 1rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #000000;
+}
+.rules{
+    position: absolute;
+    width: 14.6rem;
+    height: 2rem;
+    left: 11.4rem;
+    top: 26.6rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #212427;
+
+}
+.rulestext{
+    position: absolute;
+    width: 24.9rem;
+    height: 11rem;
+    top: 33.7rem;
+    left: 1rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #000000;
+}
+.spaceprivacy{
+    
+    position: absolute;
+    width: 109px;
+    height: 20px;
+    left: 70px;
+    top: 547px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(33, 36, 39, 0.5);
+}
+
+.spaceagreement{
+    position: absolute;
+    width: 13.3rem;
+    height: 2rem;
+    top: 59.7rem;
+    left: 6rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: rgba(33, 36, 39, 0.5);
+}
+
+.spacecontact{
+    
+    position: absolute;
+    width: 8.9rem;
+    height: 2rem;
+    top: 64.5rem;
+    left: 8rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: rgba(33, 36, 39, 0.5);
+}
+.yearspace{
+    position: absolute;
+    width: 12.3rem;
+    height: 2rem;
+    top: 68.1rem;
+    left: 10rem;
+
+}
+

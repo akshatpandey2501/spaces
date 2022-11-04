@@ -1,0 +1,98 @@
+html{
+    font-size: 50%;
+}
+.card{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 84.6rem;
+    height: 37.3rem;
+    left: 29.7rem;
+    top: 42.9rem;
+
+background: #FFFFFF;
+box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+border-radius: 0.2rem;
+
+}
+.upvoteicon{
+    position: absolute;
+    left: 69.51%;
+    right: 29.38%;
+    top: 8.16%;
+    bottom: 64.73%;
+}
+.upvotes{
+    position: absolute;
+    width: 2.3rem;
+    height: 1.5rem;
+    left: 62.7rem;
+    top: 3.1rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: rgba(33, 36, 39, 0.9);
+
+}
+.downvoteicon{
+    position: absolute;
+    width: 1.6rem;
+    height: 1.6rem;
+    top: 3rem;
+    left: 68rem;
+}
+.comment{
+    position: absolute;
+    left: 85.5%;
+    /* right: 12.5%; */
+    top: 7.5%;
+    bottom: 12.5%;
+    border: 2px solid rgba(33, 36, 39, 0.71);
+}
+.comments{
+    position: absolute;
+    width: 2.5rem;
+    height: 1.5rem;
+    top: 3.3rem;
+    left: 76rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: rgba(33, 36, 39, 0.9);
+
+}
+.posttext{
+    position: absolute;
+    width: 81.4rem;
+    height: 5rem;
+    left: 2.3rem;
+    top: 6.5rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #212427;
+
+}
+
+.postimg{
+    position: absolute;
+width: 40.2rem;
+height: 23.7rem;
+left: 7.9rem;
+top: 12rem;
+}
+.cardbox{
+    box-sizing: border-box;
+
+position: absolute;
+width: 84.6rem;
+height: 37.3rem;
+left: 29.7rem;
+top: 16.7rem;
+}

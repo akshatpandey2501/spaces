@@ -1,0 +1,77 @@
+html{
+    font-size: 55%;
+}
+.trending{
+    position: absolute;
+width: 14.8rem;
+height: 3.9rem;
+left: 29.7rem;
+top: 1.6rem;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 3.2rem;
+line-height: 3.9rem;
+/* identical to box height */
+
+
+color: #000000;
+
+}
+.trendingimg{
+    position: absolute;
+    width: 62.8rem;
+    height: 27rem;
+    left: 30rem;
+    top: 7rem;
+}
+.bar{
+    position: absolute;
+    width: 79rem;
+    height: 4.8rem;
+    left: 29.7rem;
+    top: 37.1rem;
+    background: #FFFBFB;
+}
+.card{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 84.6rem;
+    height: 37.3rem;
+    left: 29.7rem;
+    top: 42.9rem;
+
+background: #FFFFFF;
+box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+border-radius: 0.2rem;
+
+}
+
+.new{
+    position: absolute;
+    width: 4rem;
+    height: 2rem;
+    left: 14.5rem;
+    top: 0.5rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #000000;
+}
+.top{
+    position: absolute;
+    width: 3.8rem;
+    height: 2rem;
+    left: 2rem;
+    top: 0.5rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #000000;
+}

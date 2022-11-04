@@ -1,0 +1,220 @@
+.resetimg{
+    position: absolute;
+    left: 3.89%;
+    right: 49.31%;
+    top: 17.96%;
+    bottom: 8.63%;
+    
+     width:674px;
+     height :519px;
+}
+.resetpass{
+    position: absolute;
+    width: 29vw;
+    height: 8vh;
+    left: 65.5vw;
+    top: 27.5vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 59px;
+    color: #212427E5;
+}
+.createnew{
+    position: absolute;
+    width: 28vw;
+    height: 6vh;
+    left: 65vw;
+    top: 39vh;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 20px;
+    color: #212427;
+}
+.newpass{
+    box-sizing: border-box;
+    position: absolute;
+    width: 31vw;
+    height: 6.5vh;
+    left: 63vw;
+    top: 46vh;
+    border: 1px solid #212427;
+    border-radius: .5rem;
+    padding-left: 3vw;
+}
+.cnfnewpass{
+    box-sizing: border-box;
+    position: absolute;
+    width: 31vw;
+    height: 6.5vh;
+    left: 63vw;
+    top: 56vh;
+    border: 1px solid #212427;
+    border-radius: .5rem;
+    padding-left: 3vw;
+}
+.verifybutton1{
+    position: absolute;
+    width: 30vw;
+    height: 40px;
+    left: 63.5vw;
+    top: 65vh;
+    background: #212427;
+    border-radius: .5rem;
+}
+.verifytext1{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 20px;
+    /* identical to box height */
+    
+    
+    color: #FFFFFF;
+}
+.respasswordicon{
+    
+        position: absolute;
+        height: 3.5vh;
+        left: 64vw;
+        top: 47.3vh;
+        z-index: 1;    
+    
+}
+
+.respasswordiconcnf{
+    
+    position: absolute;
+    height: 3.5vh;
+    left: 64vw;
+    top: 57.7vh;
+    z-index: 1;    
+
+}
+@keyframes showerror {
+    0%{
+        transform: translateX(100%);
+    }
+    40%{
+        transform: translateX(-10%);
+    }
+    80%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+    
+}
+
+
+.usererrorboxreset{
+    display: none;
+    background: #ffdb9b;
+    width: 26.5rem;
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    border: 0.25rem;
+    border-left: 0.5rem solid #ffa502;
+    animation: showerror 1s ease forwards;
+   
+    
+}
+.usererrorboxreset .errorimgreset{
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+}
+.usererrorboxreset .usererror1reset{
+    padding: 0 1.25rem;
+    font-size: 1.125rem;
+    color: #ce8500;
+}
+@media screen and (max-width: 425px){
+    .resetimg{
+       position: absolute;
+       left: 19.89%;
+       right: 49.31%;
+       top: 1.96%;
+       bottom: 8.63%;
+       width: 63vw;
+       height: 29vh;
+    }   
+    .resetpass{
+        top: 34vh;
+        left: 17vw;
+        width: 82vw;
+        height: 12vh;
+        font-size: 2rem;
+    }
+    .createnew{
+        top: 46vh;
+        left: 22vw;
+        width: 65vw;
+        height: 4vh;
+    }
+  
+    .newpass{
+       top: 55vh;
+       left: 10vw;
+       width: 84vw;
+       height: 6vh;
+       padding-left: 5vw;
+    }
+    .cnfnewpass{
+       top: 64vh;
+       left: 10vw;
+       width: 84vw;
+       height: 6vh;
+       padding-left: 5vw;
+    }
+ 
+    .verifybutton1{
+       top: 83vh;
+       left: 10vw;
+       width: 81vw;
+       height: 7vh;
+       background: #212427;
+    }
+    .clicking1{
+       top: 91vh;
+       left: 12vw;
+       width: 80vw;
+       height: 6vh;
+       font-size: 1.1rem;
+    }
+    .verifytext1{
+        height: 5vh;
+        margin-top: 1.5vh;
+       font-family: 'Montserrat';
+       font-style: normal;
+       font-weight: 700;
+       font-size: 1.5rem;
+       line-height: 20px;
+       color: #FFFFFF;
+    }
+ .respasswordicon{
+    position: absolute;
+    height: 2.5vh;
+    left: 12vw;
+    top: 56.5vh;
+    z-index: 1;
+ }
+ .respasswordiconcnf{
+    position: absolute;
+    height: 2.5vh;
+    left: 12vw;
+    top: 65.5vh;
+    z-index: 1;
+ }
+
+   
+    
+   }

@@ -1,0 +1,193 @@
+.loginimg{
+    position: absolute;
+    left: 3.89%;
+    right: 49.31%;
+    top: 17.96%;
+    bottom: 8.63%;
+    
+     width:674px;
+     height :519px;
+
+}
+.forgot1{
+    position: absolute;
+    width: 460px;
+    height: 59px;
+    left: 850px;
+    top: 221px;
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    /* identical to box height */
+    
+    
+    color: #212427;
+    
+}
+.send{
+    position: absolute;
+width: 343px;
+height: 20px;
+left: 1012px;
+top: 284px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+
+color: #212427;
+}
+::placeholder{
+    
+    color: #212427;
+}
+.giveemail{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 425px;
+    height: 40px;
+    left: 867px;
+    top: 332px;
+    padding-left: 3vw;
+    border: 1px solid #212427;
+    border-radius: 5px;
+}
+.forgottext{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+    
+    
+    color: #FFFFFF;
+}
+.forgotbutton{
+    position: absolute;
+    width: 425px;
+   height: 40px;
+   left: 867px;
+   top: 403px;
+ 
+   background: #3D7C98;
+   border-radius: 5px;
+}
+.giveemailicon{
+    position: absolute;
+    height: 3.5vh;
+    left: 64vw;
+    top: 51.7vh;
+    z-index: 1;    
+}
+@keyframes showerror {
+    0%{
+        transform: translateX(100%);
+    }
+    40%{
+        transform: translateX(-10%);
+    }
+    80%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+    
+}
+
+
+.usererrorboxforgot{
+    display: none;
+    background: #ffdb9b;
+    width: 26.5rem;
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    border: 0.25rem;
+    border-left: 0.5rem solid #ffa502;
+    animation: showerror 1s ease forwards;
+   
+    
+}
+.usererrorboxforgot .errorimgforgot{
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+}
+.usererrorboxforgot .usererror1forgot{
+    padding: 0 1.25rem;
+    font-size: 1.125rem;
+    color: #ce8500;
+}
+@media screen and (max-width: 425px){
+    .loginimg{
+       position: absolute;
+       left: 19.89%;
+       right: 49.31%;
+       top: 2.96%;
+       bottom: 8.63%;
+       width: 63vw;
+       height: 29vh;
+    }   
+    .forgot1{
+        top: 37vh;
+        left: 13vw;
+        width: 82vw;
+        height: 12vh;
+        font-size: 2rem;
+    }
+    .send{
+        top: 49vh;
+        left: 15vw;
+        width: 75vw;
+        height: 7vh;
+    }
+
+   
+    .giveemail{
+        top: 61vh;
+        
+        left: 15vw;
+        width: 75vw;
+        height: 7vh;
+    }
+  
+    .forgotbutton{
+        position: absolute;
+        width: 50vw;
+        height: 6vh;
+        top: 73vh;
+        left: 24vw;
+        background: #3D7C98;
+        border-radius: .5rem;
+    }
+
+    .forgottext{
+       font-family: 'Montserrat';
+       font-style: normal;
+       font-weight: 700;
+       font-size: 1.5rem;
+       line-height: 20px;
+       color: #FFFFFF;
+    }
+    .giveemailicon{
+        position: absolute;
+        height: 2.5vh;
+        left: 16vw;
+        top: 63.3vh;
+        z-index: 1;
+    }
+    
+   }
+  
