@@ -6,7 +6,7 @@ return(
     <div className="topcomm">
         <p className="topcommtext">Top Communities</p>
         <ol>
-            <li className="listitem"><p className="topcommname1">ghjhkjmv</p><img src={Personsvg} alt="person" className="personicon" /><p className="topcommfollower">34k</p></li>
+            <li><p className="topcommname1">ghjhkjmv</p><img src={Personsvg} alt="person" className="personicon" /><p className="topcommfollower">34k</p></li>
             {/* <li><p className="topcommname2">akshat</p><img src={Personsvg} alt="person" className="personicon1" /><p className="topcommfollower1">44k</p></li>
             <li><p className="topcommname3">ghjhkjmv</p><img src={Personsvg} alt="person" className="personicon2" /><p className="topcommfollower">54k</p></li> */}
         </ol>

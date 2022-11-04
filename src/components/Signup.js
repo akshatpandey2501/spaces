@@ -3,6 +3,7 @@ import React from "react";
 import axios from "axios";
 import { useState,useEffect } from "react";
 import "./signup.css";
+import Nav from "../Nav";
 import Signupsvg from "../images/signup.svg"
 import Mailsvg from "../images/fluent_mail-20-filled.svg"
 import Usersvg from "../images/username.svg"
@@ -122,7 +123,7 @@ function Signup(){
 
     return(
       
-        <div className="signup"><div className="usererrorbox" style={{display: isShown ? 'block' : 'none'}}><img src={Errorsvg} className="errorimg" alt="signup error"></img><p className="usererror1">{signerror}</p></div>
+        <div className="signup"><Nav/><div className="usererrorbox" style={{display: isShown ? 'block' : 'none'}}><img src={Errorsvg} className="errorimg" alt="signup error"></img><p className="usererror1">{signerror}</p></div>
           <img src={Signupsvg} alt="signup" className="signimg" />
          <p className="create">Create an account</p> 
          <p className="details">Enter your details</p>

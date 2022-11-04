@@ -87,3 +87,12 @@ height: 23.7rem;
 left: 7.9rem;
 top: 12rem;
 }
+.cardbox{
+    box-sizing: border-box;
+
+position: absolute;
+width: 84.6rem;
+height: 37.3rem;
+left: 29.7rem;
+top: 16.7rem;
+}

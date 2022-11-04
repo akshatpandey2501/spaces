@@ -1,5 +1,5 @@
 import React from "react";
-import { Route,Routes,Link } from "react-router-dom";
+import { Route,Routes } from "react-router-dom";
 import Home from "./components/Home";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
@@ -11,11 +11,12 @@ import Reset from "./components/Reset";
 import Success from "./components/Success";
 import Explore from "./components/Explore"
 import Userloginpage from "./components/Userloginpage";
+import Subspacecreated from "./components/Subspacecreated";
 
 function App(){
     return(
        <div>
-         <div className="navbar">
+         {/* <div className="navbar">
             <p className="appname">SPACES</p>
             <ul>
             <li><Link to="/" style={{ textDecoration: 'none',color:'black' }}>Home</Link> </li>
@@ -23,7 +24,7 @@ function App(){
             <li><Link to="/Login" style={{ textDecoration: 'none',color:'black' }} >Login</Link> </li>
             </ul>
            
-        </div>
+        </div> */}
         <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/Login" element={<Login/>} />
@@ -35,6 +36,7 @@ function App(){
             <Route path="/Success" element={<Success/>} />
             <Route path="/Explore" element={<Explore/>} />
             <Route path="/Userlogin" element={<Userloginpage/>}/>
+            <Route path="/Subspacecreated" element={<Subspacecreated/>}/>
         </Routes>
         
         </div>

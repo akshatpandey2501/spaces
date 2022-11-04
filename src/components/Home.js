@@ -1,10 +1,11 @@
 import React from "react";
 import "./home.css";
+import Nav from "../Nav";
 import Homesvg from "../images/home.svg"
 import { Link } from "react-router-dom";
 function Home (){
     return(
-        <div className="home">
+        <div className="home"><Nav/>
             <img src={Homesvg} className="imagehome"  alt="home"/>         
             <div> <p className="welcome">Welcome To Spaces</p></div>
            <div><p className="grow">A place where ideas grow</p></div>

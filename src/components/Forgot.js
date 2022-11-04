@@ -32,9 +32,9 @@ function Forgot(){
           })
           .catch((err) => {
             console.log(err);
-            setIsShow(true)
-            setSignError(err.response.data.msg)
             
+            setSignError(err.response.data.msg)
+            setIsShow(true)
          
           })
     }
