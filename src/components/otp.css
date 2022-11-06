@@ -17,7 +17,7 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 5rem;
     line-height: 59px;
     color: #212427E5;
 }
@@ -40,18 +40,18 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 2.1rem;
     line-height: 20px;
     color: #212427;
 }
 .verifybutton{
     position: absolute;
     width: 30vw;
-    height: 40px;
+    height: 5rem;
     left: 63.5vw;
     top: 55vh;
     background: #212427;
-    border-radius: .5rem;
+    border-radius: .8rem;
 }
 .otperror{
     position: absolute;
@@ -70,8 +70,8 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    font-size: 1rem;
-    line-height: 20px;
+    font-size: 2.3rem;
+    line-height: 18px;
     /* identical to box height */
     
     
@@ -84,7 +84,7 @@
     left: 74.5vw;
     top: 66vh;
     background: white;
-    border-radius: .5rem;
+    border-radius: .8rem;
 }
 .resendtimer{
     position: absolute;
@@ -95,7 +95,7 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 2.1rem;
     line-height: 20px;
     color: #212427; 
 }
@@ -136,7 +136,7 @@
     font-size: 1.125rem;
     color: #ce8500;
 }
-@media screen and (max-width: 425px){
+@media screen and (max-width: 1112px){
     .otpimg{
        position: absolute;
        left: 19.89%;
@@ -146,53 +146,60 @@
        width: 63vw;
        height: 29vh;
     }   
-    .verify{
-       top: 32vh;
-       left: 15vw;
-       width: 82vw;
-       height: 12vh;
-       font-size: 2rem;
-    }
-    .enterotp{
-       top: 47vh;
-       left: 3vw;
-       width: 95vw;
-       height: 4vh;
-    }
-   
-    .otpfield{
-       top: 55vh;
-       left: 10vw;
-       width: 84vw;
-       height: 6vh;
-    }
-    .verifybutton{
-        top: 67vh;
-        left: 20vw;
-        width: 60vw;
-        height: 7vh;
-        background: #212427;
-    }
-    .resendotp{
-        top: 80vh;
+    .resendotp {
+        top: 85vh;
         left: 28vw;
         width: 43vw;
         height: 6vh;
-        font-size: 1.1rem;
+        font-size: 3.1rem;
     }
-   
-    .resendtimer{
+    .resendtimer {
         position: absolute;
         width: 20vw;
         height: 4vh;
         left: 73vw;
-        top: 81vh;
+        top: 86vh;
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 500;
-        font-size: 1.1rem;
+        font-size: 3.1rem;
         line-height: 20px;
         color: #212427;
+    }
+    .verifybutton {
+        top: 74vh;
+        left: 29vw;
+        width: 39vw;
+        height: 7vh;
+        background: #212427;
+    }
+    .verifytext {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.3rem;
+        line-height: 18px;
+        color: #FFFFFF;
+    }
+    .otpfield {
+        top: 65vh;
+        left: 21vw;
+        width: 55vw;
+        height: 6vh;
+    }
+    .enterotp {
+        top: 58vh;
+        left: 20vw;
+        width: 57vw;
+        height: 6vh;
+        font-size: 2.1rem;
+    }
+    .verify {
+        top: 49vh;
+        left: 23vw;
+        width: 60vw;
+        height: 12vh;
+        font-size: 6rem;
     }
     
    }

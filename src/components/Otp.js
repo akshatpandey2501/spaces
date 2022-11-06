@@ -50,6 +50,7 @@ function Otp(){
     const Resendotp=e=>{
         e.preventDefault();
         
+        
         axios.post('https://spacesback-production.up.railway.app/resendotp',intell2).then((res) => {
           console.log(res);
           })

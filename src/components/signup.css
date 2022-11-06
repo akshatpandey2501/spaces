@@ -8,171 +8,94 @@
     height: 78vh;
 
 }
-.create{
-    position: absolute;
-    width: 37vw;
-    height: 9vh;
-    left: 62vw;
-    top: 15vh;
+.registered{     position: absolute;
+    width: 17rem;
+    height: 2.0rem;
+    left: 121.5rem;
+    top: 66.6rem;
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight: 700;
-    font-size: 3rem;
-    line-height: 59px;
-    color: #212427;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+    letter-spacing: -0.02em;
+    color: rgba(33, 36, 39, 0.9);
 }
-.details{
+.clicking{
     position: absolute;
-    width: 13vw;
-    height: 20px;
-    left: 74vw;
-    top: 25vh;
+    width: 42.4rem;
+    height: 1.5rem;
+    left: 91.8rem;
+    top: 63.7rem;
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight: 500;
-    font-size: 1.1rem;
-    line-height: 20px;
-    color: #212427;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.02em;
+    color: rgba(33, 36, 39, 0.9);
 }
-.input{
-    box-sizing: border-box;
+.continuebutton{
     position: absolute;
-    width: 31vw;
-    height: 6.5vh;
-    left: 63vw;
-    top: 31vh;
-    border: 1px solid #212427;
+    width: 42.5rem;
+    height: 4.0rem;
+    left: 90.7rem;
+    top: 58.3rem;
+    background: #212427;
     border-radius: .5rem;
-    padding-left: 3vw;
-}
-.usericon{
-    position: absolute;
-    height: 3.5vh;
-    left: 64vw;
-    top: 32.5vh;
-    z-index: 1;
-}
-.usererror{
-    position: absolute;
-    top: 20vh;
-    left: 30vw;
-    width: 30vw;
-    height: 20vh;
-    font-size: 2rem;
-}
-.input1{
-    box-sizing: border-box;
-    position: absolute;
-    width: 31vw;
-    height: 6.5vh;
-    left: 63vw;
-    top: 42vh;
-    border: 1px solid #212427;
-    border-radius: .5rem;
-    padding-left: 3vw;
-}
-.mailicon{
-    position: absolute;
-    height: 3.5vh;
-    left: 64vw;
-    top: 43.5vh;
-    z-index: 1;
-}
-
-.input2{
-    box-sizing: border-box;
-    position: absolute;
-    width: 31vw;
-    height: 6.5vh;
-    left: 63vw;
-    top: 54vh;
-    border: 1px solid #212427;
-    border-radius: .5rem;
-    padding-left: 3vw;
-}
-.passwordicon{
-    position: absolute;
-    height: 3.5vh;
-    left: 64vw;
-    top: 55.5vh;
-    z-index: 1;
 }
 .input3{
     box-sizing: border-box;
     position: absolute;
-    width: 31vw;
-    height: 6.5vh;
-    left: 63vw;
-    top: 66vh;
-    border: 1px solid #212427;
-    border-radius: .5rem;
-    padding-left: 3vw;
-}
-.passwordicon1{
-    position: absolute;
-    height: 3.5vh;
-    left: 64vw;
-    top: 67.5vh;
-    z-index: 1;
-}
-.continuebutton{
-    position: absolute;
-    width: 425px;
-    height: 40px;
-    left: 63vw;
-    top: 78vh;
-    background: #212427;
+    width: 53.5rem;
+    height: 4.0rem;
+    left: 86.7rem;
+    top: 49.9rem;
+    border: .1rem solid #212427;
     border-radius: .5rem;
 }
-.clicking{
+.errorconfirm{
+    display: inline-block;
     position: absolute;
-    width: 30vw;
-    height: 7vh;
-    left: 64vw;
-    top: 85vh;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 0.75rem;
-    line-height: 15px;
-    letter-spacing: -0.02em;
-    color: #212427;
-}
-.registered{
-    position: absolute;
-    width: 20vw;
-    height: 6vh;
-    left: 70vw;
-    top: 89vh;
+    width: 53rem;
+    height: 3.5rem;
+    left: 87rem;
+    top: 54.2rem;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 1rem;
-    line-height: 20px;
-    letter-spacing: -0.02em;
-    color: rgba(61, 124, 152, 0.6);
-
-
+    line-height: 17px;
+    color: #af4242;
+    background-color: #fde8ec;
+    text-align: center;
+    border: 1px solid #af4242;
+    border-radius: 0.5rem;
 }
-.continuetext{
-    font-family: 'Montserrat';
-font-style: normal;
-font-weight: 700;
-font-size: 16px;
-line-height: 20px;
-/* identical to box height */
-
-
-color: #FFFFFF;
-
+.passwordicon1{
+    position: absolute;
+    height: 3.5rem;
+    left: 87rem;
+    top: 50rem;
+    z-index: 1;
+}
+.input2{
+box-sizing: border-box;
+    position: absolute;
+    width: 53.5rem;
+    height: 4.0rem;
+    left: 86.7rem;
+    top: 40.5rem;
+    border: .1rem solid #212427;
+    border-radius: .5rem;
 }
 .error{
     display: inline-block;
     position: absolute;
-    width: 31vw;
-    height: 5vh;
-    left: 63vw;
-    top: 60.655vh;
+    width: 53rem;
+    height: 4rem;
+    left: 87rem;
+    top: 45rem;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -184,42 +107,89 @@ color: #FFFFFF;
     border: 1px solid #af4242;
     border-radius: 0.5rem;
 }
+.passwordicon{
+position: absolute;
+    height: 3.5rem;
+    left: 87rem;
+    top: 41rem;
+    z-index: 1;
+}
+.input1{
+    box-sizing: border-box;
+    position: absolute;
+    width: 53.5rem;
+    height: 4.0rem;
+    left: 86.7rem;
+    top: 32.1rem;
+    border: .1rem solid #212427;
+    border-radius: .5rem;
+}
 .emailerror{
     display: inline-block;
     position: absolute;
-    width: 31vw;
-    height: 4vh;
-    left: 63vw;
-    top: 49vh;
+    width: 53rem;
+    height: 3.5rem;
+    left: 87rem;
+    top: 36.5rem;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 1rem;
-    line-height: 17px;
     color: #af4242;
     background-color: #fde8ec;
     text-align: center;
     border: 1px solid #af4242;
     border-radius: 0.5rem;
 }
-.errorconfirm{
-    display: inline-block;
+.mailicon{
+        position: absolute;
+    height: 4rem;
+    left: 87rem;
+    top: 32rem;
+    z-index: 1;
+}
+.input{
+    box-sizing: border-box;
     position: absolute;
-    width: 31vw;
-    height: 4vh;
-    left: 63vw;
-    top: 73vh;
+    width: 53.5rem;
+    height: 4.0rem;
+    left: 86.7rem;
+    top: 23.7rem;
+    border: .1rem solid #212427;
+    border-radius: .5rem;
+}
+.usericon1{
+    position: absolute;
+    height: 3.5rem;
+    left: 87rem;
+    top: 24rem;
+    z-index: 1;
+}
+.details{
+position: absolute;
+    width: 14.3rem;
+    height: 2.0rem;
+    left: 101.2rem;
+    top: 18.5rem;
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 17px;
-    color: #af4242;
-    background-color: #fde8ec;
-    text-align: center;
-    border: 1px solid #af4242;
-    border-radius: 0.5rem;
-
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+    color: rgba(33, 36, 39, 0.9);
+}
+.create {
+    position: absolute;
+    width: 46.0rem;
+    height: 5.9rem;
+    left: 85.0rem;
+    top: 12.7rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 5.9rem;
+    color: #212427;
 }
 ::placeholder{
     /* text-indent: 3vw; */
@@ -268,8 +238,11 @@ color: #FFFFFF;
     color: #ce8500;
 }
 
-@media screen and (max-width: 425px){
- .signimg{
+@media screen and (max-width: 1130px){
+ .navbar{
+    display: none;
+ }
+    .signimg{
     position: absolute;
     left: 19.89%;
     right: 49.31%;
@@ -283,7 +256,7 @@ color: #FFFFFF;
     left: 13vw;
     width: 82vw;
     height: 12vh;
-    font-size: 2rem;
+    font-size: 4rem;
  }
  .details{
     top: 39vh;
@@ -403,7 +376,7 @@ color: #FFFFFF;
     left: 11vw;
     height:3.5vh;
 }
-.usericon{
+.usericon1{
     top: 46vh;
     left: 11vw;
     height:3.5vh;
