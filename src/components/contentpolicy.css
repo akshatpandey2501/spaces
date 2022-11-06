@@ -1,0 +1,179 @@
+.contenpolicyheading {
+    position: absolute;
+    width: 37.3rem;
+    height: 3.9rem;
+    left: 3.2rem;
+    top: 1rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.2rem;
+    line-height: 3.9rem;
+    color: #212427;
+}
+.contentpolicysection {
+    box-sizing: border-box;
+    position: absolute;
+    width: 97rem;
+    height: 95.6rem;
+    left: 29.7rem;
+    top: 2.4rem;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 2px rgb(0 0 0 / 12%), 0px 2px 2px rgb(0 0 0 / 24%);
+    border-radius: 0.2rem;
+}
+.policy {
+    position: absolute;
+    width: 67.6rem;
+    height: 38.5rem;
+    left: 10rem;
+    top: 7rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: rgba(33, 36, 39, 0.8);
+}
+.rules {
+    position: absolute;
+    width: 9.1rem;
+    height: 3.9rem;
+    left: 7.2rem;
+    top: 45.5rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.2rem;
+    line-height: 3.9rem;
+    color: #212427;
+}
+.contentPointer1 {
+    position: absolute;
+    left: 3rem;
+    top: 50.5rem;
+}
+.contentpoint1 {
+    position: absolute;
+    width: 65.3rem;
+    height: 8.0rem;
+    left: 10rem;
+    top: 50rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+    color: rgba(33, 36, 39, 0.8);
+}
+
+.contentPointer2 {
+    position: absolute;
+    left: 3rem;
+    top: 60rem;
+}
+.contentpoint2 {
+    position: absolute;
+    width: 65.3rem;
+    height: 8.0rem;
+    left: 10.5rem;
+    top: 59rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+    color: rgba(33, 36, 39, 0.8);
+}
+
+.contentPointer3 {
+    position: absolute;
+    left: 3rem;
+    top: 68.5rem;
+}
+.contentpoint3 {
+    position: absolute;
+    width: 65.3rem;
+    height: 4.0rem;
+    left: 10.5rem;
+    top: 68rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+    color: rgba(33, 36, 39, 0.8);
+}
+
+.contentPointer4 {
+    position: absolute;
+    left: 3rem;
+    top: 73.5rem;
+}
+.contentpoint4 {
+    position: absolute;
+    width: 65.3rem;
+    height: 4rem;
+    left: 10.5rem;
+    top: 73rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: rgba(33, 36, 39, 0.8);
+}
+.contentPointer5 {
+    position: absolute;
+    left: 3rem;
+    top: 79rem;
+}
+.contentpoint5 {
+    position: absolute;
+    width: 65.3rem;
+    height: 6rem;
+    left: 10.5rem;
+    top: 79rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: rgba(33, 36, 39, 0.8);
+}
+.contentpointer6 {
+    position: absolute;
+    left: 3rem;
+    top: 87rem;
+}
+.contentpoint6 {
+    position: absolute;
+    width: 65.3rem;
+    height: 6rem;
+    left: 10.5rem;
+    top: 86rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: rgba(33, 36, 39, 0.8);
+}
+.contentpointer7 {
+    position: absolute;
+    left: 3rem;
+    top: 92rem;
+}
+.contentpoint7 {
+    position: absolute;
+    width: 65.3rem;
+    height: 2rem;
+    left: 10.5rem;
+    top: 91rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: rgba(33, 36, 39, 0.8);
+}

@@ -12,6 +12,9 @@ import Success from "./components/Success";
 import Explore from "./components/Explore"
 import Userloginpage from "./components/Userloginpage";
 import Subspacecreated from "./components/Subspacecreated";
+import Privacyandpolicy from "./components/Privacypolicy";
+import Contentpolicy from "./components/Contentpolicy";
+import Viewtopcomm from "./components/Viewtopcomm";
 
 function App(){
     return(
@@ -37,6 +40,9 @@ function App(){
             <Route path="/Explore" element={<Explore/>} />
             <Route path="/Userlogin" element={<Userloginpage/>}/>
             <Route path="/Subspacecreated" element={<Subspacecreated/>}/>
+            <Route path="/Privacypolicy" element={<Privacyandpolicy/>}/>
+            <Route path="/Contentpolicy" element={<Contentpolicy/>}/>
+            <Route path="/Topcommunities" element={<Viewtopcomm/>}/>
         </Routes>
         
         </div>

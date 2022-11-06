@@ -5,89 +5,78 @@
     top: 17.96%;
     bottom: 8.63%;
     
-     width:674px;
-     height :519px;
-
+     width:67.4rem;
+     height :51.9rem;
 }
-.forgot1{
-    position: absolute;
-    width: 460px;
-    height: 59px;
-    left: 850px;
-    top: 221px;
-    
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 59px;
-    /* identical to box height */
-    
-    
-    color: #212427;
-    
-}
-.send{
-    position: absolute;
-width: 343px;
-height: 20px;
-left: 1012px;
-top: 284px;
-
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 20px;
-/* identical to box height */
-
-
-color: #212427;
-}
+     .giveemailicon {
+        position: absolute;
+        height: 3.5vh;
+        left: 98rem;
+        top: 40.5rem;
+        z-index: 1;
+    }
+    .forgot1 {
+        position: absolute;
+        width: 46rem;
+        height: 5.9rem;
+        left: 97rem;
+        top: 27.1rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 4.8rem;
+        line-height: 5.9rem;
+        color: #212427;
+    }
+    .send {
+        position: absolute;
+        width: 34.3rem;
+        height: 2.0rem;
+        left: 106.2rem;
+        top: 34.4rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        color: #212427;
+    }
+    .giveemail {
+        box-sizing: border-box;
+        position: absolute;
+        width: 47.5rem;
+        height: 4.0rem;
+        left: 96.7rem;
+        top: 40.2rem;
+        padding-left: 3vw;
+        border: .1rem solid #212427;
+        border-radius: .5rem;
+    }
+    .forgotbutton {
+        position: absolute;
+        width: 42.5rem;
+        height: 4.0rem;
+        left: 99.7rem;
+        top: 47.3rem;
+        background: #3D7C98;
+        border-radius: .5rem;
+    } 
+    .forgottext{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 2.0rem;
+        /* identical to box height */
+        
+        
+        color: #FFFFFF;
+    }
 ::placeholder{
-    
-    color: #212427;
-}
-.giveemail{
-    box-sizing: border-box;
+        text-indent: 5rem;
+        color: #212427;
+    }
 
-    position: absolute;
-    width: 425px;
-    height: 40px;
-    left: 867px;
-    top: 332px;
-    padding-left: 3vw;
-    border: 1px solid #212427;
-    border-radius: 5px;
-}
-.forgottext{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
-    /* identical to box height */
-    
-    
-    color: #FFFFFF;
-}
-.forgotbutton{
-    position: absolute;
-    width: 425px;
-   height: 40px;
-   left: 867px;
-   top: 403px;
- 
-   background: #3D7C98;
-   border-radius: 5px;
-}
-.giveemailicon{
-    position: absolute;
-    height: 3.5vh;
-    left: 64vw;
-    top: 51.7vh;
-    z-index: 1;    
-}
 @keyframes showerror {
     0%{
         transform: translateX(100%);
@@ -130,28 +119,29 @@ color: #212427;
     font-size: 1.125rem;
     color: #ce8500;
 }
-@media screen and (max-width: 425px){
+@media screen and (max-width: 1112px){
     .loginimg{
        position: absolute;
        left: 19.89%;
        right: 49.31%;
-       top: 2.96%;
+       top: 6.96%;
        bottom: 8.63%;
        width: 63vw;
        height: 29vh;
     }   
     .forgot1{
-        top: 37vh;
+        top: 45vh;
         left: 13vw;
         width: 82vw;
         height: 12vh;
-        font-size: 2rem;
+        font-size: 4rem;
     }
     .send{
-        top: 49vh;
+        top: 55vh;
         left: 15vw;
         width: 75vw;
         height: 7vh;
+        font-size: 2rem;
     }
 
    
@@ -178,7 +168,7 @@ color: #212427;
        font-style: normal;
        font-weight: 700;
        font-size: 1.5rem;
-       line-height: 20px;
+       line-height: 2.0rem;
        color: #FFFFFF;
     }
     .giveemailicon{

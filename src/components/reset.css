@@ -1,12 +1,12 @@
 .resetimg{
     position: absolute;
-    left: 3.89%;
+    left: 7.89%;
     right: 49.31%;
-    top: 17.96%;
+    top: 20.96%;
     bottom: 8.63%;
     
-     width:674px;
-     height :519px;
+     width:67.4rem;
+     height :51.9rem;
 }
 .resetpass{
     position: absolute;
@@ -17,21 +17,21 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    font-size: 3rem;
-    line-height: 59px;
+    font-size: 5rem;
+    line-height: 5.9rem;
     color: #212427E5;
 }
 .createnew{
     position: absolute;
     width: 28vw;
     height: 6vh;
-    left: 65vw;
+    left: 69vw;
     top: 39vh;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    font-size: 1.1rem;
-    line-height: 20px;
+    font-size: 2.1rem;
+    line-height: 2rem;
     color: #212427;
 }
 .newpass{
@@ -41,7 +41,7 @@
     height: 6.5vh;
     left: 63vw;
     top: 46vh;
-    border: 1px solid #212427;
+    border: .1rem solid #212427;
     border-radius: .5rem;
     padding-left: 3vw;
 }
@@ -52,14 +52,14 @@
     height: 6.5vh;
     left: 63vw;
     top: 56vh;
-    border: 1px solid #212427;
+    border: .1rem solid #212427;
     border-radius: .5rem;
     padding-left: 3vw;
 }
 .verifybutton1{
     position: absolute;
     width: 30vw;
-    height: 40px;
+    height: 4.0rem;
     left: 63.5vw;
     top: 65vh;
     background: #212427;
@@ -69,8 +69,8 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    font-size: 1rem;
-    line-height: 20px;
+    font-size: 2rem;
+    line-height: 3rem;
     /* identical to box height */
     
     
@@ -137,7 +137,7 @@
     font-size: 1.125rem;
     color: #ce8500;
 }
-@media screen and (max-width: 425px){
+@media screen and (max-width: 1112px){
     .resetimg{
        position: absolute;
        left: 19.89%;
@@ -148,17 +148,18 @@
        height: 29vh;
     }   
     .resetpass{
-        top: 34vh;
+        top: 45vh;
         left: 17vw;
         width: 82vw;
         height: 12vh;
-        font-size: 2rem;
+        font-size: 4rem;
     }
     .createnew{
-        top: 46vh;
+        top: 52vh;
         left: 22vw;
         width: 65vw;
         height: 4vh;
+        font-size: 2rem;
     }
   
     .newpass{

@@ -127,7 +127,7 @@ function Signup(){
           <img src={Signupsvg} alt="signup" className="signimg" />
          <p className="create">Create an account</p> 
          <p className="details">Enter your details</p>
-         <img src={Usersvg} alt="username" className="usericon" />
+         <img src={Usersvg} alt="username" className="usericon1" />
          <input type="text" id="User Name" placeholder="username" className="input" value={message3} onChange={handleChange3}/>
          <img src={Mailsvg} alt="mail" className="mailicon" />
          <p className="emailerror">{error}</p>

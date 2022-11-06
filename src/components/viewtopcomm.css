@@ -1,0 +1,146 @@
+.viewtopcommheading{
+    position: absolute;
+    width: 32.3rem;
+    height: 3.9rem;
+    left: 29.7rem;
+    top: 1.6rem;
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 3.9rem;
+    /* identical to box height */
+    
+    
+    color: #000000;
+}
+.topcommcard{
+    box-sizing: border-box;
+
+position: absolute;
+width: 21.8rem;
+height: 33.3rem;
+left: 32.9rem;
+top: 7.1rem;
+
+background: #FFFFFF;
+box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 2px 2px rgba(0, 0, 0, 0.12);
+border-radius: 2px;
+
+}
+.viewtopgrowimg{
+    position: absolute;
+width: 4.8rem;
+height: 6.4rem;
+left: .5rem;
+top: .5rem;
+border-radius: .5rem;
+}
+.topcommimagebox{
+    position: absolute;
+    top: 1rem;
+    left: 3rem;
+    border-radius: 50%;
+}
+.personimage{
+    position: absolute;
+    left: 3.3rem;
+    top: 20.8rem;
+}
+.viewtopcommfollowbtn{
+    box-sizing: border-box;
+    position: absolute;
+    width: 18.6rem;
+    height: 4.0rem;
+    left: 1.5rem;
+    top: 26.8rem;
+    border: .1rem solid rgba(33, 36, 39, 0.3);
+    border-radius: .5rem;
+
+}
+.viewtopcommgrowing{
+    position: absolute;
+width: 40.2rem;
+height: 3.9rem;
+left: 29.7rem;
+top: 44.1rem;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 3.2rem;
+line-height: 3.9rem;
+/* identical to box height */
+
+
+color: #000000;
+
+}
+.viewtopcommimg{
+    height: 16.4rem;
+    width: 15.8rem;
+   
+     
+}
+.viewtopcommgrowimage{
+    position: absolute;
+width: 4.8rem;
+height: 6.4rem;
+left: .5rem;
+top: .5rem;
+border-radius: .5rem;
+}
+.viewtopcommfollowers {
+    position: absolute;
+    width: 12.9rem;
+    height: 2.2rem;
+    left: 7.3rem;
+    top: 21.1rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.0rem;
+    line-height: 1.2rem;
+    color: rgba(33, 36, 39, 0.8);
+}
+.viewtopcommgrowfollowers{
+    position: absolute;
+    width: 9.9rem;
+    height: 4.2rem;
+    left: 12.3rem;
+    top: 2.5rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.0rem;
+    line-height: 1.2rem;
+    color: rgba(33, 36, 39, 0.8);
+
+
+}
+.arrowtocomm{
+    box-sizing: border-box;
+
+position: absolute;
+width: 3.1rem;
+height: 3.4rem;
+left: 34.5rem;
+top: 2rem;
+
+border: .1rem solid rgba(33, 36, 39, 0.3);
+border-radius: .5rem;
+
+}
+.growingcommbox{
+    box-sizing: border-box;
+
+position: absolute;
+width: 41.1rem;
+height: 7.4rem;
+left: 29.7rem;
+top: 50.4rem;
+
+border: 1px solid rgba(33, 36, 39, 0.3);
+border-radius: .5rem;
+}

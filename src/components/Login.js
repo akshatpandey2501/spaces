@@ -7,7 +7,7 @@ import Mailsvg from "../images/fluent_mail-20-filled.svg"
 import Passwordsvg from "../images/password.svg"
 import Errorsvg from"../images/errorsign.svg"
 import { Link, useNavigate } from "react-router-dom";
-import Sidebar from "./Sidebar";
+
 import Nav from "../Nav";
 function Login(){
    
@@ -30,7 +30,7 @@ function Login(){
          axios.post('https://spacesback-production.up.railway.app/login',info).then((res) => {
             console.log(res);
             if(res.status===200){
-              navigate("/Success")
+              navigate("/Userlogin")
             }
           })
           .catch((err) => {

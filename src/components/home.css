@@ -3,306 +3,70 @@ html{
 }
 .imagehome{
     position: absolute;
-    width: 46vw;
-    height: 59vh;
-    left: 4vw;
-    top: 30vh;
-
+    /* width: 74.5rem; */
+    height: 69vh;
+    left: 1vw;
+    top: 16vh;
+    background: #FFFFFF;
+    opacity: 0.7;
 }
 .welcome{
-    display: inline-block;
     position: absolute;
-    width: 36vw;
-    height: 9vh;
-    left: 61vw;
-    top: 27vh;
+    width: 50.2rem;
+    height: 5.9rem;
+    left: 62vw;
+    top: 38vh;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    font-size: 3rem;
-    line-height: 59px;
+    font-size: 4.8rem;
+    line-height: 5.9rem;
     color: #212427;
+    
 
 }
 .grow{
-    display: inline-block;
     position: absolute;
-    width: 24vw;
-    height: 5vh;
-    left: 68vw;
-    top: 39vh;
+    width: 31.9rem;
+    height: 2.9rem;
+    left: 66vw;
+    top: 50vh;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
-    font-size: 1.5rem;
-    line-height: 29px;
-    color: #212427;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    color: rgba(33, 36, 39, 0.9);
 }
+
+
 .explore-box{
-    display: inline-block;
     position: absolute;
-    width: 11vw;
-    height: 6vh;
-    left: 73vw;
-    top: 48vh;
+    width: 15.3rem;
+    height: 4.0rem;
+    left: 72vw;
+    top: 59vh;
     background: #212427;
-    border-radius: 1rem;
+    border-radius: 2.0rem;
 }
 .explore{
     display: inline-block;
-    margin-left: 1.6vw;
-    margin-top: 1.5vh;
-    width: 11vw;
-    height: 3vh;
-    /* left: 1031px; */
-    /* top: 325px; */
+    
+    width: 10.5rem;
+    height: 2.0rem;
+    
+       
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
-    font-size: 1rem;
-    line-height: 20px;
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+    /* identical to box height */
+    
+    
     color: #FFFFFF;
 }
-.communities{
-    display: inline-block;
-    position: absolute;
-    width: 16vw;
-    height: 3vh;
-    left: 74vw;
-    top: 58vh;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 20px;
-    color: #212427;
-} 
-.ask-box{
-    display: inline-block;
-    box-sizing: border-box;
-    position: absolute;
-    width: 10vw;
-    height: 6vh;
-    left: 61vw;
-    top: 65.5vh;
-    border: 1px solid #212427;
-    border-radius: 1rem;
-}     
-.ask{
-    margin-left: 1.6vw;
-    margin-top: 1.5vh;
-    width: 14vh;
-    height: 3vh;
-    /* left: 860px; */
-    /* top: 439px; */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 20px;
-    color: #212427;
-}
-.football-box{
-    display: inline-block;
-    box-sizing: border-box;
-    position: absolute;
-    width: 10vw;
-    height: 6vh;
-    left: 72vw;
-    top: 65.5vh;
-    border: 1px solid #212427;
-    border-radius: 1rem;
-}
-.football{
-    margin-left: 2vw;
-    margin-top: 1.5vh;
-    width: 14vh;
-    height: 3vh;
-    /* left: 860px; */
-    /* top: 439px; */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 20px;
-    color: #212427;
-}  
-.leagueoflegens-box{
-    display: inline-block;
-    box-sizing: border-box;
-    position: absolute;
-    width: 14vw;
-    height: 6vh;
-    left: 83vw;
-    top: 65.5vh;
-    border: 1px solid #212427;
-    border-radius: 1rem;
-} 
-.leagueoflegens{
-    margin-left: 1.6vw;
-    margin-top: 1.5vh;
-    width: 22vh;
-    height: 3vh;
-    /* left: 860px; */
-    /* top: 439px; */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 20px;
-    color: #212427;
-}
-.marvel-box{
-    display: inline-block;
-    box-sizing: border-box;
-    position: absolute;
-    width: 11vw;
-    height: 6vh;
-    left: 60vw;
-    top: 74vh;
-    border: 1px solid #212427;
-    border-radius: 1rem;
-}
-.marvel{
-    margin-left: 1.3vw;
-    margin-top: 1.5vh;
-    width: 18vh;
-    height: 3vh;
-    /* left: 860px; */
-    /* top: 439px; */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 20px;
-    color: #212427;
-}  
-.minecraft-bax{
-    display: inline-block;
-    box-sizing: border-box;
-    position: absolute;
-    width: 10vw;
-    height: 6vh;
-    left: 72vw;
-    top: 74vh;
-    border: 1px solid #212427;
-    border-radius: 1rem;
-}   
-.minecraft{
-    margin-left: 1.9vw;
-    margin-top: 1.5vh;
-    width: 14vh;
-    height: 3vh;
-    /* left: 860px; */
-    /* top: 439px; */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 20px;
-    color: #212427;
-}
-.travel-box{
-    display: inline-block;
-    box-sizing: border-box;
-    position: absolute;
-    width: 12vw;
-    height: 6vh;
-    left: 84vw;
-    top: 74vh;
-    border: 1px solid #212427;
-    border-radius: 1rem;
-}
-.travel{
-    margin-left: 1.6vw;
-    margin-top: 1.5vh;
-    width: 17vh;
-    height: 3vh;
-    /* left: 860px; */
-    /* top: 439px; */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 20px;
-    color: #212427;
-}
-.esport-box{
-    display: inline-block;
-    box-sizing: border-box;
-    position: absolute;
-    width: 10vw;
-    height: 6vh;
-    left: 57vw;
-    top: 82.5vh;
-    border: 1px solid #212427;
-    border-radius: 1rem;
-}
 
-.esport{
-    margin-left: 2.5vw;
-    margin-top: 1.5vh;
-    width: 14vh;
-    height: 3vh;
-    /* left: 860px; */
-    /* top: 439px; */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 20px;
-    color: #212427;
-}
-.robotics-box{
-    display: inline-block;
-    box-sizing: border-box;
-    position: absolute;
-    width: 10vw;
-    height: 6vh;
-    left: 68vw;
-    top: 82.5vh;
-    border: 1px solid #212427;
-    border-radius: 1rem;
-}
-.robotics{
-    margin-left: 2.2vw;
-    margin-top: 1.5vh;
-    width: 14vh;
-    height: 3vh;
-    /* left: 860px; */
-    /* top: 439px; */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 20px;
-    color: #212427;
-}
-.running-box{
-    display: inline-block;
-    box-sizing: border-box;
-    position: absolute;
-    width: 9vw;
-    height: 6vh;
-    left: 79vw;
-    top: 82.5vh;
-    border: 1px solid #212427;
-    border-radius: 1rem;
-}
-.running{
-    margin-left: 1.7vw;
-    margin-top: 1.5vh;
-    width: 14vh;
-    height: 3vh;
-    /* left: 860px; */
-    /* top: 439px; */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 20px;
-    color: #212427;
-}
 .login-box{
     display: none;
 }
@@ -312,31 +76,24 @@ html{
 .already{
     display: none;
 }
-.formula-box{
-    display: inline-block;
-    box-sizing: border-box;
-    position: absolute;
-    width: 8vw;
-    height: 6vh;
-    left: 89vw;
-    top: 82.5vh;
-    border: 1px solid #212427;
-    border-radius: 1rem;
+@media screen and (max-width: 1180px){
+    .imagehome{
+        height: 50vh;
+    }
+    .welcome{
+    left: 10vw;
+    top: 70vh;
 }
-.formula{
-    margin-left: 1.1vw;
-    margin-top: 1.5vh;
-    width: 14vh;
-    height: 3vh;
-    /* left: 860px; */
-    /* top: 439px; */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 20px;
-    color: #212427;
+.grow{
+    top: 76vh;
+    left: 14vw;
 }
+.explore-box{
+    top: 82vh;
+    left: 16vw;
+}
+}
+
 @media screen and (max-width: 425px){
 .imagehome{
     position: absolute;
@@ -348,14 +105,14 @@ html{
 .welcome{
     position: absolute;
     width: 71vw;
-    height: 88px;
+    height: 8.8rem;
     left: 16vw;
     top: 50vh;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 2.5rem;
-    line-height: 44px;
+    line-height: 4.4rem;
     text-align: center;
     color: #212427;
 } 
@@ -369,7 +126,7 @@ html{
     font-style: normal;
     font-weight: 600;
     font-size: 1rem;
-    line-height: 20px;
+    line-height: 2.0rem;
     color: #212427;
 
 }
@@ -383,8 +140,8 @@ html{
     border-radius: 2rem;
 }
 .explore{
-    margin-left: 18px;
-    margin-top: 10px;
+    margin-left: 1.8rem;
+    margin-top: 1.0rem;
     width: 30vw;
 }
 .login-box{
@@ -395,20 +152,20 @@ html{
     height: 5vh;
     left: 20vw;
     top: 80vh;
-    border: 1px solid #212427;
+    border: .1rem solid #212427;
     border-radius: 2rem;
 }
 .login1{
     display: inline-block;
-    width: 50px;
-    height: 20px;
+    width: 5.0rem;
+    height: 2.0rem;
     padding-left: 26vw;
     padding-top: 1vh;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 1rem;
-    line-height: 20px;
+    line-height: 2.0rem;
     color: #212427;
 }
 .already{
@@ -422,90 +179,11 @@ html{
     font-style: normal;
     font-weight: 400;
     font-size: 1rem;
-    line-height: 15px;
+    line-height: 1.5rem;
     color: #212427;
 
 }
-.communities{
-    display:none;
-} 
-.ask-box{
-    display:none;
-}     
-.ask{
-    display:none;
-}
-.football-box{
-    display:none;
-}
-.football{
-    display:none;
-}  
-.leagueoflegens-box{
-    display:none;
-} 
-.leagueoflegens{
-    display:none;
-}
-.marvel-box{
-    display:none;
-}
-.marvel{
-    display:none;
 
-}  
-.minecraft-bax{
-    display:none;
-}   
-.minecraft{
-    display:none;
-}
-.travel-box{
-    display:none;
-}
-.travel{
-    display:none;
-
-
-}
-.esport-box{
-    display:none;
-
-}
-.explore{
-    padding-left: 20vw;
-}
-
-.esport{
-    display:none;
-
-}
-.robotics-box{
-    display:none;
-}
-.robotics{
-    display:none;
-   
-
-}
-.running-box{
-    
-  display: none;
-
-}
-.running{
-  display: none;
-}
-
-.formula-box{
-    box-sizing: border-box;
-    display: none;
-
-}
-.formula{
-    display: none;
-   
-}
 
 
 }

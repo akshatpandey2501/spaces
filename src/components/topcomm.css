@@ -53,21 +53,14 @@ html{
     left: 20rem;
 
 }
-.topcommview{
+
+.topcommviewtext{
     position: absolute;
     width: 22.5rem;
     height: 4rem;
     top: 24.7rem;
-    left: 2rem;
-    background: rgba(33, 36, 39, 0.9);
-    border-radius: .5rem;
-}
-.topcommviewtext{
-    position: absolute;
-    width: 10.1rem;
-    height: 2rem;
-    top: 0.7rem;
-    left: 6rem;
+    left: 10rem;
+   
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
@@ -80,8 +73,8 @@ html{
     position: absolute;
     width: 109px;
     height: 20px;
-    left: 70px;
-    top: 547px;
+    left: 6rem;
+    top: 50rem;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -94,8 +87,8 @@ html{
     position: absolute;
     width: 13.3rem;
     height: 2rem;
-    top: 59.7rem;
-    left: 6rem;
+    top: 55.7rem;
+    left: 7rem;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -109,8 +102,8 @@ html{
     position: absolute;
     width: 8.9rem;
     height: 2rem;
-    top: 64.5rem;
-    left: 8rem;
+    top: 60.5rem;
+    left: 7rem;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -122,8 +115,8 @@ html{
     position: absolute;
     width: 12.3rem;
     height: 2rem;
-    top: 68.1rem;
-    left: 10rem;
+    top: 65.1rem;
+    left: 9rem;
 
 }
 
