@@ -5,6 +5,7 @@ import Passwordsvg from "../images/password.svg"
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Errorsvg from "../images/errorsign.svg"
+import Tokentoheader from "./Tokentoheader";
 
 
 function Reset(){
@@ -25,9 +26,10 @@ function Reset(){
         event.preventDefault();
         setNewPass("")
         setNewConfirmPass("")
+        Tokentoheader(localStorage.getItem("resettoken"))
         axios.post('https://spacesback-production.up.railway.app/forgotpassword/otpverify/changepassword',info1).then((res) => {
           console.log(res);
-         
+          
           localStorage.clear();
           if (res.status === 200) {
            localStorage.removeItem("forgote")

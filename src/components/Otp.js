@@ -28,7 +28,7 @@ function Otp(){
           if (res.status === 200) {
            navigate("/Login")
            localStorage.removeItem("email");
-
+           localStorage.setItem("signuptoken",res.data.token)
 
           } 
         })

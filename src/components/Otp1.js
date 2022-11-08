@@ -27,7 +27,8 @@ function Otp1(){
           if (res.status === 200) {
             console.log(intell)
             navigate("/Reset")
-
+            localStorage.setItem("resettoken",res.data.token)
+            
           }
         })
         .catch((err) => {

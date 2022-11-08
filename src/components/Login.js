@@ -31,6 +31,7 @@ function Login(){
             console.log(res);
             if(res.status===200){
               navigate("/Userlogin")
+              localStorage.setItem("logintoken",res.data.token)
             }
           })
           .catch((err) => {

@@ -1,0 +1,182 @@
+.createspaceheading{
+    position: absolute;
+    width: 37.3rem;
+    height: 3.9rem;
+    left: 30.2rem;
+    top: 1rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.2rem;
+    line-height: 3.9rem;
+    color: #212427;
+}
+.createspaceuserloginarea{
+    float: left;
+    position: absolute;
+    top: 52.3rem;
+    width: 29rem;
+    height: 16rem;
+    background: #FFFFFF;
+}
+.createspaceavatar{
+    position: absolute;
+    width: 8.811rem;
+    height: 8.8rem;
+}
+.createspaceusername{
+    position: absolute;
+    width: 12.2rem;
+    height: 2.9rem;
+    left: 10rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    color: rgba(33, 36, 39, 0.9);
+}
+
+.createspacelogoutbutton{
+    box-sizing: border-box;
+    position: absolute;
+    width: 24.1rem;
+    height: 4rem;
+    top: 11rem;
+    left: 3rem;
+    border: 0.1rem solid rgba(33, 36, 39, 0.3);
+    border-radius: 0.5rem;
+}
+.createspacelogouttext{
+    position: absolute;
+    width: 5.9rem;
+    left: 7rem;
+    bottom: 1rem;
+    height: 2rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #212427;
+}
+.createtext {
+    position: absolute;
+    width: 5.5rem;
+    height: 2.5rem;
+    left: 9rem;
+    top: 0.9rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+    color: #FFFFFF;
+}
+.createbtn {
+    position: absolute;
+    width: 24.1rem;
+    height: 4.0rem;
+    left: 53.7rem;
+    top: 54.2rem;
+    background: #212427;
+    border-radius: .5rem;
+}
+.profileimage {
+    box-sizing: border-box;
+    position: absolute;
+    width: 67.6rem;
+    height: 10.5rem;
+    left: 3.2rem;
+    top: 41.5rem;
+    opacity: 0.48;
+    border: .1rem solid rgba(0, 0, 0, 0.3);
+    border-radius: .3rem;
+}
+.spacerules {
+    box-sizing: border-box;
+    position: absolute;
+    width: 67.6rem;
+    height: 6.0rem;
+    left: 3.2rem;
+    top: 33.1rem;
+    opacity: 0.48;
+    border: .1rem solid rgba(0, 0, 0, 0.3);
+    border-radius: .3rem;
+    resize: none;
+}
+.spaceruletitle {
+    position: absolute;
+    width: 24.6rem;
+    height: 3rem;
+    left: 3.2rem;
+    top: 27.3rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+    color: #212427;
+    resize: none;
+}
+.spacedescription {
+    box-sizing: border-box;
+    position: absolute;
+    width: 67.6rem;
+    height: 6.0rem;
+    left: 3.2rem;
+    top: 17.7rem;
+    opacity: 0.48;
+    border: .1rem solid rgba(0, 0, 0, 0.3);
+    border-radius: .3rem;
+    resize: none;
+}
+.spacedescriptiontitle {
+    position: absolute;
+    width: 19.5rem;
+    height: 3rem;
+    left: 3.2rem;
+    top: 12.9rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+    color: #212427;
+    resize: none;
+}
+.spacename {
+    box-sizing: border-box;
+    position: absolute;
+    width: 67.6rem;
+    height: 4.0rem;
+    left: 3.2rem;
+    top: 5.3rem;
+    opacity: 0.48;
+    border: .1rem solid rgba(0, 0, 0, 0.3);
+    border-radius: .3rem;
+}
+.spacenametitle {
+    position: absolute;
+    width: 23.3rem;
+    height: 3rem;
+    left: 3.2rem;
+    top: 2.5rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+    color: #212427;
+}
+.createspacebox {
+    box-sizing: border-box;
+    position: absolute;
+    width: 84.6rem;
+    height: 64.1rem;
+    left: 29.7rem;
+    top: 10.3rem;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 2px rgb(0 0 0 / 12%), 0px 2px 2px rgb(0 0 0 / 24%);
+    border-radius: 0.2rem;
+}

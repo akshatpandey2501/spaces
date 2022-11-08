@@ -15,6 +15,8 @@ import Subspacecreated from "./components/Subspacecreated";
 import Privacyandpolicy from "./components/Privacypolicy";
 import Contentpolicy from "./components/Contentpolicy";
 import Viewtopcomm from "./components/Viewtopcomm";
+import Createspace from "./components/Createspace";
+import Createpost from "./components/Createpost";
 
 function App(){
     return(
@@ -43,6 +45,8 @@ function App(){
             <Route path="/Privacypolicy" element={<Privacyandpolicy/>}/>
             <Route path="/Contentpolicy" element={<Contentpolicy/>}/>
             <Route path="/Topcommunities" element={<Viewtopcomm/>}/>
+            <Route path="/Createspace" element={<Createspace/>}/>
+            <Route path="/Createpost" element={<Createpost/>}/>
         </Routes>
         
         </div>

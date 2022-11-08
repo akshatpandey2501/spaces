@@ -115,7 +115,7 @@ border-radius: 0.2rem;
 }
 .userloginarea{
     float: left;
-    position: absolute;
+    position: fixed;
     top: 52.3rem;
     width: 29rem;
     height: 16rem;
