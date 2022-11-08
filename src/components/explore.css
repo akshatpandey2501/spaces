@@ -1,48 +1,25 @@
 html{
     font-size: 55%;
 }
-.trending{
-    position: absolute;
-width: 14.8rem;
-height: 3.9rem;
-left: 29.7rem;
-top: 1.6rem;
 
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 500;
-font-size: 3.2rem;
-line-height: 3.9rem;
-/* identical to box height */
-
-
-color: #000000;
-
-}
-.trendingimg{
-    position: absolute;
-    width: 62.8rem;
-    height: 27rem;
-    left: 30rem;
-    top: 7rem;
-}
 .bar{
-    position: absolute;
+    position: sticky;
     width: 79rem;
     height: 4.8rem;
     left: 29.7rem;
-    top: 37.1rem;
+    top: 17.1rem;
     background: #FFFBFB;
+    z-index: 5;
 }
 .card{
     box-sizing: border-box;
-
-    position: absolute;
+     
+    position: relative;
     width: 84.6rem;
     height: 37.3rem;
     left: 29.7rem;
-    top: 42.9rem;
-
+    top: 10.9rem;
+    padding-top: 20vh;
 background: #FFFFFF;
 box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
 border-radius: 0.2rem;
@@ -71,6 +48,374 @@ border-radius: 0.2rem;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #000000;
+}
+.createpostbutton{
+    box-sizing: border-box;
+    position: absolute;
+    width: 39.5rem;
+    height: 4rem;
+    left: 1.3rem;
+    top: 2.4rem;
+    background: #F7F8F9;
+    border-radius: 0.3rem;
+}
+.createspacebutton{
+    box-sizing: border-box;
+    position: absolute;
+    width: 39.5rem;
+    height: 4rem;
+    left: 52.2rem;
+    top: 2.4rem;
+    background: #F7F8F9;
+    border-radius: 0.3rem;
+}
+.create{
+    position: sticky;
+    z-index: 5;
+width: 94.6rem;
+height: 72px;
+left: 297px;
+top: 8px;
+
+background: #FFFBFB;
+border-radius: 3px;
+}
+.posticon{
+    position: absolute;
+    width: 1.6rem;
+    height: 1.6rem;
+    left: 4rem;
+    top: 3.6rem;
+    z-index: 2;
+}
+.spaceicon{
+    position: absolute;
+    width: 1.6rem;
+    height: 1.6rem;
+    left: 55.8rem;
+    top: 3.6rem;
+    z-index: 2;
+
+}
+
+.upvoteicon{
+    position: absolute;
+    left: 69.51%;
+    right: 29.38%;
+    top: 8.16%;
+    bottom: 64.73%;
+}
+.topcomm{
+    
+    width: 27.3rem;
+    height: 70.7rem;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+.upvotes{
+    position: absolute;
+    width: 2.3rem;
+    height: 1.5rem;
+    left: 62.7rem;
+    top: 3.1rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: rgba(33, 36, 39, 0.9);
+
+}
+.downvoteicon{
+    position: absolute;
+    width: 1.6rem;
+    height: 1.6rem;
+    top: 3rem;
+    left: 68rem;
+}
+.comment{
+    position: absolute;
+    left: 85.5%;
+    /* right: 12.5%; */
+    top: 7.5%;
+    bottom: 12.5%;
+    border: 2px solid rgba(33, 36, 39, 0.71);
+}
+.comments{
+    position: absolute;
+    width: 2.5rem;
+    height: 1.5rem;
+    top: 3.3rem;
+    left: 76rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: rgba(33, 36, 39, 0.9);
+
+}
+.posttext{
+    position: absolute;
+    width: 81.4rem;
+    height: 5rem;
+    left: 2.3rem;
+    top: 6.5rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #212427;
+
+}
+
+.postimg{
+   
+    position: absolute;
+width: 40.2rem;
+height: 23.7rem;
+left: 7.9rem;
+top: 12rem;
+}
+.cardbox{
+    box-sizing: border-box;
+
+position: absolute;
+width: 84.6rem;
+max-height: 20rem;
+height: auto;
+left: 29.7rem;
+top: 16.7rem;
+}
+.cardusername{
+    position: absolute;
+width: 267.59px;
+height: 15px;
+left: 2rem;
+top: 2rem;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+
+
+color: rgba(33, 36, 39, 0.6);
+
+
+}
+.cardarea{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    
+}
+.cardarea::-webkit-scrollbar {
+    display: none;
+  }
+.subspace{
+    position: absolute;
+    width: 267.59px;
+    height: 15px;
+    left: 6rem;
+    top: 2rem;
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+    
+    
+    color: #0079D399;   
+}
+.topcommname0{
+    position: absolute;
+    width: 8.9rem;
+    height: 2rem;
+    top: 5.7rem;
+    left: 8rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #000000;
+}
+.topcommname1{
+    position: absolute;
+    width: 7.9rem;
+    height: 2rem;
+    top: 7.7rem;
+    left: 7rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #000000;
+}
+.topcommname2{
+    position: absolute;
+    width: 8.9rem;
+    height: 2rem;
+    top: 9.7rem;
+    left: 6rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #000000;
+}
+.topcommname3{
+    position: absolute;
+    width: 7.9rem;
+    height: 2rem;
+    top: 11.7rem;
+    left: 8rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #000000;
+}
+.personicon0{
+    position: absolute;
+    width: 1rem;
+    height: 1.2rem;
+    top: 5.7rem;
+    left: 20rem;
+
+}
+.commnumber0{
+    position: absolute;
+    width: 1rem;
+    height: 2.2rem;
+    top: 5.7rem;
+    left: 2rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #000000;
+}
+.personicon1{
+    position: absolute;
+    width: 1rem;
+    height: 1.2rem;
+    top: 7.7rem;
+    left: 20rem;
+
+}
+.commnumber1{
+    position: absolute;
+    width: 1rem;
+    height: 2.2rem;
+    top: 7.7rem;
+    left: 2rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #000000;
+}
+.personicon2{
+    position: absolute;
+    width: 1rem;
+    height: 1.2rem;
+    top: 9.7rem;
+    left: 20rem;
+
+}
+.commnumber2{
+    position: absolute;
+    width: 1rem;
+    height: 2.2rem;
+    top: 9.7rem;
+    left: 2rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #000000;
+}
+.personicon3{
+    position: absolute;
+    width: 1rem;
+    height: 1.2rem;
+    top: 11.7rem;
+    left: 20rem;
+
+}
+.commnumber3{
+    position: absolute;
+    width: 1rem;
+    height: 2.2rem;
+    top: 11.7rem;
+    left: 2rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #000000;
+}
+
+.topcommfollower0{
+    position: absolute;
+    left: 22rem;
+    top: 5.7rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #000000;
+}
+.topcommfollower1{
+    position: absolute;
+    left: 22rem;
+    top: 7.7rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #000000;
+}
+.topcommfollower2{
+    position: absolute;
+    left: 22rem;
+    top: 9.7rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #000000;
+}
+.topcommfollower3{
+    position: absolute;
+    left: 22rem;
+    top: 11.7rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
     font-size: 1.6rem;
     line-height: 2rem;
     color: #000000;

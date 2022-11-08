@@ -1,0 +1,109 @@
+.createpostheading{
+    
+        position: absolute;
+        width: 37.3rem;
+        height: 3.9rem;
+        left: 30.2rem;
+        top: 10rem;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 3.2rem;
+        line-height: 3.9rem;
+        color: #212427;
+    
+}
+.spacenames{
+    
+        box-sizing: border-box;
+        position: absolute;
+        width: 33.8rem;
+        height: 4.0rem;
+        left: 3.2rem;
+        top: 5.3rem;
+        opacity: 0.48;
+        border: .1rem solid rgba(0, 0, 0, 0.3);
+        border-radius: .3rem;
+    
+}
+.createpostsbox{
+    
+        box-sizing: border-box;
+        position: absolute;
+        width: 84.6rem;
+        height: 64.1rem;
+        left: 29.7rem;
+        top: 20.3rem;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 2px rgb(0 0 0 / 12%), 0px 2px 2px rgb(0 0 0 / 24%);
+        border-radius: 0.2rem;
+    
+}
+.chooseposttype{
+    box-sizing: border-box;
+    position: absolute;
+    width: 33.8rem;
+    height: 4.0rem;
+    left: 36.2rem;
+    top: 5.3rem;
+    opacity: 0.48;
+    border: .1rem solid rgba(0, 0, 0, 0.3);
+    border-radius: .3rem;
+}
+.spacedescriptiontitle{
+        position: absolute;
+        width: 3.5rem;
+        height: 2rem;
+        left: 38.2rem;
+        top: 22.3rem;
+        
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        /* identical to box height */
+        
+        
+        color: #212427;
+        
+           
+}
+.posttitle{
+        box-sizing: border-box;
+        position: absolute;
+        width: 62.8rem;
+        height: 4.0rem;
+        left: 3.2rem;
+        top: 9.3rem;
+        opacity: 0.48;
+        border: .1rem solid rgba(0, 0, 0, 0.3);
+        border-radius: .3rem;       
+}
+.postimage{
+        box-sizing: border-box;
+    position: absolute;
+    width: 67.6rem;
+    height: 16.5rem;
+    left: 3.2rem;
+    top: 33.5rem;
+    opacity: 0.48;
+    border: .1rem solid rgba(0, 0, 0, 0.3);
+    border-radius: .3rem;
+}
+.posttitle{
+        box-sizing: border-box;
+        position: absolute;
+        width: 67.6rem;
+        height: 6.0rem;
+        left: 3.2rem;
+        top: 17.1rem;
+        opacity: 0.48;
+        border: .1rem solid rgba(0, 0, 0, 0.3);
+        border-radius: .3rem;
+        resize: none;
+}
+.type{
+        height: 3rem;
+        width: 8rem;
+}

@@ -55,7 +55,7 @@
     border-radius: .5rem;
 }
 .errorconfirm{
-    display: inline-block;
+    display: none;
     position: absolute;
     width: 53rem;
     height: 3.5rem;
@@ -64,7 +64,7 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 2rem;
     line-height: 17px;
     color: #af4242;
     background-color: #fde8ec;
@@ -90,7 +90,7 @@ box-sizing: border-box;
     border-radius: .5rem;
 }
 .error{
-    display: inline-block;
+    display: none;
     position: absolute;
     width: 53rem;
     height: 4rem;
@@ -99,7 +99,7 @@ box-sizing: border-box;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: 0.85rem;
+    font-size: 1.7rem;
     /* line-height: 17px; */
     color: #af4242;
     background-color: #fde8ec;
@@ -125,7 +125,7 @@ position: absolute;
     border-radius: .5rem;
 }
 .emailerror{
-    display: inline-block;
+    display: none;
     position: absolute;
     width: 53rem;
     height: 3.5rem;
@@ -134,7 +134,7 @@ position: absolute;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 2rem;
     color: #af4242;
     background-color: #fde8ec;
     text-align: center;
@@ -178,7 +178,7 @@ position: absolute;
     line-height: 2.0rem;
     color: rgba(33, 36, 39, 0.9);
 }
-.create {
+.createheading {
     position: absolute;
     width: 46.0rem;
     height: 5.9rem;
@@ -216,9 +216,10 @@ position: absolute;
     display: none;
     background: #ffdb9b;
     width: 26.5rem;
+    height: 6rem;
     position: absolute;
     right: 0;
-    top: 1rem;
+    top: 15rem;
     border: 0.25rem;
     border-left: 0.5rem solid #ffa502;
     animation: showerror 1s ease forwards;
@@ -227,7 +228,7 @@ position: absolute;
 }
 .usererrorbox .errorimg{
     position: absolute;
-    left: 1rem;
+    left: 3rem;
     top: 50%;
     transform: translateY(-50%);
     width: 1rem;
@@ -251,7 +252,7 @@ position: absolute;
     width: 63vw;
     height: 29vh;
  }   
- .create{
+ .createheading{
     top: 32vh;
     left: 13vw;
     width: 82vw;

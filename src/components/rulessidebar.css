@@ -1,0 +1,109 @@
+.rulepoint1{
+    position: absolute;
+    width: 201.5.2rem;
+    height: 2.0rem;
+    left:2rem;
+    top: 6.2rem;
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+    /* identical to box height */
+    
+    
+    color: #000000;
+}
+.rulepoint2{
+    position: absolute;
+    width: 201.5.2rem;
+    height: 4.0rem;
+    left: 2rem;
+    top: 9.8rem;
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+    
+    color: #000000;  
+}
+.rulepoint3{
+    position: absolute;
+width: 201.5.2rem;
+height: 4.0rem;
+left: 2rem;
+top: 15.4rem;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 1.6rem;
+line-height: 2.0rem;
+
+color: #000000;
+}
+.rulepoint4{
+    position: absolute;
+width: 201.5.2rem;
+height: 4.0rem;
+left: 4rem;
+top: 21rem;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 1.6rem;
+line-height: 2.0rem;
+
+color: #000000;
+
+}
+.rulepoint5{
+    position: absolute;
+    width: 201.5.2rem;
+    height: 4.0rem;
+    left: 2rem;
+    top: 30rem;
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+    
+    color: #000000; 
+}
+.rulesside{
+    position: absolute;
+width: 4.6rem;
+height: 2.0rem;
+left: 3rem;
+top: 1.6rem;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 1.6rem;
+line-height: 2.0rem;
+/* identical to box height */
+
+text-align: center;
+
+color: #0079D3;
+
+
+}
+.rulessidebar{
+    
+    position: absolute;
+width: 27.3rem;
+height: 70.7rem;
+right: 0;
+top: 0rem;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

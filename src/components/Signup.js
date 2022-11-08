@@ -17,7 +17,7 @@ function Signup(){
     //  var correctpassword=false
      const[message,setMessage] = useState("");
     const[message3,setMessage3]=useState("")
-    const[error,setError]=useState("")
+    const[error,setError]=useState("");
     const handleChange3 = event =>{
       setMessage3(event.target.value);
    };
@@ -32,6 +32,9 @@ function Signup(){
         
         setMessage1(event.target.value);
      }
+     const[isShowError,setIsShowerror]=useState(false)
+     const[isShowEmailError,setIsshowEmailError]=useState(false)
+     const[isShowConfirmError,setIsshowConfirmerror]=useState(false)
     const password = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
     const emailreg = 
     new RegExp(/^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/, "gm");
@@ -41,11 +44,13 @@ function Signup(){
         useEffect(() => {
           if (password.test(message1)) {
           setError1("")  
-             setCorrectPass(true)     
+             setCorrectPass(true) 
+             setIsShowerror(false)    
             }
           else if(message1){
-            setError1("invalid password must have:number,uppercase,lowercase,symbol")
             
+            setError1("invalid password must have:number,uppercase,lowercase,symbol")
+            setIsShowerror(true)
            
             } 
             
@@ -54,11 +59,13 @@ function Signup(){
         useEffect(() => {
           if (emailreg.test(message)) {
           setError("")  
-            setCorrectEmail(true)         
+            setCorrectEmail(true) 
+            setIsshowEmailError(false)        
             }
           else if(message){
-            setError("invalid email")
             
+            setError("invalid email")
+            setIsshowEmailError(true)
            
             } 
             
@@ -70,10 +77,14 @@ function Signup(){
      const handleChange2=event=>{
               setMessage2(event.target.value);
               if(message1 !== (event.target.value)){
+                setIsshowConfirmerror(true)
                 setError2("password not matched")
+                setCorrectCnfPass(true)
               }else{
+                setIsshowConfirmerror(false)
                 setError2("");
                 setCorrectCnfPass(true)
+                
               }
      }
      const[isShown,setIsShow]=useState(false)
@@ -108,7 +119,7 @@ function Signup(){
           console.log(res);
           if (res.status == 201) {
            navigate("/Otp")
-           
+          
           } 
         })
         .catch((err) => {
@@ -125,18 +136,18 @@ function Signup(){
       
         <div className="signup"><Nav/><div className="usererrorbox" style={{display: isShown ? 'block' : 'none'}}><img src={Errorsvg} className="errorimg" alt="signup error"></img><p className="usererror1">{signerror}</p></div>
           <img src={Signupsvg} alt="signup" className="signimg" />
-         <p className="create">Create an account</p> 
+         <p className="createheading">Create an account</p> 
          <p className="details">Enter your details</p>
          <img src={Usersvg} alt="username" className="usericon1" />
          <input type="text" id="User Name" placeholder="username" className="input" value={message3} onChange={handleChange3}/>
          <img src={Mailsvg} alt="mail" className="mailicon" />
-         <p className="emailerror">{error}</p>
+         <p className="emailerror" style={{display: isShowEmailError ? 'block' : 'none'}}>{error}</p>
          <input type="text" id="Emaiid" placeholder="Email id" className="input1" value={message} onChange={handleChange} />
          <img src={Passwordsvg} alt="password" className="passwordicon" />
-         <p className="error">{error1}</p>
+         <p className="error" style={{display: isShowError ? 'block' : 'none'}} >{error1}</p>
          <input onChange={handleChange1} value={message1} type="password" id="password" placeholder="Password" className="input2"   />
          <img src={Passwordsvg} alt="password" className="passwordicon1" />
-         <p className="errorconfirm">{error2}</p>
+         <p className="errorconfirm" style={{display: isShowConfirmError ? 'block' : 'none'}}>{error2}</p>
          <input onChange={handleChange2} type="password" id="Confirm Password" placeholder="Confirm Password" value={message2} className="input3"  />
          <button className="continuebutton" onClick={Buttonaction}><p className="continuetext">Continue</p></button>
          <p className="clicking">By clicking on Login, I accept the<b>Terms & Conditions</b> & <b>Privacy Policy</b></p>
