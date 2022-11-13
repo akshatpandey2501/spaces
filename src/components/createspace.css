@@ -11,9 +11,18 @@
     line-height: 3.9rem;
     color: #212427;
 }
+.search{
+    position: fixed;
+}
+.spaceicon{
+    position: fixed;
+}
+.createspace{
+    height: 2rem;
+}
 .createspaceuserloginarea{
     float: left;
-    position: absolute;
+    position: fixed;
     top: 52.3rem;
     width: 29rem;
     height: 16rem;
@@ -81,6 +90,7 @@
     top: 54.2rem;
     background: #212427;
     border-radius: .5rem;
+    cursor: pointer;
 }
 .profileimage {
     box-sizing: border-box;
@@ -131,7 +141,7 @@
     border-radius: .3rem;
     resize: none;
 }
-.spacedescriptiontitle {
+.spacedescriptiontitle1{
     position: absolute;
     width: 19.5rem;
     height: 3rem;
@@ -145,7 +155,7 @@
     color: #212427;
     resize: none;
 }
-.spacename {
+.spacename1 {
     box-sizing: border-box;
     position: absolute;
     width: 67.6rem;
@@ -179,4 +189,25 @@
     background: #FFFFFF;
     box-shadow: 0px 0px 2px rgb(0 0 0 / 12%), 0px 2px 2px rgb(0 0 0 / 24%);
     border-radius: 0.2rem;
+}
+.profileimage{
+    display: none;
+}
+label{
+    position: relative;
+    top: 403px;
+    left: 23rem;
+    font-family: calibri;
+    width: 35rem;
+    font-size: 2rem;
+    color: #0079D3CC;
+    ;
+    padding: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid rgba(0, 121, 211, 0.8);
+    ;
+    text-align: center;
+    /* background-color: #0079D3CC; */
+    cursor: pointer;
 }

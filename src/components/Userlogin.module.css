@@ -32,15 +32,18 @@
     background: #F7F8F9;
     border-radius: 0.3rem;
 }
+.container{
+    display: none;
+}
 .create{
-    position: absolute;
-width: 846px;
-height: 72px;
-left: 297px;
-top: 8px;
-
-background: #FFFBFB;
-border-radius: 3px;
+    position: fixed;
+    width: 93.6rem;
+    height: 7.2rem;
+    left: 28.7rem;
+    top: -0.2rem;
+    z-index: 5;
+    background: #FFFBFB;
+    border-radius: .3rem;
 }
 .posticon{
     position: absolute;
@@ -120,4 +123,21 @@ border-radius: 0.2rem;
     width: 29rem;
     height: 16rem;
     background: #FFFFFF;
+}
+#paraofcard{
+    position: relative;
+    width: 40.2rem;
+    height: 23.7rem;
+    left: 7.9rem;
+    top: 12rem;
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+
+color: rgba(33, 36, 39, 0.8);
+flex: none;
+order: 1;
+flex-grow: 0;
 }

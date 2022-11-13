@@ -14,6 +14,7 @@
     height: 8vh;
     left: 65.5vw;
     top: 27.5vh;
+    overflow-y: hidden;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
@@ -70,7 +71,7 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    font-size: 2.3rem;
+    font-size: 1.5rem;
     line-height: 18px;
     /* identical to box height */
     

@@ -307,14 +307,17 @@ position: absolute;
     height: 7vh;
     font-size: 0.85rem;
  }
- .continuetext{
+ .continuetext1{
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 1.5rem;
     line-height: 20px;
     color: #FFFFFF;
+        color: white;
+    
  }
+
 .registered{
     top: 96vh;
     left: 22vw;

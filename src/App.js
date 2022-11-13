@@ -17,6 +17,8 @@ import Contentpolicy from "./components/Contentpolicy";
 import Viewtopcomm from "./components/Viewtopcomm";
 import Createspace from "./components/Createspace";
 import Createpost from "./components/Createpost";
+import Showpost from "./components/Showpost";
+import Changeprofile from "./components/Changeprofile";
 
 function App(){
     return(
@@ -35,6 +37,7 @@ function App(){
             <Route path="/Login" element={<Login/>} />
             <Route path="/Signup" element={<Signup/>} />
             <Route path="/Forgot" element={<Forgot/>}/>
+            
             <Route path="/Otp" element={<Otp/>} />
             <Route path="/Otp1" element={<Otp1/>} />
             <Route path="/Reset" element={<Reset/>} />
@@ -47,6 +50,8 @@ function App(){
             <Route path="/Topcommunities" element={<Viewtopcomm/>}/>
             <Route path="/Createspace" element={<Createspace/>}/>
             <Route path="/Createpost" element={<Createpost/>}/>
+            <Route path="/Showpost" element={<Showpost/>}/>
+            <Route path="/Changeprofile" element={<Changeprofile/>}/>
         </Routes>
         
         </div>

@@ -194,32 +194,38 @@ color: #FFFFFF;
         transform: translateX(-100%);
     }
 }
-.usererrorboxlog{
-  
-    background: #ffdb9b;
-    width: 26.5rem;
-    position: absolute;
-    right: 0;
-    top: 5rem;
-    border: 0.25rem;
-    border-left: 0.5rem solid #ffa502;
-    animation: showerror 1s ease forwards;
-}
+
 ::placeholder{
-    text-indent: 3rem;
+
     color: #212427;
 }
-.usererrorboxlog .errorimglog{
+.usererrorboxlog .usererror1log {
+    padding: 0 1.50rem;
+    font-size: 3.125rem;
+    width: 50rem;
+    color: #ce8500;
+}.usererrorboxlog {
+    background: #ffdb9b;
+    width: 50rem;
+    height: 4rem;
     position: absolute;
-    left: 1rem;
+    right: 0;
+    top: 9rem;
+    border: 0.25rem;
+    border-left: 3rem solid #ffa502;
+    animation: showerror 1s ease forwards;
+}
+.usererrorboxlog .errorimglog {
+    position: absolute;
+    left: 0rem;
     top: 50%;
+    height: 4rem;
     transform: translateY(-50%);
     width: 1rem;
+    z-index: 0;
 }
-.usererrorboxlog .usererror1log{
-    padding: 0 1.25rem;
-    font-size: 1.125rem;
-    color: #ce8500;
+button{
+    cursor: pointer;
 }
 @media screen and (max-width: 1000px){
     .welcomeback{
