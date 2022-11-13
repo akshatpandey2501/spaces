@@ -11,19 +11,20 @@ html{
     background: #FFFBFB;
     z-index: 5;
 }
-.card{
+
+.card {
     box-sizing: border-box;
-     
     position: relative;
+    margin-bottom: 10rem;
     width: 84.6rem;
-    height: 37.3rem;
+    height: 54rem;
     left: 29.7rem;
+    overflow-y: hidden;
     top: 10.9rem;
     padding-top: 20vh;
-background: #FFFFFF;
-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
-border-radius: 0.2rem;
-
+    background: #FFFFFF;
+    box-shadow: 0px 0px 2px rgb(0 0 0 / 12%), 0px 2px 2px rgb(0 0 0 / 24%);
+    border-radius: 0.2rem;
 }
 
 .new{
@@ -95,8 +96,8 @@ border-radius: 3px;
     position: absolute;
     width: 1.6rem;
     height: 1.6rem;
-    left: 55.8rem;
-    top: 3.6rem;
+    left: 88.8rem;
+    top: 4.6rem;
     z-index: 2;
 
 }
@@ -105,8 +106,9 @@ border-radius: 3px;
     position: absolute;
     left: 69.51%;
     right: 29.38%;
-    top: 8.16%;
+    top: 3.1rem;
     bottom: 64.73%;
+    cursor: pointer;
 }
 .topcomm{
     
@@ -138,12 +140,13 @@ border-radius: 3px;
     height: 1.6rem;
     top: 3rem;
     left: 68rem;
+    cursor: pointer;
 }
 .comment{
     position: absolute;
     left: 85.5%;
     /* right: 12.5%; */
-    top: 7.5%;
+    top:3.1rem;
     bottom: 12.5%;
     border: 2px solid rgba(33, 36, 39, 0.71);
 }
@@ -176,13 +179,12 @@ border-radius: 3px;
 
 }
 
-.postimg{
-   
-    position: absolute;
-width: 40.2rem;
-height: 23.7rem;
-left: 7.9rem;
-top: 12rem;
+.postimg {
+    position: relative;
+    width: 40.2rem;
+    height: fit-content;
+    left: 7.9rem;
+    top: 0;
 }
 .cardbox{
     box-sizing: border-box;
@@ -226,7 +228,7 @@ color: rgba(33, 36, 39, 0.6);
     position: absolute;
     width: 267.59px;
     height: 15px;
-    left: 6rem;
+    left: 10rem;
     top: 2rem;
     
     font-family: 'Montserrat';
@@ -413,6 +415,96 @@ color: rgba(33, 36, 39, 0.6);
     position: absolute;
     left: 22rem;
     top: 11.7rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #000000;
+}
+.topcommfollower4{
+    position: absolute;
+    left: 22rem;
+    top: 13.7rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #000000;
+}
+.commnumber4{
+    position: absolute;
+    width: 1rem;
+    height: 2.2rem;
+    top: 13.7rem;
+    left: 2rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #000000;
+}
+.personicon4{
+    position: absolute;
+    width: 1rem;
+    height: 1.2rem;
+    top: 13.7rem;
+    left: 20rem;
+
+}
+.topcommfollower5{
+    position: absolute;
+    left: 22rem;
+    top: 15.7rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #000000;
+}
+.commnumber5{
+    position: absolute;
+    width: 1rem;
+    height: 2.2rem;
+    top: 15.7rem;
+    left: 2rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #000000;
+}
+.personicon5{
+    position: absolute;
+    width: 1rem;
+    height: 1.2rem;
+    top: 15.7rem;
+    left: 20rem;
+
+}
+.topcommname4{
+    position: absolute;
+    width: 7.9rem;
+    height: 2rem;
+    top: 13.7rem;
+    left: 8rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #000000;
+}
+.topcommname5{
+    position: absolute;
+    width: 7.9rem;
+    height: 2rem;
+    top: 15.7rem;
+    left: 8rem;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;

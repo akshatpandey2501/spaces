@@ -15,14 +15,18 @@ function Login(){
     const[email,setLogin] = useState("");
     const[password,setPassword]=useState("")
     const handleChange = event =>{
-      setLogin(event.target.value);
+      setLogin(event.target.value)
+      setIsShow(false)
    };
    const handleChange1 = event =>{
+      setIsShow(false)
     setPassword(event.target.value);
  };
  const navigate=useNavigate();
  const[isShown,setIsShow]=useState(false)
+ 
  var info={email:email,password:password};
+ console.log(info)
     const Buttionaction1=e=>{
         e.preventDefault();
         setLogin("")
@@ -31,12 +35,14 @@ function Login(){
             console.log(res);
             if(res.status===200){
               navigate("/Userlogin")
+              if(localStorage.getItem("logintoken")!==null){
+               localStorage.removeItem("logintoken")
+              }
               localStorage.setItem("logintoken",res.data.token)
             }
           })
           .catch((err) => {
             console.log(err);
-            
             setLoginError(err.response.data.msg)
             setIsShow(true)
 

@@ -19,17 +19,20 @@ function Signup(){
     const[message3,setMessage3]=useState("")
     const[error,setError]=useState("");
     const handleChange3 = event =>{
+      
       setMessage3(event.target.value);
+      setIsShow(false)
    };
      const handleChange = event =>{
         setMessage(event.target.value);
+        setIsShow(false)
      };
     
      const[message1,setMessage1] = useState("");
      const[error1,setError1] = useState("");
  
      const handleChange1 = event => {
-        
+      setIsShow(false)
         setMessage1(event.target.value);
      }
      const[isShowError,setIsShowerror]=useState(false)
@@ -149,7 +152,7 @@ function Signup(){
          <img src={Passwordsvg} alt="password" className="passwordicon1" />
          <p className="errorconfirm" style={{display: isShowConfirmError ? 'block' : 'none'}}>{error2}</p>
          <input onChange={handleChange2} type="password" id="Confirm Password" placeholder="Confirm Password" value={message2} className="input3"  />
-         <button className="continuebutton" onClick={Buttonaction}><p className="continuetext">Continue</p></button>
+         <button className="continuebutton" onClick={Buttonaction}><p className="continuetext1">Continue</p></button>
          <p className="clicking">By clicking on Login, I accept the<b>Terms & Conditions</b> & <b>Privacy Policy</b></p>
          <p className="registered"><Link to="/Login" style={{ textDecoration: 'none',color:'black'}}>Already Registered?</Link></p>
         </div>

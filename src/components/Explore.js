@@ -18,12 +18,12 @@ function Explore(){
     subspace:'',
     heading:'',
     imgpath:'',
-    upvotes:[],
-    downvotes:[],
+    votes:'',
     comments:[],
   }])
   const[top,setTop]=useState([{
-  name:''
+  name:'',
+  members:""
   }])
     
     const fetchData = async() =>{
@@ -58,7 +58,7 @@ return(
  
    <p className="topcommtext">Top Communities</p>
    <ol>
-       <li><p className={"commnumber"+k}>{k+1}</p><p className={"topcommname"+k}>{index.name}</p><img src={Personsvg} alt="person" className={"personicon"+k} /><p className={"topcommfollower"+k}>34k</p></li>
+       <li><p className={"commnumber"+k}>{k+1}</p><p className={"topcommname"+k}>{index.name}</p><img src={Personsvg} alt="person" className={"personicon"+k} /><p className={"topcommfollower"+k}>{top.members}</p></li>
 </ol>
 </>
 )
@@ -75,7 +75,7 @@ return(
     
     <div className="card" >
       <p className="cardusername">{items.author}/</p><p className="subspace">{items.subspace}</p>
-       <img src={Upvotesvg}  className="upvoteicon" /><p className="upvotes">{(items.upvotes.length)-(items.downvotes.length)}</p> <img src={Downvotesvg} alt="arrow" className="downvoteicon" /> <img src={Commentsvg} alt="popular" className="comment" /><p className="comments">{items.comments.length}</p> 
+       <img src={Upvotesvg}  className="upvoteicon" /><p className="upvotes">{items.votes}</p> <img src={Downvotesvg} alt="arrow" className="downvoteicon" /> <img src={Commentsvg} alt="popular" className="comment" /><p className="comments">{items.comments.length}</p> 
       <p className="posttext">{items.heading}</p>
       <img src={"https://spacesback-production.up.railway.app/"+items.imgpath} alt="popular" className="postimg" />
       
