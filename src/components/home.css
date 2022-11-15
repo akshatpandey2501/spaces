@@ -1,6 +1,10 @@
 html{
     font-size: 100%;
 }
+body{
+    background-color:#F7F7F7;
+    
+}
 .imagehome{
     position: absolute;
     /* width: 74.5rem; */

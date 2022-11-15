@@ -4,7 +4,7 @@
         width: 37.3rem;
         height: 3.9rem;
         left: 30.2rem;
-        top: 10rem;
+        top: 4rem;
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 600;
@@ -33,7 +33,7 @@
         width: 84.6rem;
         height: 64.1rem;
         left: 29.7rem;
-        top: 20.3rem;
+        top: 10.3rem;
         background: #FFFFFF;
         box-shadow: 0px 0px 2px rgb(0 0 0 / 12%), 0px 2px 2px rgb(0 0 0 / 24%);
         border-radius: 0.2rem;
@@ -109,7 +109,7 @@
         width: 8rem;
 }
 
-    label{
+    #inputimg1{
         position: relative;
         top: 300px;
         left: 23rem;

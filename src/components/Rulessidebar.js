@@ -12,7 +12,7 @@ function Rulessidebar(){
 </p>
          <img className="rulesPointer4" src={Pointersvg} alt="login img"/><p className="rulepoint4">Search for duplicates before posting.</p>
          <img className="rulesPointer5" src={Pointersvg} alt="login img"/><p className="rulepoint5">Read the community's rules</p>
-            <p className="topcommviewtext"><Link to="/TopCommunities" style={{ textDecoration: 'none',color:'black'}}>View More</Link></p>
+     
         <p className="topcommprivacy"><Link to="/Privacypolicy" style={{ textDecoration: 'none',color:'black'}}>Privacy Policy</Link></p>
         <p className="topcommagreement"><Link to="/Contentpolicy" style={{ textDecoration: 'none',color:'black'}}>Content Policy</Link></p>
         <p className="topcommcontact">Contact Us</p>

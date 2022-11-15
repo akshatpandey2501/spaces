@@ -19,6 +19,8 @@ import Upvotedone from "../images/upvotedone.svg"
 var spaceinfo;
 var myusername;
 function Userloginpage(){
+  const [upvotedone,setUpvotedone]=useState()
+const [downvotedone,setDownvotedone]=useState(false)
   const [username,setUsername]=useState("")
   const[data,setData]=useState([{
     author:'',
@@ -48,6 +50,7 @@ function Userloginpage(){
    setUsername(res.data.user_name)
    setMyspace(res.data.topcomm)
  setDownVoted(res.data.downvoted)
+
  })
  console.error();
 };
@@ -58,7 +61,7 @@ useEffect(() => {
   fetchData();
   
   
-}, [votedon]);
+},[]);
    const navigate=useNavigate()
 function changeHandle(){
   navigate("/Createpost") 
@@ -68,22 +71,34 @@ const[iscomment,setIsComment]=useState(false)
  function showComments(){
 setIsComment(true)
 }
-const [upvotedone,setUpvotedone]=useState(false)
-const [downvotedone,setDownvotedone]=useState(false)
+const[valueincrease,setValueinc]=useState(null)
+const[valuedecrease,setValuednc]=useState(null)
+const[showincrease,setShowinc]=useState(true)
+const[showdecrease,setShowdnc]=useState(true)
+var arraycopy1=[...downvotedon]
+var arraycopy=[...votedon]
 const handleClick = event => {
   Tokentoheader(localStorage.getItem("logintoken"))
   var itera=event.target.getAttribute("dataset")
-  console.log(itera)
-  setDownvotedone(true)
-  var postid={"_Id":event.currentTarget.id}
+   var postid={"_Id":event.currentTarget.id}
   if(downvotedon[itera]!==true){
-    
+    arraycopy1[itera] = true
+    setDownVoted(arraycopy1) 
+    arraycopy[itera]=false
+    setVoted(arraycopy)
+    if(votedon[itera]===true){
+    setValuednc("minustwo")
+    setShowinc(false)
+    setShowdnc(true)
+    }
+    else{
+      setValuednc("minusone")
+      setShowdnc(true)
+      setShowinc(false)
+    }
   axios.put('https://spacesback-production.up.railway.app/p/downvote',postid).then((res) => {
     console.log(res);
-    if(res.data.success===true){
-      downvotedon[itera]=true
-      votedon[itera]=false
-    }
+    
   })
   .catch((err) => {
     console.log(err)
@@ -91,13 +106,15 @@ const handleClick = event => {
       
       }
       else{
-        setDownvotedone(false)
+        arraycopy1[itera] = false
+        setDownVoted(arraycopy1) 
+        setShowinc(true)
+        setShowdnc(false)
+        setValueinc("plusone")
+        
         axios.put('https://spacesback-production.up.railway.app/p/undownvote',postid).then((res) => {
           console.log(res);
-          if(res.data.success===true){
-            downvotedon[itera]=false 
-          }
-       
+           
         })
         .catch((err) => {
           console.log(err)
@@ -110,14 +127,26 @@ const handleClick1 = event => {
   Tokentoheader(localStorage.getItem("logintoken"))
   var iteration=event.target.getAttribute("dataset")
   var postid1={_Id :event.currentTarget.id}
+  console.log(iteration)
   if(votedon[iteration]!==true){
-    
+arraycopy[iteration] = true
+setVoted(arraycopy)
+arraycopy1[iteration]=false
+setDownVoted(arraycopy1)
+    downvotedon[iteration]=false
+    if(downvotedone[iteration]===true){
+       setValueinc("plustwo") 
+       setShowdnc(false)
+       setShowinc(true)
+      }
+      else{
+        setValuednc("plusone")
+        setShowdnc(false)
+        setShowinc(true)
+      }
     axios.put('https://spacesback-production.up.railway.app/p/upvote',postid1).then((res) => {
       console.log(res);
-      if(res.data.success===true){
-      votedon[iteration]=true
-      downvotedon[iteration]=false
-      }
+     
     })
     .catch((err) => {
       console.log(err)
@@ -125,11 +154,14 @@ const handleClick1 = event => {
          
         }
         else{
-          setDownvotedone(false)
+          arraycopy[iteration] = false
+          setVoted(arraycopy)
+          setValuednc("minusone")
+ setShowdnc(true)
+ setShowinc(false)
+
           axios.put('https://spacesback-production.up.railway.app/p/unupvote',postid1).then((res) => {
-            if(res.data.success===true){
-              votedon[iteration]=false 
-            }
+          
          
           })
           .catch((err) => {
@@ -191,13 +223,13 @@ function takeTosubspace(e){
 return(
     <div className={styles.home}>
         <Sidebar/>
-        <Topcomm/>
+        
         <img src={Searchsvg} alt="search" className="searchicon" /><input type="search" id="search" className="search" onChange={handleSearch} value={search1} placeholder="Search" />
           
         <div className="subspacecard">
           {searchresult1.map((searches)=>( 
            
-                <p className="subspaces"><Link to="/Subspacecreated" style={{ textDecoration: 'none',color:'black'}} id={searches} onClick={takeTosubspace}>{searches}</Link></p>
+                <p className="subspaces">{(searchresult1.length===0)?("No result for"+search1):<Link to="/Subspacecreated" style={{ textDecoration: 'none',color:'black'}} id={searches} onClick={takeTosubspace}>{searches}</Link>}</p>
             
             
           ))}
@@ -211,7 +243,7 @@ return(
     
     <div className="card"  >
       <p className="cardusername" >{items.author}/</p><p className="subspace" onClick={sendSubname} id={items.subspace}><Link to="/Subspacecreated"  style={{ textDecoration: 'none',color:'black'}}>{items.subspace}</Link></p>
-       <img src={(votedon[i]===true) ? Upvotedone  : Upvotesvg}  className="upvoteicon" onClick={handleClick1} id={items._id} dataset={i} /><p className="upvotes" >{items.votes}</p> <img  src={(downvotedon[i]===true) ? Downvotedonesvg : Downvotesvg}  alt="arrow" className="downvoteicon" id={items._id} onClick={handleClick} dataset={i} /> <img src={Commentsvg} alt="popular" className="comment" onClick={showComments} /><p className="comments">{items.comments.length}</p> 
+       <img src={(votedon[i]===true) ? Upvotedone  : Upvotesvg}  className="upvoteicon" onClick={handleClick1} id={items._id} dataset={i} /><p className="upvotes" style={(!showincrease)? { display:'none'} : {display : 'block'}}>{(valueincrease === null) ? (items.votes) : valueincrease === 'plusone' ? (items.votes+1 ): (items.votes+2)}</p><p className="upvotes" style={(!showdecrease)? { display:'none'} : {display : 'block'}}>{(valuedecrease === null) ? (items.votes) : valuedecrease === 'minusone' ? (items.votes-1 ): (items.votes-2)}</p> <img  src={(downvotedon[i]===true) ? Downvotedonesvg : Downvotesvg}  alt="arrow" className="downvoteicon" id={items._id} onClick={handleClick} dataset={i} /> <img src={Commentsvg} alt="popular" className="comment" onClick={showComments} /><p className="comments">{items.comments.length}</p> 
       <p className="posttext"onClick={navigateUser} id={items._id} >{items.heading}</p>
       <p  style={ (items.para===null)? { display:'none'} : {display : 'block'}} id="paraofcard">{items.para}</p>
       <img src={"https://spacesback-production.up.railway.app/"+items.imgpath} alt="popular" className="postimg" onClick={navigateUser} id={items._id} style={ (items.imgpath===null)? { display:'none'} : {display : 'block'} }  
@@ -225,16 +257,21 @@ return(
      </div> ):(<Changeprofile/>)}
       <div className={styles.userloginarea}><img src={Avatarsvg} alt="person" className={styles.avatar} /><p className={styles.username}>{username}</p><button className={styles.logoutbutton}><p className={styles.logouttext}>Logout</p></button></div>
       <div className="topcomm">
+      <p className="topcommtext">Top Communities</p>
+      <div className={styles.communityarea}>
 {myspace.map((index,k)=>(
   <>
- 
-   <p className="topcommtext">Top Communities</p>
-   <ol>
-       <li><p className={"commnumber"+k}>{k+1}</p><p className={"topcommname"+k}>{index.name}</p><img src={Personsvg} alt="person" className={"personicon"+k} /><p className={"topcommfollower"+k}>{index.members}</p></li>
-</ol>
-</>
+  <div className={styles.commcontainer}>
+       <p className={styles.commnumber}>{k+1}</p><p className={styles.topcommname}>{index.name}</p><img src={Personsvg} alt="person" className={styles.personicon} /><p className={styles.topcommfollower}>{index.members}</p>
+       </div>
+       <div className={styles.secondline}></div>
+       </>
 )
 )}
+</div>
+<div className={styles.firstline}></div>
+<div className={styles.firstline1}></div>
+
         <p className="topcommviewtext"><Link to="/TopCommunities" style={{ textDecoration: 'none',color:'black'}}>View More</Link></p>
         <p className="topcommprivacy"><Link to="/Privacypolicy" style={{ textDecoration: 'none',color:'black'}}>Privacy Policy</Link></p>
         <p className="topcommagreement"><Link to="/Contentpolicy" style={{ textDecoration: 'none',color:'black'}}>Content Policy</Link></p>
@@ -246,30 +283,3 @@ return(
 )
 }
 export default Userloginpage;
-export function loginArea(){
-
-  return(<>
-  <div>
-    <div className={styles.userloginarea}><img src={Avatarsvg} alt="person" className={styles.avatar} /><p className={styles.username}>{myusername}</p><button className={styles.logoutbutton}><p className={styles.logouttext}>Logout</p></button></div>
-    <div className="topcomm">
-{spaceinfo.map((index,k)=>(
-<>
-
- <p className="topcommtext">Top Communities</p>
- <ol>
-     <li><p className={"commnumber"+k}>{k+1}</p><p className={"topcommname"+k}>{index.name}</p><img src={Personsvg} alt="person" className={"personicon"+k} /><p className={"topcommfollower"+k}>{index.members.length+"k"}</p></li>
-</ol>
-</>
-)
-)}
-      <p className="topcommviewtext"><Link to="/TopCommunities" style={{ textDecoration: 'none',color:'black'}}>View More</Link></p>
-      <p className="topcommprivacy"><Link to="/Privacypolicy" style={{ textDecoration: 'none',color:'black'}}>Privacy Policy</Link></p>
-      <p className="topcommagreement"><Link to="/Contentpolicy" style={{ textDecoration: 'none',color:'black'}}>Content Policy</Link></p>
-      <p className="topcommcontact">Contact Us</p>
-      <p className="topcommspace">2022 spaces</p>
-  </div>
-  </div>
-    
-
- </> )
-}

@@ -52,17 +52,21 @@ return(
        
       
         <div className="bar" ><p className="new">New</p><p className="top">Top</p></div>
-<div className="topcomm">
+        <div className="topcomm">
+      <p className="topcommtext">Top Communities</p>
+      <div className="communityarea">
 {top.map((index,k)=>(
   <>
- 
-   <p className="topcommtext">Top Communities</p>
-   <ol>
-       <li><p className={"commnumber"+k}>{k+1}</p><p className={"topcommname"+k}>{index.name}</p><img src={Personsvg} alt="person" className={"personicon"+k} /><p className={"topcommfollower"+k}>{top.members}</p></li>
-</ol>
-</>
+  <div className="commcontainer">
+       <p className="commnumber">{k+1}</p><p className="topcommname">{index.name}</p><img src={Personsvg} alt="person" className="personicon" /><p className="topcommfollower">{index.members}</p>
+       </div>
+       <div className="secondline"></div>
+       </>
 )
 )}
+</div>
+<div className="firstline"></div>
+<div className="firstline1"></div>
  <p className="topcommviewtext"><Link to="/TopCommunities" style={{ textDecoration: 'none',color:'black'}}>View More</Link></p>
         <p className="topcommprivacy"><Link to="/Privacypolicy" style={{ textDecoration: 'none',color:'black'}}>Privacy Policy</Link></p>
         <p className="topcommagreement"><Link to="/Contentpolicy" style={{ textDecoration: 'none',color:'black'}}>Content Policy</Link></p>

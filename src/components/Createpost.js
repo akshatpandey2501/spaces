@@ -51,12 +51,8 @@ function Createpost(){
       console.log(res);
       
       if (res.status == 200) {
-    
-          navigt("/Userlogin")
-         
-         
-      
-      } 
+     navigt("/Userlogin")
+        } 
     })
     .catch((err) => {
       console.log(err)
@@ -155,7 +151,7 @@ fetchData3();
           
           <p className="spaceruletitle">{showimage?("Image"):("Text")}</p>
           <textarea className="posttitle" cols="30" rows="10" onChange={handleChange} value={description}></textarea>
-          <label for="inputimage" style={showimage?{display:"block"}:{display:"none"}}>Upload   </label>        
+          <label for="inputimage1" id="inputimg1" style={showimage?{display:"block"}:{display:"none"}}>Upload   </label>        
           <input type={showimage?("file"):("text")} id="inputimage" className="textfield" accept="image/png, image/jpg, image/gif, image/jpeg" style={showimage?{display:"none"}:{display:"block"}} onChange={showimage?handleFile : handleText}  ></input>
          
           <button className="createbtn" onClick={sendInfo}><p className="createtext">Create</p> </button>

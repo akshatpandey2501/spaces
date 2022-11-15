@@ -12,7 +12,7 @@ import DesignA from"../images/Group 99.svg"
 import DesignB from"../images/Group 100.svg"
 import Pentagon from"../images/pentagon.svg"
 import Tokentoheader from "./Tokentoheader";
-import "./subspacecreated.css";
+import "./Subspacecreated.css";
 import { specialChars } from "@testing-library/user-event";
 
 function Subspacecreated(){
@@ -49,7 +49,7 @@ function Subspacecreated(){
        setSpaceRules(res.data.subspace.rules)
        setSpaceimage(res.data.subspace.imgpath)
        setSpacefollow(res.data.subspace.members)
-       console.log(res.data.posts[0].upvoted)
+      
      })
      console.error();
     };
@@ -60,20 +60,21 @@ function Subspacecreated(){
       fetchData();
      
       
-    }, [followed]);
+    },[]);
     var unfollow={subspace:spacename}
     var follow={subspace:spacename}
     function Followuser(){
-      if(followed===true){
+      if(followed===true){ setFollowed(false)
+        spacefollow.length-=1
         axios.put('https://spacesback-production.up.railway.app/s/unfollow',unfollow).then((res) => {
-          console.log(res);
-          setFollowed(res.data.msg)
+       
+         
       })
-    }else{
-      
+    }else{setFollowed(true)
+      spacefollow.length+=1
         axios.put('https://spacesback-production.up.railway.app/s/follow',follow).then((res) => {
-          console.log(res);
-          setFollowed(res.data.msg)
+         
+          
       })
     }
     }

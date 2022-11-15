@@ -3,9 +3,11 @@ html{
 }
 .sidebar{
     float: left;
-    height: 70.7rem;
+    top: 0;
+    height: 100%;
     width: 27.3rem;
     position: fixed;
+    background-color: #FFFFFF;
 }
 .spaces{
     position: absolute;

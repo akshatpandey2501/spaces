@@ -108,7 +108,7 @@ function takeTosubspace(e){
           <textarea className="spacedescription" cols="30" rows="10" onChange={changeHandle2} value={spacedescri} ></textarea>
           <p className="spaceruletitle">Space Description</p>
           <textarea className="spacerules" cols="30" rows="10" onChange={changeHandle3} value={spacerules}></textarea>
-          <label for="inputimage">Drag and Drop image or Upload
+          <label for="inputimage" id="inputimg">Drag and Drop image or Upload
           <input type="file" id="inputimage" className="profileimage" accept="image/png, image/jpg, image/gif, image/jpeg" onChange={handleChange4} ></input>
           </label>
           <button className="createbtn" onClick={submitApi} ><p className="createtext">Create</p> </button>

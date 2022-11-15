@@ -411,7 +411,7 @@ button{
         color: #212427;
     }
     ::placeholder{
-        text-indent: 3vw;
+        padding-left: -3rem;
         color: #212427;
     }
     .loginbutton{

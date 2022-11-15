@@ -110,7 +110,9 @@ function postComment(e){
           
         })
 }
+
 var id;
+
 const [apiid,setApiid]=useState('')
 const[replyvalue,setReplyvalue]=useState([{
   author:"",
@@ -124,20 +126,14 @@ var replynumber;
 function ReplyClicked(e){
   setApiid(e.target.getAttribute("dataset")) 
  id=e.currentTarget.id
- 
- console.log(apiid)
-if(id){
- 
-  let replycomment=document.querySelectorAll(`[dataset=${id}]`)
 
-  replycomment.forEach((child)=> child.classList.toggle("opened"));
-}
+let replycomment=document.querySelectorAll(`[dataset=${id}]`)
+replycomment.forEach((child)=> child.classList.toggle("opened"));
+
 }
 const fetchData2 = async() =>{
- 
-  replynumber=0
-  
-  await axios.get('https://spacesback-production.up.railway.app/c/'+apiid+'/'+replynumber).then((res) => {
+ replynumber=0
+    await axios.get('https://spacesback-production.up.railway.app/c/'+apiid+'/'+replynumber).then((res) => {
   console.log(res)
  setReplyvalue(res.data.comments)
 
@@ -145,13 +141,10 @@ const fetchData2 = async() =>{
 console.log(e);
 })
 };
-console.log('https://spacesback-production.up.railway.app/c/'+apiid+'/'+replynumber)
+
 useEffect(() => {
-
 fetchData2();
-
-
-}, [apiid]); 
+},[apiid]); 
 function takeTosubspace(e){
   if(localStorage.getItem("spacename")!==null){
     localStorage.removeItem("spacename")
@@ -181,11 +174,11 @@ return(
        <img src={Upvotesvg} alt="popular" className="upvoteicon" /><p className="upvotes"></p> <img src={Downvotesvg} alt="arrow" className="downvoteicon" /> <img src={Commentsvg} alt="popular" className="comment" /><p className="comments">{comments.length}</p> 
       <p className="posttext">{heading}</p>
       <p  style={ (para===null)? { display:'none'} : {display : 'block'}} id="paraofcard">{para}</p>
-      <img src={"https://spacesback-production.up.railway.app/"+{imgpath}} alt="popular" className="postimg"  style={ (imgpath===null)? { display:'none'} : {display : 'block'} }   />
+      <img src={"https://spacesback-production.up.railway.app/"+imgpath} alt="popular" className="postimg"  style={ (imgpath===null)? { display:'none'} : {display : 'block'} }   />
       
     </div>
       <div className="container1" >
-     
+    
       {commentvalue.map((elem,i)=>(
         
        <div className="commentcontainer opened" id={"firstcomment"}>
@@ -205,7 +198,7 @@ return(
      
       
       {replyvalue.map((reply)=>(<>
-          <div className="commentcontainer" dataset={"firstcomment"+apiid} id={"firstreply"}>
+          <div className="commentcontainer" dataset={"firstcomment"+elem._id} id={"firstreply"}>
           <div className="commentcard">
                       
 
@@ -236,8 +229,8 @@ return(
         </>  ))}
         </div>
           ))} 
+      
        </div>
-       
   
           
       
