@@ -1,9 +1,9 @@
 import React, { useState,useEffect } from "react";
 import axios from "axios";
 import Sidebar from "./Sidebar";
-import Topcomm from "./Topcomm";
 import styles from "./Userlogin.module.css"; 
 import Commentsvg from "../images/message-square.svg"
+import Topcomm from "./Topcomm"
 import Upvotesvg from "../images/arrowup.svg"
 import Downvotesvg from "../images/arrowdown.svg"
 import Createpostsvg from "../images/pluscircle.svg"
@@ -12,7 +12,6 @@ import Avatarsvg from "../images/Group 71.svg"
 import Personsvg from "../images/Group.svg"
 import { Link,useNavigate } from "react-router-dom";
 import Tokentoheader from "./Tokentoheader";
-import Changeprofile from "./Changeprofile";
 import Searchsvg from "../images/search.svg"
 import Downvotedonesvg from "../images/downvotedone.svg"
 import Upvotedone from "../images/upvotedone.svg"
@@ -87,14 +86,14 @@ const handleClick = event => {
     arraycopy[itera]=false
     setVoted(arraycopy)
     if(votedon[itera]===true){
-    setValuednc("minustwo")
-    setShowinc(false)
-    setShowdnc(true)
+      datadummy=[...data]
+      datadummy[itera].votes-=2
+      setData(datadummy)
     }
     else{
-      setValuednc("minusone")
-      setShowdnc(true)
-      setShowinc(false)
+      datadummy=[...data]
+    datadummy[itera].votes-=1
+     setData(datadummy)
     }
   axios.put('https://spacesback-production.up.railway.app/p/downvote',postid).then((res) => {
     console.log(res);
@@ -108,9 +107,9 @@ const handleClick = event => {
       else{
         arraycopy1[itera] = false
         setDownVoted(arraycopy1) 
-        setShowinc(true)
-        setShowdnc(false)
-        setValueinc("plusone")
+        datadummy=[...data]
+        datadummy[itera].votes+=1
+        setData(datadummy)
         
         axios.put('https://spacesback-production.up.railway.app/p/undownvote',postid).then((res) => {
           console.log(res);
@@ -133,16 +132,16 @@ arraycopy[iteration] = true
 setVoted(arraycopy)
 arraycopy1[iteration]=false
 setDownVoted(arraycopy1)
-    downvotedon[iteration]=false
-    if(downvotedone[iteration]===true){
-       setValueinc("plustwo") 
-       setShowdnc(false)
-       setShowinc(true)
+   
+    if(downvotedon[iteration]===true){
+      datadummy=[...data]
+      datadummy[iteration].votes+=2
+      setData(datadummy)
       }
       else{
-        setValuednc("plusone")
-        setShowdnc(false)
-        setShowinc(true)
+        datadummy=[...data]
+    datadummy[iteration].votes+=1
+    setData(datadummy)
       }
     axios.put('https://spacesback-production.up.railway.app/p/upvote',postid1).then((res) => {
       console.log(res);
@@ -156,9 +155,9 @@ setDownVoted(arraycopy1)
         else{
           arraycopy[iteration] = false
           setVoted(arraycopy)
-          setValuednc("minusone")
- setShowdnc(true)
- setShowinc(false)
+          datadummy=[...data]
+          datadummy[iteration].votes-=1
+           setData(datadummy)
 
           axios.put('https://spacesback-production.up.railway.app/p/unupvote',postid1).then((res) => {
           
@@ -171,6 +170,7 @@ setDownVoted(arraycopy1)
               }
                
   };
+
 const navi=useNavigate()
 function navigateUser(even){
   if(localStorage.getItem("idpost")!==null){
@@ -178,10 +178,6 @@ function navigateUser(even){
   }
   navi("/Showpost")
   localStorage.setItem("idpost",even.currentTarget.id)
-}
-const[ischangeprofile,setIschangeprofile]=useState(true)
-function Navigate(){
-  setIschangeprofile(false)
 }
 spaceinfo=myspace
 myusername=username
@@ -220,10 +216,13 @@ function takeTosubspace(e){
   }
   localStorage.setItem("spacename",e.currentTarget.id)
 }
+var datadummy
+var topcommdata;
+topcommdata=[...myspace]
 return(
     <div className={styles.home}>
         <Sidebar/>
-        
+        <Topcomm first={topcommdata}/>
         <img src={Searchsvg} alt="search" className="searchicon" /><input type="search" id="search" className="search" onChange={handleSearch} value={search1} placeholder="Search" />
           
         <div className="subspacecard">
@@ -235,15 +234,15 @@ return(
           ))}
           </div>
           
-        <div className={styles.create} style={{display: ischangeprofile ? 'block' : 'none'}}><img src={Createpostsvg} alt="person" className={styles.posticon} /><img src={Createspacesvg} alt="person" className={styles.spaceicon} /><button className={styles.createpostbutton}onClick={changeHandle} ><p className={styles.createpost}>Create Post</p></button><button className={styles.createspacebutton} ><p className={styles.createspace}><Link to="/Createspace" style={{ textDecoration: 'none',color:'black'}}>Create Subspace</Link></p></button></div>
+        <div className={styles.create} ><img src={Createpostsvg} alt="person" className={styles.posticon} /><img src={Createspacesvg} alt="person" className={styles.spaceicon} /><button className={styles.createpostbutton}onClick={changeHandle} ><p className={styles.createpost}>Create Post</p></button><button className={styles.createspacebutton} ><p className={styles.createspace}><Link to="/Createspace" style={{ textDecoration: 'none',color:'black'}}>Create Subspace</Link></p></button></div>
        
         <p className={styles.Posts}>All Posts</p>
-   {ischangeprofile?(     <div className=" cardarea">       
+   <div className=" cardarea">       
    {data.map((items,i)=>(
     
     <div className="card"  >
       <p className="cardusername" >{items.author}/</p><p className="subspace" onClick={sendSubname} id={items.subspace}><Link to="/Subspacecreated"  style={{ textDecoration: 'none',color:'black'}}>{items.subspace}</Link></p>
-       <img src={(votedon[i]===true) ? Upvotedone  : Upvotesvg}  className="upvoteicon" onClick={handleClick1} id={items._id} dataset={i} /><p className="upvotes" style={(!showincrease)? { display:'none'} : {display : 'block'}}>{(valueincrease === null) ? (items.votes) : valueincrease === 'plusone' ? (items.votes+1 ): (items.votes+2)}</p><p className="upvotes" style={(!showdecrease)? { display:'none'} : {display : 'block'}}>{(valuedecrease === null) ? (items.votes) : valuedecrease === 'minusone' ? (items.votes-1 ): (items.votes-2)}</p> <img  src={(downvotedon[i]===true) ? Downvotedonesvg : Downvotesvg}  alt="arrow" className="downvoteicon" id={items._id} onClick={handleClick} dataset={i} /> <img src={Commentsvg} alt="popular" className="comment" onClick={showComments} /><p className="comments">{items.comments.length}</p> 
+       <img src={(votedon[i]===true) ? Upvotedone  : Upvotesvg}  className="upvoteicon" onClick={handleClick1} id={items._id} dataset={i} /><p className="upvotes" >{items.votes}</p> <img  src={(downvotedon[i]===true) ? Downvotedonesvg : Downvotesvg}  alt="arrow" className="downvoteicon" id={items._id} onClick={handleClick} dataset={i} /> <img src={Commentsvg} alt="popular" className="comment" onClick={showComments} /><p className="comments">{items.comments.length}</p> 
       <p className="posttext"onClick={navigateUser} id={items._id} >{items.heading}</p>
       <p  style={ (items.para===null)? { display:'none'} : {display : 'block'}} id="paraofcard">{items.para}</p>
       <img src={"https://spacesback-production.up.railway.app/"+items.imgpath} alt="popular" className="postimg" onClick={navigateUser} id={items._id} style={ (items.imgpath===null)? { display:'none'} : {display : 'block'} }  
@@ -253,9 +252,9 @@ return(
     ) ) 
     
    }
- 
-     </div> ):(<Changeprofile/>)}
-      <div className={styles.userloginarea}><img src={Avatarsvg} alt="person" className={styles.avatar} /><p className={styles.username}>{username}</p><button className={styles.logoutbutton}><p className={styles.logouttext}>Logout</p></button></div>
+
+     </div> 
+      <div className={styles.userloginarea}><img src={Avatarsvg} alt="person" className={styles.avatar} /><p className={styles.username} >{username}</p><button className={styles.logoutbutton}><p className={styles.logouttext}>Logout</p></button></div>
       <div className="topcomm">
       <p className="topcommtext">Top Communities</p>
       <div className={styles.communityarea}>

@@ -1,6 +1,19 @@
 html{
     font-size: 55%;
 }
+.Posts {
+    position: relative;
+    width: 14.8rem;
+    height: 3.9rem;
+    left: 34.7rem;
+    top: 1.6rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 3.9rem;
+    color: #0079D3;
+}
 
 .bar{
     position: sticky;
@@ -18,9 +31,9 @@ html{
     margin-bottom: 10rem;
     width: 84.6rem;
     height: 54rem;
-    left: 29.7rem;
+    left: 34.7rem;
     overflow-y: hidden;
-    top: 10.9rem;
+    top: 5.9rem;
     padding-top: 20vh;
     background: #FFFFFF;
     box-shadow: 0px 0px 2px rgb(0 0 0 / 12%), 0px 2px 2px rgb(0 0 0 / 24%);
@@ -215,11 +228,13 @@ color: rgba(33, 36, 39, 0.6);
 
 
 }
-.cardarea{
+.cardarea {
+    height: -moz-fit-content;
     height: fit-content;
     display: flex;
+    position: relative;
+    top: -3rem;
     flex-direction: column;
-    
 }
 .cardarea::-webkit-scrollbar {
     display: none;

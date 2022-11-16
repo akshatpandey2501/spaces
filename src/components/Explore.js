@@ -51,7 +51,7 @@ return(
         <Sidebar/>
        
       
-        <div className="bar" ><p className="new">New</p><p className="top">Top</p></div>
+        <p className="Posts">All Posts</p>
         <div className="topcomm">
       <p className="topcommtext">Top Communities</p>
       <div className="communityarea">

@@ -19,6 +19,8 @@ import Createspace from "./components/Createspace";
 import Createpost from "./components/Createpost";
 import Showpost from "./components/Showpost";
 import Changeprofile from "./components/Changeprofile";
+import Showprofile from "./components/Showuser";
+import Showuser from "./components/Showuser";
 
 function App(){
     return(
@@ -52,6 +54,7 @@ function App(){
             <Route path="/Createpost" element={<Createpost/>}/>
             <Route path="/Showpost" element={<Showpost/>}/>
             <Route path="/Changeprofile" element={<Changeprofile/>}/>
+            <Route path="/Showuser" element={<Showuser/>}/>
         </Routes>
         
         </div>

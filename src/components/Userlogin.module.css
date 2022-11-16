@@ -1,17 +1,16 @@
-.Posts{
-    position: absolute;
+.Posts {
+    position: relative;
     width: 14.8rem;
     height: 3.9rem;
-    left: 29.7rem;
+    left: 34.7rem;
     top: 10.6rem;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
     font-size: 3.2rem;
     line-height: 3.9rem;
-    color: #000000;
-    
-    }
+    color: #0079D3;
+}
 .createpostbutton{
     box-sizing: border-box;
     position: absolute;
@@ -40,7 +39,7 @@
         width: 273px;
         height: 2px;
         left: 0px;
-        top: 49.5rem;
+        top: 54.5rem;
         background: #D9D9D9;
     }
     .secondline{
@@ -54,7 +53,7 @@
     width: 273px;
     height: 2px;
     left: 0px;
-    top: 63.5rem;
+    top: 68.5rem;
     background: #D9D9D9;
 }
 .container{

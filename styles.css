@@ -7,3 +7,9 @@ body{
     background-color: #FFFFFF;
     ;
 }
+.example::-webkit-scrollbar {
+    display: none;
+  }
+  .example {
+    -ms-overflow-style: none;  /* IE and Edge */
+  }  
