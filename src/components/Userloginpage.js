@@ -15,6 +15,8 @@ import Tokentoheader from "./Tokentoheader";
 import Searchsvg from "../images/search.svg"
 import Downvotedonesvg from "../images/downvotedone.svg"
 import Upvotedone from "../images/upvotedone.svg"
+import Showmoresubsvg from "../images/showmoreicon.svg"
+import Showmorearrowsvg from "../images/showmoremyspace.svg"
 var spaceinfo;
 var myusername;
 function Userloginpage(){
@@ -40,6 +42,8 @@ const [downvotedone,setDownvotedone]=useState(false)
     members:'',
     
   }])
+  var myspaces=[]
+  const [mysubspace,setMysubspace]=useState([])
   const fetchData = async() =>{
         
     await axios.get('https://spacesback-production.up.railway.app/p/loggedfeed').then((res) => {
@@ -49,7 +53,8 @@ const [downvotedone,setDownvotedone]=useState(false)
    setUsername(res.data.user_name)
    setMyspace(res.data.topcomm)
  setDownVoted(res.data.downvoted)
-
+  setMysubspace(res.data.mysubspaces)
+  
  })
  console.error();
 };
@@ -219,9 +224,25 @@ function takeTosubspace(e){
 var datadummy
 var topcommdata;
 topcommdata=[...myspace]
+const[count,setcount]=useState(1)
+console.log(count)
+const[showSpace,setShowspace]=useState(false)
+function mapSubspace(){
+  if(count%2!==0){
+ setShowspace(true)
+setcount(2)
+
+  }
+  else if(count%2===0){
+    setShowspace(false)
+    setcount(1)
+  }
+}
 return(
     <div className={styles.home}>
         <Sidebar/>
+        <img src={Showmoresubsvg} className={styles.showmoresub}/>
+        <img src={Showmorearrowsvg} className={styles.showarrow} onClick={mapSubspace}/>
         <Topcomm first={topcommdata}/>
         <img src={Searchsvg} alt="search" className="searchicon" /><input type="search" id="search" className="search" onChange={handleSearch} value={search1} placeholder="Search" />
           
@@ -242,7 +263,7 @@ return(
     
     <div className="card"  >
       <p className="cardusername" >{items.author}/</p><p className="subspace" onClick={sendSubname} id={items.subspace}><Link to="/Subspacecreated"  style={{ textDecoration: 'none',color:'black'}}>{items.subspace}</Link></p>
-       <img src={(votedon[i]===true) ? Upvotedone  : Upvotesvg}  className="upvoteicon" onClick={handleClick1} id={items._id} dataset={i} /><p className="upvotes" >{items.votes}</p> <img  src={(downvotedon[i]===true) ? Downvotedonesvg : Downvotesvg}  alt="arrow" className="downvoteicon" id={items._id} onClick={handleClick} dataset={i} /> <img src={Commentsvg} alt="popular" className="comment" onClick={showComments} /><p className="comments">{items.comments.length}</p> 
+       <img src={(votedon[i]===true) ? Upvotedone  : Upvotesvg}  className="upvoteicon" onClick={handleClick1} id={items._id} dataset={i} /><p className="upvotes" >{items.votes}</p> <img  src={(downvotedon[i]===true) ? Downvotedonesvg : Downvotesvg}  alt="arrow" className="downvoteicon" id={items._id} onClick={handleClick} dataset={i} /> <img src={Commentsvg} alt="popular" className="comment" onClick={navigateUser} id={items._id} /><p className="comments">{items.comments.length}</p> 
       <p className="posttext"onClick={navigateUser} id={items._id} >{items.heading}</p>
       <p  style={ (items.para===null)? { display:'none'} : {display : 'block'}} id="paraofcard">{items.para}</p>
       <img src={"https://spacesback-production.up.railway.app/"+items.imgpath} alt="popular" className="postimg" onClick={navigateUser} id={items._id} style={ (items.imgpath===null)? { display:'none'} : {display : 'block'} }  
@@ -252,8 +273,16 @@ return(
     ) ) 
     
    }
-
-     </div> 
+      </div> 
+      <p className={styles.myspacesname}>My Spaces</p>
+      <div className={styles.thesubspace}>
+          {mysubspace.map((spaces)=>{
+           return showSpace ? (
+                <p className={styles.sidebarsubspace} ><Link to="/Subspacecreated" style={{ textDecoration: 'none',color:'black'}} id={spaces} onClick={takeTosubspace}>{spaces}</Link></p>
+           ):(null) 
+            
+})}
+          </div>
       <div className={styles.userloginarea}><img src={Avatarsvg} alt="person" className={styles.avatar} /><p className={styles.username} >{username}</p><button className={styles.logoutbutton}><p className={styles.logouttext}>Logout</p></button></div>
       <div className="topcomm">
       <p className="topcommtext">Top Communities</p>

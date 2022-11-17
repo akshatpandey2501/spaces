@@ -16,6 +16,7 @@ html{
     color: rgba(33, 36, 39, 0.9);
 }
 .comment {
+    cursor: pointer;
     position: absolute;
     left: 89.5%;
     /* right: 12.5%; */

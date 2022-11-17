@@ -2,7 +2,7 @@ import React from "react";
 import Personsvg from "../images/Group.svg"
 import "./topcomm.css";
 import { Link } from "react-router-dom"
-function Topcomm({spaceinfo}){
+function Topcomm(){
 return(
     <div className="topcomm">
     {/* <p className="topcommtext">Top Communities</p>

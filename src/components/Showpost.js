@@ -44,7 +44,7 @@ function Showpost(){
        }, []);
     const[commentvalue,setCommentsvalue]=useState([{
       author:"",
-      childId:[],
+      parentId: '',     
       text: "",
       votes:"",
      _id:"",
@@ -52,9 +52,9 @@ function Showpost(){
      const fetchData1 = async() =>{
         var api2='https://spacesback-production.up.railway.app/c/'
 
-        await axios.get(api2+newid+'/comments/'+commentsnumber).then((res) => {
+        await axios.get(api2+newid+'/comments').then((res) => {
         console.log(res)
-        setCommentsvalue(res.data.comments)
+        setCommentsvalue(res.data)
      
      }).catch(e => {
       console.log(e);
@@ -112,51 +112,27 @@ function postComment(e){
 }
 
 var id;
-var replyarray=[]
-var result=[]
-const [apiid,setApiid]=useState('')
-const[replyvalue,setReplyvalue]=useState([{
-  author:"",
-  childId:[],
-  text: "",
-  votes:"",
- _id:"",
-}])
-var replynumber;
 var iteration
 function ReplyClicked(e){
-  setApiid(e.target.getAttribute("dataset")) 
  id=e.currentTarget.id
-iteration=e.target.getAttribute("data-value")
-let replycomment=document.querySelectorAll(`[dataset=${id}]`)
-replycomment.forEach((child)=> child.classList.toggle("opened"));
+let replycommentt=document.querySelectorAll(`[dataset=${id}]`)
+replycommentt.forEach((child)=> child.classList.toggle("opened"));
 
 }
-const fetchData2 = async() =>{
- replynumber=0
-    await axios.get('https://spacesback-production.up.railway.app/c/'+apiid+'/'+replynumber).then((res) => {
-  console.log(res)
-  replyarray[iteration]=res.data.comments
-  result = replyarray.map(element => element.slice(iteration));
-  console.log(replyarray)
- 
 
-}).catch(e => {
-console.log(e);
-})
-};
-
-useEffect(() => {
-fetchData2();
-},[apiid]); 
 function takeTosubspace(e){
   if(localStorage.getItem("spacename")!==null){
     localStorage.removeItem("spacename")
   }
   localStorage.setItem("spacename",e.currentTarget.id)
 }
-var idrequired=commentvalue.__id
-    
+var replyycomments;
+function getReplies(id){
+ replyycomments=commentvalue.filter((replyycomments)=>replyycomments.parentId===id)
+ console.log(replyycomments)  
+}
+const maincomment=commentvalue.filter((maincomment)=>maincomment.parentId===null);
+ 
 return(
     <>
    <Sidebar/>
@@ -179,13 +155,14 @@ return(
       <p className="posttext">{heading}</p>
       <p  style={ (para===null)? { display:'none'} : {display : 'block'}} id="paraofcard">{para}</p>
       <img src={"https://spacesback-production.up.railway.app/"+imgpath} alt="popular" className="postimg"  style={ (imgpath===null)? { display:'none'} : {display : 'block'} }   />
+      <div className="inputarea"><input type="text" className="commentinput" onChange={changeComment} value={comment} /><button className="postbtn" onClick={postComment} ><p className="postbutton">Post</p></button></div>
       
     </div>
       <div className="container1" >
     
-      {commentvalue.map((elem,i)=>(
-        
-       <div className="commentcontainer opened" id={"firstcomment"}>
+      {maincomment.map((elem,i)=>(
+       
+       <div className="commentcontainer opened" >
         
           <div className="commentcard">
             <p className="ourcomment">
@@ -194,20 +171,20 @@ return(
             <div className="commentsfooter">
             <div className="inputdiv" dataset={"firstcomment"+i} ><input type="text" className="replyinput" onChange={changeComment} value={comment} dataset={"firstcomment"+i} /><button className="replybtn" onClick={postComment} dataset={"firstcomment"+i} id={elem._id}><p className="replybutton" dataset={"firstcomment"+i}>Post</p></button></div>
              <p className="userinfo">{elem.author}</p>
-             <img src={Replysvg} className="replyimg" id={"firstcomment"+elem._id} onClick={ReplyClicked} data-value={i} dataset={elem._id}></img ><p className="noofreply"></p>
+             <img src={Replysvg} className="replyimg" id={"firstcomment"+elem._id} replies={getReplies(elem._id)} ></img ><p className="noofreply"></p>
 
             </div>
           </div>
         
      
       
-      { result.map((reply)=>(<>
+         {replyycomments.length>0 &&(
+         <>
+            {replyycomments.map(reply=>(
           <div className="commentcontainer" dataset={"firstcomment"+elem._id} id={"firstreply"}>
-          <div className="commentcard">
-                      
-
+          <div className="commentcard">  
             <p className="ourcomment">
-           {reply}
+            {reply.text}
             </p>
             <div className="commentsfooter">
             <div className="inputdiv" ><input type="text" className="replyinput" onChange={changeComment} value={comment} /><button className="replybtn" onClick={postComment} ><p className="replybutton">Post</p></button></div>
@@ -230,16 +207,14 @@ return(
           </div>
           </div>
         </div>
-        </>  ))}
+
+))}
+</>
+         )}
         </div>
           ))} 
       
        </div>
-  
-          
-      
-      <div className="inputarea"><input type="text" className="commentinput" onChange={changeComment} value={comment} /><button className="postbtn" onClick={postComment} ><p className="postbutton">Post</p></button></div>
-      
 </>
 )
 }
