@@ -25,7 +25,7 @@ const [downvotedone,setDownvotedone]=useState(false)
   const [username,setUsername]=useState("")
   const[data,setData]=useState([{
     author:'',
-   
+    createdAt:'',
     subspace:'',
     heading:'',
     imgpath:'',
@@ -221,6 +221,7 @@ function takeTosubspace(e){
   }
   localStorage.setItem("spacename",e.currentTarget.id)
 }
+const timenow = Date.now();
 var datadummy
 var topcommdata;
 topcommdata=[...myspace]
@@ -237,6 +238,10 @@ setcount(2)
     setShowspace(false)
     setcount(1)
   }
+}
+
+function Logoutuser(){
+localStorage.removeItem("logintoken")
 }
 return(
     <div className={styles.home}>
@@ -258,11 +263,11 @@ return(
         <div className={styles.create} ><img src={Createpostsvg} alt="person" className={styles.posticon} /><img src={Createspacesvg} alt="person" className={styles.spaceicon} /><button className={styles.createpostbutton}onClick={changeHandle} ><p className={styles.createpost}>Create Post</p></button><button className={styles.createspacebutton} ><p className={styles.createspace}><Link to="/Createspace" style={{ textDecoration: 'none',color:'black'}}>Create Subspace</Link></p></button></div>
        
         <p className={styles.Posts}>All Posts</p>
-   <div className=" cardarea">       
+   <div className={styles.ccard}>       
    {data.map((items,i)=>(
     
     <div className="card"  >
-      <p className="cardusername" >{items.author}/</p><p className="subspace" onClick={sendSubname} id={items.subspace}><Link to="/Subspacecreated"  style={{ textDecoration: 'none',color:'black'}}>{items.subspace}</Link></p>
+      <p className="cardusername" >{(Math.floor((timenow-items.createdAt)/3600000)<24)?(Math.floor((timenow-items.createdAt)/3600000)+"hours ago by"):(Math.floor((timenow-items.createdAt)/(3600000*24))+"days ago by")} {items.author}/</p><p className="subspace" onClick={sendSubname} id={items.subspace}><Link to="/Subspacecreated"  style={{ textDecoration: 'none',color:'black'}}>{items.subspace}</Link></p>
        <img src={(votedon[i]===true) ? Upvotedone  : Upvotesvg}  className="upvoteicon" onClick={handleClick1} id={items._id} dataset={i} /><p className="upvotes" >{items.votes}</p> <img  src={(downvotedon[i]===true) ? Downvotedonesvg : Downvotesvg}  alt="arrow" className="downvoteicon" id={items._id} onClick={handleClick} dataset={i} /> <img src={Commentsvg} alt="popular" className="comment" onClick={navigateUser} id={items._id} /><p className="comments">{items.comments.length}</p> 
       <p className="posttext"onClick={navigateUser} id={items._id} >{items.heading}</p>
       <p  style={ (items.para===null)? { display:'none'} : {display : 'block'}} id="paraofcard">{items.para}</p>
@@ -283,14 +288,14 @@ return(
             
 })}
           </div>
-      <div className={styles.userloginarea}><img src={Avatarsvg} alt="person" className={styles.avatar} /><p className={styles.username} >{username}</p><button className={styles.logoutbutton}><p className={styles.logouttext}>Logout</p></button></div>
+      <div className={styles.userloginarea}><img src={Avatarsvg} alt="person" className={styles.avatar} /><p className={styles.username} ><Link to="/Showuser" style={{ textDecoration: 'none',color:'black'}}>{username}</Link></p><button className={styles.logoutbutton}><p className={styles.logouttext} onClick={Logoutuser}><Link to="/Explore" style={{ textDecoration: 'none',color:'black'}} >Logout</Link></p></button></div>
       <div className="topcomm">
       <p className="topcommtext">Top Communities</p>
       <div className={styles.communityarea}>
 {myspace.map((index,k)=>(
   <>
   <div className={styles.commcontainer}>
-       <p className={styles.commnumber}>{k+1}</p><p className={styles.topcommname}>{index.name}</p><img src={Personsvg} alt="person" className={styles.personicon} /><p className={styles.topcommfollower}>{index.members}</p>
+       <p className={styles.commnumber}>{k+1}</p><p className={styles.topcommname}><Link to="/Subspacecreated" style={{ textDecoration: 'none',color:'black'}} id={index.name} onClick={takeTosubspace}>{index.name}</Link></p><img src={Personsvg} alt="person" className={styles.personicon} /><p className={styles.topcommfollower}>{index.members}</p>
        </div>
        <div className={styles.secondline}></div>
        </>
@@ -300,7 +305,7 @@ return(
 <div className={styles.firstline}></div>
 <div className={styles.firstline1}></div>
 
-        <p className="topcommviewtext"><Link to="/TopCommunities" style={{ textDecoration: 'none',color:'black'}}>View More</Link></p>
+        <p className="topcommviewtext"></p>
         <p className="topcommprivacy"><Link to="/Privacypolicy" style={{ textDecoration: 'none',color:'black'}}>Privacy Policy</Link></p>
         <p className="topcommagreement"><Link to="/Contentpolicy" style={{ textDecoration: 'none',color:'black'}}>Content Policy</Link></p>
         <p className="topcommcontact">Contact Us</p>

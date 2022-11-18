@@ -24,6 +24,7 @@ function Showuser(){
         heading:'',
         imgpath:'',
         votes:'',
+        _id:'',
         createdAt:'',
         comments:[],
       }])
@@ -38,18 +39,18 @@ console.log(res)
      console.error();
     };
     const[showSpace,setShowspace]=useState(false)
+    const [count,setcount]=useState(1)
     function mapSubspace(){
-      console.log("hello")
-      var count=1
       if(count%2!==0){
      setShowspace(true)
-     count++
+    setcount(2)
+    
       }
       else if(count%2===0){
         setShowspace(false)
-        count++
+        setcount(1)
       }
-    } 
+    }
     const [showCards,setShowCards]=useState(false) 
     function takeTosubspace(e){
         if(localStorage.getItem("spacename")!==null){
@@ -104,7 +105,18 @@ _id:'' ,
         Tokentoheader(localStorage.getItem("logintoken"))
         fetchData2()
       }
-  
+      var ide;
+      function Deletepost(e){
+        Tokentoheader(localStorage.getItem("logintoken"))
+        const api= 'https://spacesback-production.up.railway.app/p/delete/'
+        ide=e.currentTarget.id
+        console.log(api+ide) 
+         axios.delete(api+ide).then((res) => {
+          console.log(res)
+                   
+        })
+      }
+      
     return(<>
         
          <Topcomm/>
@@ -139,7 +151,7 @@ _id:'' ,
 ))}
 </div>
 <hr className="firstline"></hr>
-        <p className="topcommviewtext"><Link to="/TopCommunities" style={{ textDecoration: 'none',color:'black'}}>View More</Link></p>
+
         <p className="topcommprivacy"><Link to="/Privacypolicy" style={{ textDecoration: 'none',color:'black'}}>Privacy Policy</Link></p>
         <p className="topcommagreement"><Link to="/Contentpolicy" style={{ textDecoration: 'none',color:'black'}}>Content Policy</Link></p>
         <p className="topcommcontact">Contact Us</p>
@@ -152,10 +164,10 @@ _id:'' ,
    {data.map((items)=>{
     return showCards?(
     <div className="card" >
-      <p className="cardusername">{Math.floor((timenow-items.createdAt)/3600000)}hours ago by {myusername}/</p><p className="subspace">{items.subspace}</p>
-       <img src={Upvotesvg}  className="upvoteicon" /><p className="upvotes">{items.votes}</p> <img src={Downvotesvg} alt="arrow" className="downvoteicon" /> <img src={Commentsvg} alt="popular" className="comment" /><p className="comments">{items.comments.length}</p> <img src={Trashsvg} alt="delete" className="trashicon" />
-      <p className="posttext">{items.heading}</p>
-      <img src={"https://spacesback-production.up.railway.app/"+items.imgpath} alt="popular" className="postimg" />
+      <p className="cardusername">{(Math.floor((timenow-items.createdAt)/3600000)<24)?(Math.floor((timenow-items.createdAt)/3600000)+"hours ago by"):(Math.floor((timenow-items.createdAt)/(3600000*24))+"days ago by")} {myusername}/</p><p className="subspace">{items.subspace}</p>
+       <img src={Upvotesvg}  className="upvoteicon" /><p className="upvotes">{items.votes}</p> <img src={Downvotesvg} alt="arrow" className="downvoteicon" /> <img src={Commentsvg} alt="popular" className="comment" /><p className="comments">{items.comments.length}</p> <img src={Trashsvg} alt="delete" className="trashicon" onClick={Deletepost} id={items._id} />
+      <p className="posttext" style={(items.heading===null)? { display:'none'} : {display : 'block'}}>{items.heading}</p>
+      <img src={"https://spacesback-production.up.railway.app/"+items.imgpath} alt="popular" className="postimg" style={(items.imgpath===null)? { display:'none'} : {display : 'block'}} />
       
       </div>):(null)
  } )

@@ -98,9 +98,9 @@ color: #0079D3;
 }
 .rulessidebar{
     
-    position: absolute;
+    position: fixed;
 width: 27.3rem;
-height: 70.7rem;
+height:100%;
 right: 0;
 top: 0rem;
 

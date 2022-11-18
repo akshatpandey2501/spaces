@@ -53,7 +53,7 @@ function Createspace(){
           console.log(uploadimage)
             })
     }
-    const[search,setSearch]=useState("")
+    const[search,setSearch]=useState()
 const handleSearch=e=>{
        setSearch(e.target.value)
 

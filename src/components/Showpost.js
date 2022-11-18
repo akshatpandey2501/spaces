@@ -15,16 +15,16 @@ import Searchsvg from "../images/search.svg"
 function Showpost(){
   const[imgpath,setImgpath]=useState("")
  const[para,setPara]=useState("")
+ const[createdAt,setcreatedAt]=useState('')
   const [username,setUsername]=useState("")
   const[comments,setComments]=useState([])
   const[heading,setHeading]=useState("")
   const [subspace,setSpace]=useState("")
-   const [commentsnumber,setcommentNumber]=useState(0)
-   var api='https://spacesback-production.up.railway.app/p/'
+   var api='https://spacesback-production.up.railway.app/p/logged/'
     var iddata=JSON.stringify(localStorage.getItem("idpost"))
    const newid = iddata.replaceAll('"','');
     const fetchData = async() =>{
-        
+        Tokentoheader(localStorage.getItem("logintoken"))
         await axios.get(api+newid).then((res) => {
         console.log(res)
         setUsername(res.data.author)
@@ -33,6 +33,7 @@ function Showpost(){
         setSpace(res.data.subspace)
         setImgpath(res.data.imgpath)
         setPara(res.data.para)
+        setcreatedAt(res.data.createdAt)
      }).catch(e => {
       console.log(e);
      })
@@ -45,10 +46,11 @@ function Showpost(){
     const[commentvalue,setCommentsvalue]=useState([{
       author:"",
       parentId: '',     
-      text: "",
+      text: '',
       votes:"",
      _id:"",
 }])
+clonecomments=[...commentvalue]
      const fetchData1 = async() =>{
         var api2='https://spacesback-production.up.railway.app/c/'
 
@@ -87,7 +89,7 @@ console.error();
 useEffect(() => {
 fetchData3();
 },  [search]);
- 
+var clonecomments
     const[comment,setComment]=useState()
    function changeComment(e){
     setComment(e.target.value)
@@ -96,6 +98,8 @@ fetchData3();
 function postComment(e){
   e.preventDefault()
   setComment("")
+ 
+  if(comment!==""){
   Tokentoheader(localStorage.getItem("logintoken"))
   axios.post('https://spacesback-production.up.railway.app/c/comment',sendcomment).then((res) => {
           console.log(res);
@@ -106,15 +110,32 @@ function postComment(e){
         })
         .catch((err) => {
           console.log(err);
-          
-          
-        })
+          })
+         var commentlength=maincomment.length
+          clonecomments[commentlength].text=comment
+          setCommentsvalue(clonecomments) 
+        }
 }
 
+var copyarr
+const [arr,setArr]=useState([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
 var id;
 var iteration
+const[count,setcount]=useState(1)
 function ReplyClicked(e){
  id=e.currentTarget.id
+ iteration=e.target.getAttribute("dataset")
+ copyarr=[...arr]
+ if(count%2!==0){
+copyarr[iteration]=1
+setArr(copyarr)
+setcount(2)
+ }
+ else if(count%2===0){
+  copyarr[iteration]=0
+  setArr(copyarr)
+  setcount(1) 
+ }
 let replycommentt=document.querySelectorAll(`[dataset=${id}]`)
 replycommentt.forEach((child)=> child.classList.toggle("opened"));
 
@@ -132,7 +153,7 @@ function getReplies(id){
  console.log(replyycomments)  
 }
 const maincomment=commentvalue.filter((maincomment)=>maincomment.parentId===null);
- 
+const timenow = Date.now(); 
 return(
     <>
    <Sidebar/>
@@ -149,18 +170,18 @@ return(
           ))}
            </div>
           </>
-    <div className="card1">
-      <p className="cardusername">{username}/</p><p className="subspace">{subspace}</p>
+    <div id="card1">
+      <p className="cardusername">{(Math.floor((timenow-createdAt)/3600000)<24)?(Math.floor((timenow-createdAt)/3600000)+"hours ago by"):(Math.floor((timenow-createdAt)/(3600000*24))+"days ago by")}{username}/</p><p className="subspace">{subspace}</p>
        <img src={Upvotesvg} alt="popular" className="upvoteicon" /><p className="upvotes"></p> <img src={Downvotesvg} alt="arrow" className="downvoteicon" /> <img src={Commentsvg} alt="popular" className="comment" /><p className="comments">{comments.length}</p> 
       <p className="posttext">{heading}</p>
       <p  style={ (para===null)? { display:'none'} : {display : 'block'}} id="paraofcard">{para}</p>
       <img src={"https://spacesback-production.up.railway.app/"+imgpath} alt="popular" className="postimg"  style={ (imgpath===null)? { display:'none'} : {display : 'block'} }   />
-      <div className="inputarea"><input type="text" className="commentinput" onChange={changeComment} value={comment} /><button className="postbtn" onClick={postComment} ><p className="postbutton">Post</p></button></div>
+      <div className="inputarea"><input type="text" className="commentinput" onChange={changeComment} value={comment} /><button className="postbtn" onClick={postComment} ><p className="postbutton">Comment</p></button></div>
       
     </div>
       <div className="container1" >
     
-      {maincomment.map((elem,i)=>(
+      {maincomment.map((elem,index)=>(
        
        <div className="commentcontainer opened" >
         
@@ -169,9 +190,9 @@ return(
               {elem.text}
             </p>
             <div className="commentsfooter">
-            <div className="inputdiv" dataset={"firstcomment"+i} ><input type="text" className="replyinput" onChange={changeComment} value={comment} dataset={"firstcomment"+i} /><button className="replybtn" onClick={postComment} dataset={"firstcomment"+i} id={elem._id}><p className="replybutton" dataset={"firstcomment"+i}>Post</p></button></div>
+           
              <p className="userinfo">{elem.author}</p>
-             <img src={Replysvg} className="replyimg" id={"firstcomment"+elem._id} replies={getReplies(elem._id)} ></img ><p className="noofreply"></p>
+             <img src={Replysvg} className="replyimg" id={"firstcomment"+index} replies={getReplies(elem._id)} ></img ><p className="noofreply"></p>
 
             </div>
           </div>
@@ -180,18 +201,18 @@ return(
       
          {replyycomments.length>0 &&(
          <>
-            {replyycomments.map(reply=>(
-          <div className="commentcontainer" dataset={"firstcomment"+elem._id} id={"firstreply"}>
+            {replyycomments.map((reply,i)=>(
+          <div className="commentcontainer opened" dataset={"firstcomment"+index} id={"firstreply"}>
           <div className="commentcard">  
             <p className="ourcomment">
             {reply.text}
             </p>
             <div className="commentsfooter">
-            <div className="inputdiv" ><input type="text" className="replyinput" onChange={changeComment} value={comment} /><button className="replybtn" onClick={postComment} ><p className="replybutton">Post</p></button></div>
-             <p className="userinfo"></p>
-             <img src={Replysvg} className="replyimg"  id={"firstreply"} onClick={ReplyClicked}></img ><p className="noofreply"></p>
-
-            </div>
+            
+             <p className="userinfo">{reply.author}</p>
+             <img src={Replysvg} className="replyimg"  id={"firstreply"} onClick={ReplyClicked} dataset={i}></img ><p className="noofreply"></p>
+             </div>
+             <input type="text" style={{display: arr[i]===1 ? 'block' : 'none'}} />
           </div>
           
           <div className="commentcontainer" dataset={"firstreply"} id="replykareply">

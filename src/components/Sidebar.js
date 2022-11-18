@@ -7,14 +7,15 @@ import Popularsvg from "../images/popular.svg"
 import Arrowsvg from "../images/arrow1.svg"
 import { useNavigate } from "react-router-dom";
 import "./sidebar.css";
-function Sidebar({topcomminfo}){
+function Sidebar(){
  
     const navigate=useNavigate()
+    const navigat=useNavigate()
     function Buttionaction1(){
        navigate("/Login")
     }
     function Buttionaction2(){
-        navigate("/Signup")
+        navigat("/Signup")
      }
     return(
         <div className="sidebar">
@@ -22,10 +23,10 @@ function Sidebar({topcomminfo}){
             
          <ul>
             <li> <img src={Homesvg} alt="home" className="homeicon" /><p className="home1"><Link to="/Userlogin" style={{ textDecoration: 'none',color:'black'}}>Home</Link></p></li>
-    
-            <button className="loginbuttonside" onClick={Buttionaction1}><p className="logintextside">Log In</p></button>
-            <button className="signupbuttonside" onClick={Buttionaction2}><p className="signuptextside">Sign up</p></button>
-         </ul>
+            </ul>
+            <button className="loginbuttonside" onClick={Buttionaction1}><p className="logintextside"><Link to="/Login" style={{ textDecoration: 'none',color:'black'}}>Log In</Link></p></button>
+            <button className="signupbuttonside" onClick={Buttionaction2}><p className="signuptextside"><Link to="/Login" style={{ textDecoration: 'none',color:'black'}}>Sign up</Link></p></button>
+       
           <div className="firstline12"></div>
 
         </div>

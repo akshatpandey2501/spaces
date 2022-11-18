@@ -205,6 +205,14 @@ color: rgba(33, 36, 39, 0.9);
     z-index: 2;
 
 }
+.ccard{
+height: -moz-fit-content;
+height: fit-content;
+display: flex;
+position: relative;
+top: 6rem;
+flex-direction: column;
+}
 .cardbox{
     box-sizing: border-box;
 
@@ -227,6 +235,7 @@ border-radius: 0.2rem;
     position: absolute;
     width: 12.2rem;
     height: 2.9rem;
+    top: 2rem;
     left: 10rem;
     font-family: 'Montserrat';
     font-style: normal;
@@ -234,6 +243,7 @@ border-radius: 0.2rem;
     font-size: 2.4rem;
     line-height: 2.9rem;
     color: rgba(33, 36, 39, 0.9);
+    cursor: pointer;
 
 }
 .logoutbutton{
@@ -262,7 +272,7 @@ border-radius: 0.2rem;
 .userloginarea{
     float: left;
     position: fixed;
-    top: 52.3rem;
+    top: 58.3rem;
     width: 27rem;
     height: 16rem;
     background: #FFFFFF;
