@@ -263,6 +263,7 @@ color: rgba(33, 36, 39, 0.6);
     display: flex;
     position: relative;
     top: -3rem;
+    z-index: -1;
     flex-direction: column;
 }
 .cardarea::-webkit-scrollbar {

@@ -10,12 +10,11 @@ import "./sidebar.css";
 function Sidebar(){
  
     const navigate=useNavigate()
-    const navigat=useNavigate()
-    function Buttionaction1(){
+ function Buttionaction1(){
        navigate("/Login")
     }
     function Buttionaction2(){
-        navigat("/Signup")
+        navigate("/Signup")
      }
     return(
         <div className="sidebar">

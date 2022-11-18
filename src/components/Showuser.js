@@ -58,7 +58,7 @@ console.log(res)
         }
         localStorage.setItem("spacename",e.currentTarget.id)
       }   
-        
+      const[arrpost,setArrpost]=useState([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])        
     useEffect(() => {
       Tokentoheader(localStorage.getItem("logintoken"))
       fetchData();
@@ -107,6 +107,8 @@ _id:'' ,
       }
       var ide;
       function Deletepost(e){
+        var iteration=e.currentTarget.getAttribute("dataset")
+        arrpost[iteration]=1
         Tokentoheader(localStorage.getItem("logintoken"))
         const api= 'https://spacesback-production.up.railway.app/p/delete/'
         ide=e.currentTarget.id
@@ -161,11 +163,11 @@ _id:'' ,
 
 <div className="cardareakaarea">
 <div className=" cardarea12">       
-   {data.map((items)=>{
+   {data.map((items,index)=>{
     return showCards?(
-    <div className="card" >
+    <div className="card" style={(arrpost[index]===1)? { display:'none'} : {display : 'block'}} >
       <p className="cardusername">{(Math.floor((timenow-items.createdAt)/3600000)<24)?(Math.floor((timenow-items.createdAt)/3600000)+"hours ago by"):(Math.floor((timenow-items.createdAt)/(3600000*24))+"days ago by")} {myusername}/</p><p className="subspace">{items.subspace}</p>
-       <img src={Upvotesvg}  className="upvoteicon" /><p className="upvotes">{items.votes}</p> <img src={Downvotesvg} alt="arrow" className="downvoteicon" /> <img src={Commentsvg} alt="popular" className="comment" /><p className="comments">{items.comments.length}</p> <img src={Trashsvg} alt="delete" className="trashicon" onClick={Deletepost} id={items._id} />
+       <img src={Upvotesvg}  className="upvoteicon" /><p className="upvotes">{items.votes}</p> <img src={Downvotesvg} alt="arrow" className="downvoteicon" /> <img src={Commentsvg} alt="popular" className="comment" /><p className="comments">{items.comments.length}</p> <img src={Trashsvg} alt="delete" className="trashicon" onClick={Deletepost} dataset={index} id={items._id} />
       <p className="posttext" style={(items.heading===null)? { display:'none'} : {display : 'block'}}>{items.heading}</p>
       <img src={"https://spacesback-production.up.railway.app/"+items.imgpath} alt="popular" className="postimg" style={(items.imgpath===null)? { display:'none'} : {display : 'block'}} />
       

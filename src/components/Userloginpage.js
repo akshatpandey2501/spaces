@@ -75,6 +75,7 @@ const[iscomment,setIsComment]=useState(false)
  function showComments(){
 setIsComment(true)
 }
+
 const[valueincrease,setValueinc]=useState(null)
 const[valuedecrease,setValuednc]=useState(null)
 const[showincrease,setShowinc]=useState(true)
@@ -116,9 +117,9 @@ const handleClick = event => {
         datadummy[itera].votes+=1
         setData(datadummy)
         
-        axios.put('https://spacesback-production.up.railway.app/p/undownvote',postid).then((res) => {
+        axios.put('https://spacesback-production.up.railway.app/p/downvote',postid).then((res) => {
           console.log(res);
-           
+          
         })
         .catch((err) => {
           console.log(err)
@@ -181,8 +182,12 @@ function navigateUser(even){
   if(localStorage.getItem("idpost")!==null){
     localStorage.removeItem("idpost")
   }
+  if(localStorage.getItem("userkanaam")!==null){
+    localStorage.removeItem("userkanaam")
+  }
   navi("/Showpost")
   localStorage.setItem("idpost",even.currentTarget.id)
+  localStorage.setItem("userkanaam",username)
 }
 spaceinfo=myspace
 myusername=username

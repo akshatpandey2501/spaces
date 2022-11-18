@@ -38,7 +38,7 @@ function Explore(){
      console.error();
     };
        
-        
+  const[isShow,setIsshow]=useState(false)      
     useEffect(() => {
       fetchData();    
     }, []);
@@ -56,6 +56,7 @@ function Explore(){
        const myapi='https://spacesback-production.up.railway.app/p/next' 
       await axios.post(myapi,feednumber).then((res) => {
       console.log(res)
+      setIsshow(true)
      arraycopy=[...data,res.data]
      console.log(arraycopy)
    })
@@ -103,7 +104,7 @@ return(
 </div> 
 
 <div className=" cardarea">       
-   {data.map((items)=>(
+   {arraycopy.map((items)=>(
     
     <div className="card" >
       <p className="cardusername">{items.author}/</p><p className="subspace">{items.subspace}</p>
@@ -114,8 +115,12 @@ return(
       </div>
     ) )
    }</div>
-   {/* <div className=" cardarea">  
-      {next+{feednumber}.map((items)=>(
+    
+   {(isShow)&&(
+    <div className=" cardarea"> 
+   <>
+   
+      {arraycopy[10].map((items)=>(
     
     <div className="card" >
       <p className="cardusername">{items.author}/</p><p className="subspace">{items.subspace}</p>
@@ -124,8 +129,13 @@ return(
       <img src={"https://spacesback-production.up.railway.app/"+items.imgpath} alt="popular" className="postimg1" />
       
       </div>
-    ) )
-   }</div> */}
+      
+    ))
+   }
+   
+   </>
+   </div>
+  )}
    <div className="viewmore"><p className="viewmoretext" onClick={Viewmoreposts}>View more</p></div>
  </div>
 )
