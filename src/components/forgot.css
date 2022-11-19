@@ -95,28 +95,31 @@
 
 
 .usererrorboxforgot{
-    display: none;
     background: #ffdb9b;
-    width: 26.5rem;
+    width: 50rem;
+    height: 4rem;
     position: absolute;
     right: 0;
-    top: 1rem;
+    top: 9rem;
     border: 0.25rem;
-    border-left: 0.5rem solid #ffa502;
+    border-left: 3rem solid #ffa502;
     animation: showerror 1s ease forwards;
    
     
 }
 .usererrorboxforgot .errorimgforgot{
     position: absolute;
-    left: 1rem;
+    left: 0rem;
     top: 50%;
+    height: 4rem;
     transform: translateY(-50%);
     width: 1rem;
+    z-index: 0;
 }
 .usererrorboxforgot .usererror1forgot{
-    padding: 0 1.25rem;
-    font-size: 1.125rem;
+    padding: 0 1.50rem;
+    font-size: 3.125rem;
+    width: 50rem;
     color: #ce8500;
 }
 @media screen and (max-width: 1112px){
