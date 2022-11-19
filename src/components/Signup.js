@@ -124,7 +124,7 @@ function Signup(){
           if (res.status == 201) {
            navigate("/Otp")
           setLoadbool(false)
-          sessionStorage.setItem("otpnavigate","true")
+          sessionStorage.setItem("otpnavigate",true)
           } 
         })
         .catch((err) => {

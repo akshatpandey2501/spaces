@@ -43,22 +43,22 @@ function App(){
             <Route path="/Signup" element={<Signup/>}/>
             <Route path="/Forgot" element={<Forgot/>}/>
             
-            {signup?(<Route path="/Otp" element={<Otp/>}/>) :(null)}
-            {otp1?(<Route path="/Otp1" element={<Otp1/>} />):(null)}
+            <Route path="/Otp" element={<Otp/>}/>
+            <Route path="/Otp1" element={<Otp1/>} />
             <Route path="/Reset" element={<Reset/>} />
             <Route path="/Success" element={<Success/>} />
             <Route path="/Explore" element={<Explore/>} />
-           {login?(<Route path="/Userlogin" element={<Userloginpage/>}/>):(null)}
-           {login?(<Route path="/Subspacecreated" element={<Subspacecreated/>}/>):(null)}
-           {login?(<Route path="/Privacypolicy" element={<Privacyandpolicy/>}/>):(null)}
-           {login?(<Route path="/Privacypolicy" element={<Privacyandpolicy/>}/>):(null)}
-           {login?(<Route path="/Contentpolicy" element={<Contentpolicy/>}/>):(null)}
-           {login?(<Route path="/Topcommunities" element={<Viewtopcomm/>}/>):(null)}
-           {login?(<Route path="/Createspace" element={<Createspace/>}/>):(null)}
-           {login?(<Route path="/Createpost" element={<Createpost/>}/>):(null)}
-           {login?(<Route path="/Showpost" element={<Showpost/>}/>):(null)}
-           {login?(<Route path="/Changeprofile" element={<Changeprofile/>}/>):(null)}
-           {login?(<Route path="/Showuser" element={<Showuser/>}/>):(null)}
+           <Route path="/Userlogin" element={<Userloginpage/>}/>
+           <Route path="/Subspacecreated" element={<Subspacecreated/>}/>
+           <Route path="/Privacypolicy" element={<Privacyandpolicy/>}/>
+           <Route path="/Privacypolicy" element={<Privacyandpolicy/>}/>
+        <Route path="/Contentpolicy" element={<Contentpolicy/>}/>
+           <Route path="/Topcommunities" element={<Viewtopcomm/>}/>
+           <Route path="/Createspace" element={<Createspace/>}/>
+           <Route path="/Createpost" element={<Createpost/>}/>
+           <Route path="/Showpost" element={<Showpost/>}/>
+           <Route path="/Changeprofile" element={<Changeprofile/>}/>
+           <Route path="/Showuser" element={<Showuser/>}/>
         </Routes>
         
         </div>
