@@ -7,7 +7,7 @@ import Mailsvg from "../images/fluent_mail-20-filled.svg"
 import Passwordsvg from "../images/password.svg"
 import Errorsvg from"../images/errorsign.svg"
 import { Link, useNavigate } from "react-router-dom";
-
+import Spinner from 'react-bootstrap/Spinner';
 import Nav from "../Nav";
 function Login(){
    
@@ -24,10 +24,11 @@ function Login(){
  };
  const navigate=useNavigate();
  const[isShown,setIsShow]=useState(false)
- 
+ const[loadbool,setLoadbool]=useState(false)
  var info={email:email,password:password};
  console.log(info)
     const Buttionaction1=e=>{
+      setLoadbool(true)
         e.preventDefault();
         setLogin("")
         setPassword("")
@@ -35,6 +36,8 @@ function Login(){
             console.log(res);
             if(res.status===200){
               navigate("/Userlogin")
+              setLoadbool(false)
+              sessionStorage.setItem("userloggedin",true)
               if(localStorage.getItem("logintoken")!==null){
                localStorage.removeItem("logintoken")
               }
@@ -66,6 +69,7 @@ function Login(){
          <button className="loginbutton" onClick={Buttionaction1}><p className="logintext">Log In</p></button>
          <p className="byclicking">By clicking on Login, I accept the <b>Terms & Conditions</b> &<b> Privacy Policy</b></p>
          <p className="createacc"><Link to="/Signup" style={{ textDecoration: 'none',color:'black'}}>CREATE ACCOUNT</Link></p>
+         {loadbool===true?(<Spinner animation="border" id="apiloader" />):(null)}
         </div>
       
     );

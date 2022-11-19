@@ -26,7 +26,7 @@ function Forgot(){
             console.log()
            
             if (res.status === 200) {
-             
+             sessionStorage.setItem("otp1route","true")
              navigate("/Otp1")
             } 
           })

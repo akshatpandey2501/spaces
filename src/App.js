@@ -23,6 +23,9 @@ import Showprofile from "./components/Showuser";
 import Showuser from "./components/Showuser";
 
 function App(){
+    var signup=sessionStorage.getItem("otpnavigate")
+    var login=sessionStorage.getItem("userloggedin")
+    var otp1=sessionStorage.getItem("otp1route")
     return(
        <div>
          {/* <div className="navbar">
@@ -37,24 +40,25 @@ function App(){
         <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/Login" element={<Login/>} />
-            <Route path="/Signup" element={<Signup/>} />
+            <Route path="/Signup" element={<Signup/>}/>
             <Route path="/Forgot" element={<Forgot/>}/>
             
-            <Route path="/Otp" element={<Otp/>} />
-            <Route path="/Otp1" element={<Otp1/>} />
+            {signup?(<Route path="/Otp" element={<Otp/>}/>) :(null)}
+            {otp1?(<Route path="/Otp1" element={<Otp1/>} />):(null)}
             <Route path="/Reset" element={<Reset/>} />
             <Route path="/Success" element={<Success/>} />
             <Route path="/Explore" element={<Explore/>} />
-            <Route path="/Userlogin" element={<Userloginpage/>}/>
-            <Route path="/Subspacecreated" element={<Subspacecreated/>}/>
-            <Route path="/Privacypolicy" element={<Privacyandpolicy/>}/>
-            <Route path="/Contentpolicy" element={<Contentpolicy/>}/>
-            <Route path="/Topcommunities" element={<Viewtopcomm/>}/>
-            <Route path="/Createspace" element={<Createspace/>}/>
-            <Route path="/Createpost" element={<Createpost/>}/>
-            <Route path="/Showpost" element={<Showpost/>}/>
-            <Route path="/Changeprofile" element={<Changeprofile/>}/>
-            <Route path="/Showuser" element={<Showuser/>}/>
+           {login?(<Route path="/Userlogin" element={<Userloginpage/>}/>):(null)}
+           {login?(<Route path="/Subspacecreated" element={<Subspacecreated/>}/>):(null)}
+           {login?(<Route path="/Privacypolicy" element={<Privacyandpolicy/>}/>):(null)}
+           {login?(<Route path="/Privacypolicy" element={<Privacyandpolicy/>}/>):(null)}
+           {login?(<Route path="/Contentpolicy" element={<Contentpolicy/>}/>):(null)}
+           {login?(<Route path="/Topcommunities" element={<Viewtopcomm/>}/>):(null)}
+           {login?(<Route path="/Createspace" element={<Createspace/>}/>):(null)}
+           {login?(<Route path="/Createpost" element={<Createpost/>}/>):(null)}
+           {login?(<Route path="/Showpost" element={<Showpost/>}/>):(null)}
+           {login?(<Route path="/Changeprofile" element={<Changeprofile/>}/>):(null)}
+           {login?(<Route path="/Showuser" element={<Showuser/>}/>):(null)}
         </Routes>
         
         </div>

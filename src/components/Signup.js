@@ -10,8 +10,8 @@ import Usersvg from "../images/username.svg"
 import Passwordsvg from "../images/password.svg"
 import Errorsvg from "../images/errorsign.svg"
 import { Link, useNavigate } from "react-router-dom";
-
-
+import * as ReactBootStrap from "react-bootstrap"
+import Spinner from 'react-bootstrap/Spinner';
 function Signup(){
     
     //  var correctpassword=false
@@ -73,7 +73,7 @@ function Signup(){
             } 
             
         },[message])
-        
+     const[loadbool,setLoadbool]=useState(false)   
         // var confirmemail=false;
      const [message2,setMessage2]=useState("")
      const[error2,setError2]=useState(null)
@@ -100,7 +100,7 @@ function Signup(){
         localStorage.removeItem("email")
        }
        localStorage.setItem("email",message)
-       
+       setLoadbool(true)
        setError2("")
        setError("")
        setMessage2("")
@@ -108,6 +108,7 @@ function Signup(){
        setError1("")
        setMessage("")
        setMessage3("")
+       
        if(message.length===0){
         setError("Required!")
         setCorrectEmail(false)
@@ -122,7 +123,8 @@ function Signup(){
           console.log(res);
           if (res.status == 201) {
            navigate("/Otp")
-          
+          setLoadbool(false)
+          sessionStorage.setItem("otpnavigate","true")
           } 
         })
         .catch((err) => {
@@ -155,8 +157,9 @@ function Signup(){
          <button className="continuebutton" onClick={Buttonaction}><p className="continuetext1">Continue</p></button>
          <p className="clicking">By clicking on Login, I accept the<b>Terms & Conditions</b> & <b>Privacy Policy</b></p>
          <p className="registered"><Link to="/Login" style={{ textDecoration: 'none',color:'black'}}>Already Registered?</Link></p>
+         {loadbool?(<Spinner animation="border" id="apiloader" />):(null)}
         </div>
-       
+      
     );
 }
 export default Signup;
